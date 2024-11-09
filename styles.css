@@ -1,0 +1,237 @@
+:root {
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #eee;
+    background-color: #081220;
+}
+
+header, .main_wrapper, footer {
+    width: 100%;
+}
+
+/*Header */
+
+header {
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:  1.8rem;
+    padding: 10px;
+    background-color: #0b192c;
+}
+
+nav {
+    background-color: #1e3e62;
+    border-bottom: 4px solid #ff6500 ;
+}
+
+nav div {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    max-width: 700px;
+    
+}
+
+nav a {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    flex: 1;
+    display: block;
+    font-size: 0.7rem ;
+    text-decoration: none;
+    color: #ff6500;
+    font-weight: bold;
+    padding: 3px;
+}
+
+nav a img {
+    width: 26px;
+}
+
+.nav_btn_active {
+    background-color: #ff6500;
+    border-radius: 10px 10px 0 0 ;
+    color: #000000;
+}
+
+/*Main */ 
+
+.main_wrapper {
+    display: flex;
+    gap: 10px;
+    flex: 1;
+    max-width: 1100px;
+}
+
+main {
+    font-size: 1rem;
+    flex: 1 ;
+    padding:25px;
+    background-color: #081220;
+}
+
+h2 {
+    font-size: 1.7rem;
+    text-align: center;
+    margin: 0 0 15px 0;
+}
+
+/*Footer */ 
+
+footer {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #111;
+    margin-top: auto;
+    background-color: #ff6500;
+    padding: 30px;
+}
+
+/* Modal */
+
+.modal {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000057;
+    border: none;
+    backdrop-filter: blur(7px);
+}
+
+.modal div {
+    position: relative;
+    margin: auto;
+    margin-top: 200px;
+    padding: 20px 20px;
+    width: 70%;
+    max-width: 500px;
+    border-radius: 12px;
+    background-color: #ff6500;
+    box-shadow: 0 0 30px 10px #ff660036 ;
+}
+
+.modal .yoandri_modal {
+    display: block;
+    margin: auto;
+    height: 200px ;
+}
+
+.modal a {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 7px;
+    background-color: transparent;
+    border: none;
+}
+
+.modal a img {
+    display: block;
+    width: 25px;
+}
+
+.modal p {
+    color:rgb(37, 37, 37);
+    font-size: 1.1rem;
+    text-wrap: pretty;
+    font-weight: 600;
+}
+
+.modal div p:first-of-type {
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color:#1f1e1e;
+}
+
+.modal div span {
+    padding: 2px;
+    color:#ff6500;
+    background-color: #141414;
+    border-radius: 4px;
+}
+
+/* Yoandri */
+
+.flex_gallery {
+    margin: auto;
+    display: flex;
+    max-width: 750px ;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.flex_photo {
+    max-width: 100%;
+    background-color: #102238;
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 0 10px 10px 10px;
+    box-shadow: 0 0 30px 10px #00000042;
+}
+
+.flex_photo p {
+    padding: 9px;
+    text-wrap: balance;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-style: italic;
+    color:#ff6500;
+}
+
+.flex_photo span {
+    display: inline-block;
+    font-size: 0.9rem;
+    padding: 3px ;
+    margin: 0 0 8px 10px;
+    background-color: #ff6500 ;
+    font-weight: 800;
+    border-radius: 7px;
+    color: #102238;
+}
+
+.flex_photo p::before {
+    content: '"' ;
+}
+
+.flex_photo p::after {
+    content: '"' ;
+}
+
+
+.flex_photo img {
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+    margin:auto;
+}
+
+/* Miembros */
+
+
+
+/* Games */
+
+
+
+@media screen and (min-width: 1000px) {
+    :root {
+        font-size: 13px;
+    }
+}
