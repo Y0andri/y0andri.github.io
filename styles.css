@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "saiyasans";
+  src: url("recursos/fuentes/Saiyan-Sans.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "pubgsans";
+  src: url("recursos/fuentes/PUBG-SANS.ttf") format("truetype");
+  font-weight: 600;
+}
+
 :root {
     font-size: 16px;
 }
@@ -13,9 +25,13 @@ body {
     flex-direction: column;
     min-height: 100vh;
     align-items: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "pubgsans";
     color: #eee;
     background-color: #081220;
+    background-image: url('recursos/background.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 header, .main_wrapper, footer {
@@ -29,15 +45,21 @@ header {
 }
 
 h1 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size:  1.8rem;
-    padding: 10px;
+    font-family: saiyasans;
+    font-size:  2rem;
+    padding: 5px;
     background-color: #0b192c;
+    color: #f8e828;
+    backdrop-filter: blur(5px);
+}
+
+h1 span {
+    color: #f00;
 }
 
 nav {
-    background-color: #1e3e62;
-    border-bottom: 4px solid #ff6500 ;
+    padding: 3px;
+    background-color: #f8e828dd;
 }
 
 nav div {
@@ -46,18 +68,29 @@ nav div {
     justify-content: center;
     list-style: none;
     max-width: 700px;
+    height: 50px;
     
 }
 
 nav a {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    top:0;
+    font-family: "pubgsans";
+    letter-spacing: 0.7px;
     flex: 1;
     display: block;
-    font-size: 0.7rem ;
+    font-size: 0.9rem ;
+    line-height: 13px;
     text-decoration: none;
-    color: #ff6500;
+    color: #111;
     font-weight: bold;
     padding: 3px;
+    transition: 1s all;
+}
+
+nav a:focus, nav a:hover {
+  letter-spacing: 3px;
+  flex:8;
 }
 
 nav a img {
@@ -65,9 +98,14 @@ nav a img {
 }
 
 .nav_btn_active {
-    background-color: #ff6500;
-    border-radius: 10px 10px 0 0 ;
-    color: #000000;
+    background-color: #ff2424;
+    border-radius: 4px ;
+    color: #fff;
+    flex: 2;
+}
+
+.nav_btn_active img {
+  filter: invert();
 }
 
 /*Main */ 
@@ -83,13 +121,16 @@ main {
     font-size: 1rem;
     flex: 1 ;
     padding:25px;
-    background-color: #081220;
+    background-color: #111c;
 }
 
 h2 {
+  font-family: "pubgsans";
     font-size: 1.7rem;
     text-align: center;
     margin: 0 0 15px 0;
+    color: #fff;
+    text-shadow: 0 0 20px #fffa;
 }
 
 /*Footer */ 
@@ -99,7 +140,7 @@ footer {
     font-size: 1.1rem;
     color: #111;
     margin-top: auto;
-    background-color: #ff6500;
+    background-color: #f8e828;
     padding: 30px;
 }
 
@@ -108,7 +149,7 @@ footer {
 .modal {
     position: absolute;
     width: 100vw;
-    height: 100vh;
+    height: 800px;
     background-color: #00000057;
     border: none;
     backdrop-filter: blur(7px);
@@ -117,13 +158,13 @@ footer {
 .modal div {
     position: relative;
     margin: auto;
-    margin-top: 150px;
+    margin-top: 200px;
     padding: 20px 20px;
     width: 70%;
     max-width: 500px;
     border-radius: 12px;
-    background-color: #ff6500;
-    box-shadow: 0 0 30px 10px #ff660036 ;
+    background-color: #eeea;
+    box-shadow: 0 0 30px 10px #11111136 ;
 }
 
 .modal .yoandri_modal {
@@ -161,7 +202,7 @@ footer {
 
 .modal div span {
     padding: 2px;
-    color:#ff6500;
+    color: #fffc;
     background-color: #141414;
     border-radius: 4px;
 }
@@ -179,11 +220,13 @@ footer {
 
 .flex_photo {
     max-width: 100%;
-    background-color: #102238;
+    background: #0004;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 0 10px 10px 10px;
-    box-shadow: 0 0 30px 10px #00000042;
+    backdrop-filter: blur(40px);
+    box-shadow: 0 0 20px 10px #f8e02815;
+    border: 1px solid #ff2525;
 }
 
 .flex_photo p {
@@ -191,8 +234,8 @@ footer {
     text-wrap: balance;
     font-size: 1.2rem;
     font-weight: 600;
-    font-style: italic;
-    color:#ff6500;
+    color:#ff3535;
+    letter-spacing: 0.7px;
 }
 
 .flex_photo span {
@@ -200,10 +243,10 @@ footer {
     font-size: 0.9rem;
     padding: 3px ;
     margin: 0 0 8px 10px;
-    background-color: #ff6500 ;
-    font-weight: 800;
-    border-radius: 7px;
-    color: #102238;
+    font-style: italic;
+    font-weight: 500;
+    border-radius: 3px;
+    color: #ddd;
 }
 
 .flex_photo p::before {
@@ -218,8 +261,9 @@ footer {
 .flex_photo img {
     display: block;
     width: 100%;
-    border-radius: 20px;
+    border-radius: 10px;
     margin:auto;
+    border: 1px solid #111;
 }
 
 /* Miembros */
