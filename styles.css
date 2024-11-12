@@ -311,7 +311,65 @@ footer {
 }
 /* Games */
 
+.desplegable_noticias summary {
+    text-align: center;
+    font-size: 1.7rem;
+    text-shadow: 0 0 20px #00f5;
+    transition: 1s all;
+    color: #2424ff;
+}
 
+.desplegable_noticias summary::marker{
+    content: none;
+}
+
+.desplegable_noticias {
+    padding: 10px 10px 5px 10px;
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    box-shadow: 0 0 20px #eeeeee22;
+    background-color: #000a;
+    border: 1px solid #2424ff;
+}
+
+.desplegable_noticias[open] {
+    padding: 10px 14px 14px 14px;
+}
+
+.noticias_flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap:20px;
+}
+
+.noticias_flex div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2424ff77;
+    padding: 14px;
+    border-radius: 14px;
+    box-shadow: 0 0 20px #2222ff43;
+    gap: 15px;
+    backdrop-filter: blur(100px);
+}
+
+.noticias_flex div a {
+    color: #fff;
+    font-size: 1.2rem;
+    letter-spacing: 0.9px;
+}
+    
+.noticias_flex div img {
+    min-width: 100%;
+    border-radius: 14px;
+    border: 1px solid #fff;
+    box-shadow: 0 0 30px #00000074;
+}
+
+/* Medias */
 
 @media screen and (min-width: 1000px) {
     :root {
