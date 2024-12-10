@@ -380,6 +380,12 @@ footer {
     font-size: 1.3rem;
 }
 
+.music audio {
+    width: 100%;
+    border: solid 1.5px #000;
+    border-radius: 100px;
+}
+
 @media screen and (min-width: 1000px) {
     :root {
         font-size: 13px;
