@@ -369,11 +369,12 @@ footer {
 }
 
 .music a {
+    margin: 6px 0 0 0 ;
     display: block;
     text-align: center;
-    border-radius: 100px;
-    background-color: #111;
-    padding: 14px 20px ;
+    border-radius: 10px;
+    background-color: #0a0a0a;
+    padding: 13px 20px 10px 20px ;
     box-shadow: 0 0 17px #000a;
     text-decoration: none;
     color: #b00;
@@ -382,8 +383,37 @@ footer {
 
 .music audio {
     width: 100%;
-    border: solid 1.5px #000;
     border-radius: 100px;
+    box-shadow: 0 0 17px #000d;
+}
+
+.music audio::-webkit-media-controls-panel{
+    background-color: #0a0a0a;
+}
+
+.music audio::-webkit-media-controls-play-button{
+    background-color: #b00;
+    border-radius: 50px;
+}
+
+.music audio::-webkit-media-controls-timeline {
+    border-radius: 50px;
+    background-color: #b00;
+    margin:5px;
+    padding: 10px;
+}
+
+.music audio::-webkit-media-controls-mute-button{
+    background-color: #b00;
+    border-radius:50px;
+}
+
+.music audio::-webkit-media-controls-current-time-display {
+    color:#ddd;
+}
+
+.music audio::-webkit-media-controls-time-remaining-display {
+    color:#ddd;
 }
 
 @media screen and (min-width: 1000px) {
