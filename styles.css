@@ -341,6 +341,45 @@ footer {
     color: #f4f;
 }
 
+.music {
+    background: #a00;
+    border-radius: 20px;
+    width: 310px;
+    margin: auto;
+    padding: 30px;
+    box-shadow: 0 0 10px #f00a;
+    
+}
+
+.music img {
+    display: block;
+    max-width: 100%;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 17px #000a;
+}
+
+.music p {
+    text-align: center;
+    padding: 15px 0 15px 0;
+    font-size: 1.6rem;
+    color: #111;
+    text-shadow: 0 0 10px #d00;
+    
+}
+
+.music a {
+    display: block;
+    text-align: center;
+    border-radius: 100px;
+    background-color: #111;
+    padding: 14px 20px ;
+    box-shadow: 0 0 17px #000a;
+    text-decoration: none;
+    color: #b00;
+    font-size: 1.3rem;
+}
+
 @media screen and (min-width: 1000px) {
     :root {
         font-size: 13px;
