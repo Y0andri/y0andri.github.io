@@ -32,6 +32,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 header, .main_wrapper, footer {
@@ -47,11 +48,11 @@ header {
 h1 {
     font-family: saiyasans;
     font-size:  2rem;
-    padding: 5px;
-    background-color: #0b192c;
+    padding: 9px;
+    background-color: #000;
     color: #f8e828;
     backdrop-filter: blur(5px);
-    text-shadow: 0 0 20px #f8e828bb;
+    text-shadow: 0 0 20px #f8e828aa;
 }
 
 h1 span {
@@ -61,7 +62,7 @@ h1 span {
 
 nav {
     padding: 3px;
-    background-color: #f8e828dd;
+    background-color: #dd1111ee;
 }
 
 nav div {
@@ -92,7 +93,7 @@ nav a {
 
 nav a:focus, nav a:hover {
   letter-spacing: 3px;
-  flex:8;
+  flex:4;
 }
 
 nav a img {
@@ -100,10 +101,12 @@ nav a img {
 }
 
 .nav_btn_active {
-    background-color: #ff2424;
+    background-image: url('recursos/pestana_background.png') ;
     border-radius: 4px ;
     color: #fff;
     flex: 2;
+    background-position: center;
+    background-size: cover;
 }
 
 .nav_btn_active img {
@@ -140,9 +143,9 @@ h2 {
 footer {
     text-align: center;
     font-size: 1.1rem;
-    color: #111;
+    color: #ddd;
     margin-top: auto;
-    background-color: #f8e828;
+    background-color: #060606;
     padding: 30px;
 }
 
@@ -211,6 +214,37 @@ footer {
 
 /* Yoandri */
 
+.anuncio_musica {
+    display: flex;
+    width:200px;
+    border-radius:100px;
+    color: #b00;
+    margin:auto;
+    text-decoration: none;
+    background: #000;
+    overflow: hidden;
+    gap:5px;
+    padding:5px;
+    align-items: center;
+    font-size: 1.2rem;
+    border-bottom: solid 1.5px #b00;
+    transition: 1s;
+}
+
+.anuncio_musica img {
+    width:70px;
+    border-radius: 100px;
+}
+
+.anuncio_musica:focus  {
+    background-color: #b00 ;
+    color:#111;
+}
+
+.anuncio_musica {-webkit-tap-highlight-color: transparent;}
+
+
+
 .flex_gallery {
     margin: auto;
     display: flex;
@@ -227,7 +261,7 @@ footer {
     border-radius: 10px;
     padding: 0 10px 10px 10px;
     backdrop-filter: blur(40px);
-    box-shadow: 0 0 20px 5px #ff252544;
+    box-shadow: 0 0 20px 5px #000a;
     border: 1px solid #ff2525;
 }
 
@@ -341,10 +375,38 @@ footer {
     color: #f4f;
 }
 
+/* MUSIC */
+
+.bg_music {
+    width:100%;
+    height: 100vh;
+    margin:0;
+    background-color: #000e;
+    backdrop-filter: blur(50px);
+    
+}
+
+.regresar {
+    display: inline;
+    position: fixed ;
+    top: 10px;
+    left:10px;
+    font-size: 2rem;
+    text-decoration: none;
+    background-color: #b00;
+    color:#000;
+    border-radius: 10px;
+    width:40px;
+    height: 40px;
+    text-align: center;
+    border:1.5px solid #b00;
+    box-shadow: 0 0 10px #f00a;
+}
+
 .music {
     background: #a00;
     border-radius: 20px;
-    width: 310px;
+    width: 80%;
     margin: auto;
     padding: 30px;
     box-shadow: 0 0 10px #f00a;
@@ -409,11 +471,20 @@ footer {
 }
 
 .music audio::-webkit-media-controls-current-time-display {
-    color:#ddd;
+    font-family: Sans-Serif;
+    font-weight: 900;
+    color:#d00;
+    text-shadow: 0 0 0px #000;
+    d
+    
 }
 
 .music audio::-webkit-media-controls-time-remaining-display {
-    color:#ddd;
+    font-family: Sans-Serif;
+    font-weight: 900;
+    color:#d00;
+    text-shadow: 0 0 0px #000;
+
 }
 
 @media screen and (min-width: 1000px) {
