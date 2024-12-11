@@ -265,6 +265,15 @@ footer {
     border: 1px solid #ff2525;
 }
 
+.flex_photo:first-child {
+     border: 1px solid #00dd00;
+     background-color: #0008;
+}
+
+.flex_photo:first-child p {
+    color: #0b0;
+}
+
 .flex_photo p {
     padding: 9px;
     text-wrap: balance;
