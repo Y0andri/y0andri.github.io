@@ -496,10 +496,25 @@ footer {
     text-align: center;
 }
 
-.viva {
-    text-align: center;
-    color: #23ff;
-    font-size: 2rem;
+.a_awards {
+    color:#ddd;
+    margin:7px;
+    font-size: 0.9rem;
+    font-family: Times New Roman;
+    font-weight: bold;
+    text-decoration:none;
+}
+
+.item_blue {
+    background: radial-gradient(#0094fb,#0054cffb);
+    border-radius: 10px;
+    padding:9px;
+    border-bottom: 2px solid  #ddd;
+    border-right: 2px solid  #ddd;
+}
+
+.item_blue:nth-child(2n) {
+    background: radial-gradient(#ff4746,#eb0200);
 }
 /* MUSIC */
 
