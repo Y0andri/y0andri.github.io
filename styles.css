@@ -20,6 +20,8 @@
     padding: 0;
 }
 
+* {-webkit-tap-highlight-color: transparent;}
+
 body {
     display: flex;
     flex-direction: column;
@@ -374,7 +376,7 @@ footer {
     transition: 1s;
 }
 
-.div_juegosespera:hover, :focus {
+.div_juegosespera:hover, .div_juegosespera:focus {
     height: 390px;
 }
 
@@ -622,7 +624,7 @@ footer {
     font-weight: 900;
     color:#d00;
     text-shadow: 0 0 0px #000;
-    d
+    
     
 }
 
