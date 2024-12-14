@@ -369,7 +369,13 @@ footer {
     border-radius: 20px;
     background-color: #111d;
     box-shadow: 0 0 30px 5px #70f4;
-    
+    overflow: hidden;
+    height: 55px;
+    transition: 1s;
+}
+
+.div_juegosespera:hover, :focus {
+    height: 390px;
 }
 
 .div_juegosespera li {
