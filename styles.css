@@ -22,6 +22,14 @@
 
 * {-webkit-tap-highlight-color: transparent;}
 
+html {
+    background-image: url('recursos/background.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -29,12 +37,7 @@ body {
     align-items: center;
     font-family: "pubgsans";
     color: #eee;
-    background-color: #081220;
-    background-image: url('recursos/background.jpg');
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: #111c;
 }
 
 header, .main_wrapper, footer {
@@ -44,14 +47,14 @@ header, .main_wrapper, footer {
 /*Header */
 
 header {
-    text-align: center;
+    background-color: #000;
 }
 
 h1 {
+    text-align: center;
     font-family: saiyasans;
     font-size:  2rem;
-    padding: 9px;
-    background-color: #000;
+    padding: 9px 9px 9px 38px;
     color: #f8e828;
     backdrop-filter: blur(5px);
     text-shadow: 0 0 20px #f8e828aa;
@@ -63,18 +66,35 @@ h1 span {
 }
 
 nav {
+    text-align: center;
     padding: 3px;
-    background-color: #dd1111ee;
+    
 }
 
 nav div {
+    position:absolute;
     margin: auto;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     list-style: none;
-    max-width: 700px;
-    height: 50px;
-    
+    width: 50px;
+    flex-flow: column;
+    background-color: #dd1111;
+    height: 40px;
+    z-index: 6;
+    top:18px;
+    left:5px;
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: 5px ;
+    border:1px solid #f8e828;
+}
+
+nav div:focus, nav div:hover {
+    height:200px;
+    width: 190px;
+    left:0px;
+    border:1px solid #ddd;
 }
 
 nav a {
@@ -82,7 +102,6 @@ nav a {
     top:0;
     font-family: "pubgsans";
     letter-spacing: 0.7px;
-    flex: 1;
     display: block;
     font-size: 0.9rem ;
     line-height: 13px;
@@ -90,25 +109,20 @@ nav a {
     color: #111;
     font-weight: bold;
     padding: 3px;
-    transition: 1s all;
 }
 
-nav a:focus, nav a:hover {
-  letter-spacing: 3px;
-  flex:4;
+nav .menu_button {
+    width:35px;
+    align-self: start;
 }
 
-nav a img {
+nav img {
     width: 26px;
 }
 
 .nav_btn_active {
-    background-image: url('recursos/pestana_background.png') ;
     border-radius: 4px ;
     color: #fff;
-    flex: 2;
-    background-position: center;
-    background-size: cover;
 }
 
 .nav_btn_active img {
@@ -128,7 +142,7 @@ main {
     font-size: 1rem;
     flex: 1 ;
     padding:25px;
-    background-color: #111c;
+    
 }
 
 h2 {
@@ -365,6 +379,7 @@ footer {
 }
 
 .div_juegosespera {
+    margin:auto;
     color: #faf;
     border: #70f solid 1px;
     padding: 14px;
@@ -372,12 +387,16 @@ footer {
     background-color: #111d;
     box-shadow: 0 0 30px 5px #70f4;
     overflow: hidden;
-    height: 55px;
-    transition: 1s;
+    height: 54px;
+    width: 250px;
+    transition: 0.5s ;
 }
 
 .div_juegosespera:hover, .div_juegosespera:focus {
     height: 390px;
+    width: 330px;
+    box-shadow: 0 0 30px 5px #f6265744;
+    border: #f62657 solid 1px;
 }
 
 .div_juegosespera li {
