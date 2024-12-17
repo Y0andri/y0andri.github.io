@@ -91,7 +91,7 @@ nav div {
 }
 
 nav div:focus, nav div:hover {
-    height:200px;
+    height:240px;
     width: 190px;
     left:0px;
     border:1px solid #ddd;
@@ -271,6 +271,7 @@ footer {
 }
 
 .flex_photo {
+    position: relative;
     width: 100%;
     background: #0004;
     overflow: hidden;
@@ -279,6 +280,21 @@ footer {
     backdrop-filter: blur(40px);
     box-shadow: 0 0 20px 5px #000a;
     border: 1px solid #ff2525;
+    transition: 0.5s;
+    bottom: 0;
+}
+
+.flex_photo:focus , .flex_photo:hover {
+    z-index:10;
+    bottom:20px;
+    box-shadow: 0 0 30px 10px #f33b;
+}
+
+
+.flex_photo:first-child:focus , .flex_photo:first-child:hover {
+    z-index:10;
+    bottom:20px;
+    box-shadow: 0 0 30px 10px #3f3b;
 }
 
 .flex_photo:first-child {
@@ -395,8 +411,8 @@ footer {
 .div_juegosespera:hover, .div_juegosespera:focus {
     height: 390px;
     width: 330px;
-    box-shadow: 0 0 30px 5px #f6265744;
-    border: #f62657 solid 1px;
+    box-shadow: 0 0 30px 5px #fafa;
+    border: #f7f solid 1px;
 }
 
 .div_juegosespera li {
@@ -549,27 +565,12 @@ footer {
     width:100%;
     height: 100vh;
     margin:0;
-    background-color: #000e;
+    background-color: #222e;
     backdrop-filter: blur(50px);
     
 }
 
-.regresar {
-    display: inline;
-    position: fixed ;
-    top: 10px;
-    left:10px;
-    font-size: 2rem;
-    text-decoration: none;
-    background-color: #b00;
-    color:#000;
-    border-radius: 10px;
-    width:40px;
-    height: 40px;
-    text-align: center;
-    border:1.5px solid #b00;
-    box-shadow: 0 0 10px #f00a;
-}
+
 
 .music {
     background: #a00;
