@@ -409,20 +409,20 @@ footer {
     margin:auto;
     color: #faf;
     border: #70f solid 1px;
-    padding: 14px;
-    border-radius: 20px;
+    padding: 10px 14px;
+    border-radius: 7px;
     background-color: #111d;
     box-shadow: 0 0 30px 5px #70f4;
     overflow: hidden;
-    height: 54px;
+    height: 50px;
     width: 250px;
-    transition: 0.5s ;
+    transition: 0.3s ;
 }
 
 .div_juegosespera:hover, .div_juegosespera:focus {
     height: 390px;
     width: 330px;
-    box-shadow: 0 0 30px 5px #fafa;
+    box-shadow: 0 0 10px 1px #faf5;
     border: #f7f solid 1px;
 }
 
