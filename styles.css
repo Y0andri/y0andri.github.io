@@ -92,7 +92,7 @@ nav div {
 
 nav div:focus, nav div:hover {
     position:fixed;
-    background:   linear-gradient(  #211, #112,#121)  ;
+    background:   linear-gradient(  #211, #112,#212)  ;
     top:0;
     left:0px;
     height:100vh;
@@ -100,6 +100,7 @@ nav div:focus, nav div:hover {
     border: none;
     border-right:1px solid #111;
     border-radius: 0;
+    box-shadow: 0 0 30px #ddd2;
 }
 
 nav a {
@@ -114,6 +115,35 @@ nav a {
     color: #ddd;
     font-weight: bold;
     padding: 3px;
+}
+
+nav a.canal {
+    display:flex;
+    text-align: start;
+    margin:10px;
+    padding:10px;
+    margin-top: auto;
+    align-items: center;
+    gap:6px;
+    padding:8px;
+    font-family: Arial;
+    letter-spacing: 0px;
+    background-color: #3ee433;
+    color:#121;
+    border-radius: 10px;
+    font-weight: 500;
+    border:1.2px solid #121;
+    box-shadow: 0 0 15px #3ee433aa;
+    text-shadow: 0 0 5px #dfd6;
+}
+
+nav a.canal img {
+    width:50px;
+    border-radius:100%;
+    filter:none;
+    box-shadow: 0 0 10px #1113;
+    border:1.2px solid #121;
+    
 }
 
 nav .menu_button {
