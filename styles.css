@@ -122,8 +122,8 @@ nav a.canal {
     text-align: start;
     margin:10px;
     padding:10px;
-    position:absolute;
-    margin-top:90vh;
+    position: relative;
+    
     align-items: center;
     gap:6px;
     padding:8px;
