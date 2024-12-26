@@ -92,8 +92,7 @@ nav div {
 
 nav div:focus, nav div:hover {
     position:fixed;
-    backdrop-filter: blur(70px);
-    background: #0000;
+    background:   linear-gradient(  #211, #112,#121)  ;
     top:0;
     left:0px;
     height:100vh;
@@ -590,7 +589,7 @@ footer {
     margin: auto;
     padding: 30px;
     box-shadow: 0 0 10px #f00a;
-    
+    max-width: 400px;
 }
 
 .music img {
