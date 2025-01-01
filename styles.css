@@ -342,13 +342,6 @@ footer {
     color: #ddd;
 }
 
-.flex_photo p::before {
-    content: '"' ;
-}
-
-.flex_photo p::after {
-    content: '"' ;
-}
 
 
 .flex_photo img {
@@ -357,6 +350,26 @@ footer {
     border-radius: 10px;
     margin:auto;
     border: 1px solid #111;
+}
+
+.flex_photo_2025 {
+    background-color: #1d1800;
+}
+
+.flex_photo_2025 p {
+    color:#f1c800;
+}
+
+.flex_photo_2025:first-child p {
+    color:#f1c800;
+}
+
+.flex_photo_2025 {
+    border-top: 3px solid #f1c800;
+}
+
+.flex_photo_2025:first-child {
+    border-top: 3px solid #f1c800;
 }
 
 /* Miembros */
