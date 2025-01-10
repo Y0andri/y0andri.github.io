@@ -40,8 +40,12 @@ body {
     background-color: #111c;
 }
 
-header, .main_wrapper, footer {
+.main_wrapper {
     width: 100%;
+}
+
+footer, header {
+    width:100vw;
 }
 
 /*Header */
@@ -92,7 +96,7 @@ nav div {
     gap:2px;
 }
 
-nav div:focus, nav div:hover {
+ nav div:hover {
     position:fixed;
     background:   linear-gradient(  #211, #112,#212)  ;
     top:0;
@@ -110,7 +114,7 @@ nav a {
     top:0;
     font-family: "pubgsans";
     letter-spacing: 0.7px;
-    display: block;
+    display: none;
     font-size: 0.9rem ;
     line-height: 13px;
     text-decoration: none;
@@ -120,7 +124,7 @@ nav a {
 }
 
 nav a.canal {
-    display:flex;
+    display:none;
     text-align: start;
     margin:10px;
     padding:10px;
@@ -155,6 +159,10 @@ nav .menu_button {
     filter:invert();
 }
 
+nav a:has(.menu_button) {
+    display:block;
+}
+
 
 nav img {
     width: 26px;
@@ -171,6 +179,14 @@ nav img {
     filter:none;
 }
 
+nav div:hover a {
+    display:block;
+}
+
+nav div:hover .canal {
+    display: flex;
+}
+
 /*Main */ 
 
 .main_wrapper {
@@ -178,13 +194,13 @@ nav img {
     gap: 10px;
     flex: 1;
     max-width: 1100px;
+    margin:auto;
 }
 
 main {
     font-size: 1rem;
     flex: 1 ;
     padding:25px;
-    
 }
 
 h2 {
@@ -409,45 +425,50 @@ footer {
     transition: 0.8s;
 }
 
-.item_miembros:nth-child(1) {
+.derek {
     background-image:linear-gradient(#0005, #0005),  url(recursos/miembros/derek.jpg) ;
     background-position: 0 60%;
     color:#da8606;
     border-color: #da8606;
 }
 
-.item_miembros:nth-child(2) {
+.cristian {
     background-image:linear-gradient(#0005, #0005),  url(recursos/miembros/cristian.jpg) ;
     background-position: 0 20%;
     color: #ccc;
     border-color: #ccc;
 }
 
-.item_miembros:nth-child(3) {
+.maiko {
     background-image:linear-gradient(#0005, #0005),  url(recursos/miembros/maiko.jpg) ;
     color:#ffe2b9;
     border-color:#ffe2b9;
 }
-.item_miembros:nth-child(4){
+.yordan{
     background-image:linear-gradient(#0005, #0005),  url(recursos/miembros/yordan.jpg) ;
     background-position: center;
     color:#00b4c4;
 }
-.item_miembros:nth-child(5) {
+.ramzes {
     background-image:linear-gradient(#0005, #0005),  url(recursos/miembros/ramz.jpg) ;
     color:#00b028;
 }
-.item_miembros:nth-child(6) {
+.yoan {
     background-image:linear-gradient(#0005, #0005),  url(recursos/miembros/yoan.jpg) ;
     color:#7ed0fb;
 }
-.item_miembros:nth-child(7) {
+.alberto {
     background-image:linear-gradient(#0005, #0005),  url(recursos/miembros/alberto.jpg) ;
     color:#f1bbfe;
+}
+.maikel {
+    background-image:linear-gradient(#0005, #0005),  url(recursos/miembros/maikel.webp) ;
+    color:#d99e40;
 }
 
 .item_miembros:hover p{
     opacity:0;
+    
 }
 /* Games */
 
@@ -570,7 +591,7 @@ footer {
 .grid_awards2024 {
 
     display: grid;
-    grid-template-columns:  repeat(auto-fill, minmax(120px,1fr));
+    grid-template-columns:  repeat(auto-fit, minmax(120px,1fr));
     grid-auto-rows: auto;
     grid-auto-columns: auto;
     gap: 10px;
@@ -621,9 +642,11 @@ footer {
 
 .item_awards2024 div img {
     width: 25px;
-    border-radius: 50px;
+    height: 25px;
+    border-radius: 100%;
     margin:0;
     padding:0;
+    object-fit: cover;
 }
 
 .item_awards2024 div h5 {
@@ -658,6 +681,7 @@ footer {
     margin: 15px 0 0 0;
     width:90%;
     border-radius: 10px;
+    border:1.5px solid #000;
 }
 
 .item_ganador p {
@@ -806,5 +830,14 @@ footer {
 @media screen and (min-width: 1000px) {
     :root {
         font-size: 13px;
+    }
+    
+    nav {
+        min-height: 14px;
+    }
+    
+    .item_miembros p {
+        font-size: 3rem;
+        padding:30px;
     }
 }
