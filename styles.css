@@ -67,6 +67,11 @@ h1 span {
     
 }
 
+hr {
+    align-self: stretch;
+    border: solid 1px #000;
+}
+
 nav {
     text-align: center;
     padding: 3px;
@@ -151,9 +156,10 @@ nav a.canal img {
 
 nav a.app {
     display:none;
-    text-align: start;
+    align-items: center;
     margin:10px;
     padding:10px;
+    flex-flow:column;
     position: relative;
     align-items: center;
     gap:6px;
@@ -176,6 +182,12 @@ nav a.app img {
     box-shadow: 0 0 10px #ddd3;
     border:1px solid #000;
     
+}
+
+nav a.app span {
+    text-align: start;
+    align-self: start;
+    font-weight:400;
 }
 
 nav .menu_button {
