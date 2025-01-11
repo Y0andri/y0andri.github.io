@@ -12,6 +12,10 @@
 
 :root {
     font-size: 16px;
+    background-image: url('recursos/background.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 * {
@@ -23,11 +27,7 @@
 * {-webkit-tap-highlight-color: transparent;}
 
 html {
-    background-image: url('recursos/background.jpg');
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
+    
 }
 
 body {
@@ -38,10 +38,7 @@ body {
     font-family: "pubgsans";
     color: #eee;
     background-color: #111c;
-}
-
-.main_wrapper {
-    width: 100%;
+    
 }
 
 footer, header {
@@ -60,7 +57,6 @@ h1 {
     font-size:  2rem;
     padding: 9px 9px 9px 38px;
     color: #f8e828;
-    backdrop-filter: blur(5px);
     text-shadow: 0 0 20px #f8e828aa;
     animation: zooming 1s linear infinite alternate;
 }
@@ -107,6 +103,7 @@ nav div {
     border-right:1px solid #111;
     border-radius: 0;
     box-shadow: 0 0 30px #ddd2;
+    z-index:100;
 }
 
 nav a {
@@ -218,11 +215,13 @@ nav div:hover .canal , nav div:hover .app{
 /*Main */ 
 
 .main_wrapper {
+    width: 100%;
     display: flex;
     gap: 10px;
     flex: 1;
     max-width: 1100px;
     margin:auto;
+    animation: aparecer 0.4s 0.5s backwards;
 }
 
 main {
@@ -332,15 +331,17 @@ footer {
     position: relative;
     width: 100%;
     height: 100%;
-    background: #0005;
+    background: #11111aaa;
     overflow: hidden;
     border-radius: 3px 3px 15px 15px;
     padding: 0 8px 8px 10px;
-    backdrop-filter: blur(70px);
     box-shadow: 0 0 20px 2px #fff2;
     border-top: 3px solid #ff2525;
     transition: 0.1s;
     bottom: 0;
+    animation: aparecer_margin backwards linear;
+    animation-timeline: view();
+    animation-range: cover 8% cover 20%;
 }
 
 .flex_photo:hover {
@@ -436,10 +437,10 @@ footer {
     padding: 5px;
     box-shadow: 0 0 20px #fff4;
     border: 1.2px solid;
-    animation: rgb_gradient 2.5s linear infinite alternate;
     background-position: center;
     background-size: cover;
     transition: 0.8s;
+    
 }
 
 
@@ -577,8 +578,7 @@ footer {
 #pestana_apuestas, #pestana_goty, #pestana_novedades {
     display:none;
     margin-top:20px;
-    animation-name: pestana_aparecer;
-    animation-duration: 0.5s;
+    animation: aparecer 0.5s both;
     
 }
 
@@ -628,7 +628,6 @@ footer {
 
 .item_awards2024 {
     background: radial-gradient(#fb9600, #fb5a00);
-    backdrop-filter: blur(30px);
     display: flex;
     justify-content: start;
     gap:9px;
@@ -835,9 +834,18 @@ footer {
 
 }
 
-@keyframes pestana_aparecer {
+@keyframes aparecer {
     from {
         opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@keyframes aparecer_margin {
+    from {
+        opacity:0;
+        margin-top:30px;
     }
     to {
         opacity:1;
