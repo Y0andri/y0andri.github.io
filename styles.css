@@ -755,78 +755,7 @@ footer {
     background: radial-gradient(#ff4746,#eb0200);
 }
 
-.caja_ventilador{
-    position:relative;
-    width:100%;
-    display: flex;
-    margin:auto;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    max-width: 600px;
-    gap:20px;
-    padding:10px;
-    background: #f8732e;
-    border:2px solid #fff;
-    border-radius:  20px 20px;
-}
 
-.caja_ventilador img {
-    display:block;
-    width:90%;
-    
-    border-radius: 100%;
-    border:2px solid #000;
-    box-shadow: 0 0 30px #0003;
-    animation:wuiu 0.5s both infinite linear;
-    animation-play-state: paused;
-    transition: 1s;
-    filter: hue-rotate(160deg);
-}
-
-.caja_ventilador p {
-    position: absolute;
-    color:#000;
-    font-family: Sans-Serif;
-    font-size: 13px;
-    width:80px;
-}
-
-.caja_ventilador p.frase_1 {
-    bottom:30px;
-    left:20px;
-    transform: rotate(-10deg);
-}
-
-.caja_ventilador p.frase_2 {
-    right:20px;
-    bottom:30px;
-    transform: rotate(10deg);
-}
-
-.caja_ventilador .boton_encender {
-    padding:20px;
-    color:#fff;
-    background-color: transparent;
-    font-size:20px;
-    border-radius:100px;
-    border:2px solid #111;
-    transition: 0.5s;
-}
-
-.caja_ventilador .boton_encender:has(input:checked) {
-    color:#fff;
-    border:2px #111 solid;
-    background-color: #111;
-}
-
-.caja_ventilador:has(.boton_encender input:checked)  img {
-    animation-play-state: running;
-}
-
-.caja_ventilador .boton_encender input {
-    display:none;
-}
 
 
 /* MUSIC */
@@ -846,7 +775,7 @@ footer {
     border-radius: 20px;
     width: 80%;
     margin: auto;
-    padding: 30px;
+    padding: 15px;
     box-shadow: 0 0 10px #f00a;
     max-width: 400px;
 }
@@ -886,6 +815,7 @@ footer {
     width: 100%;
     border-radius: 100px;
     box-shadow: 0 0 17px #000d;
+    
 }
 
 .music audio::-webkit-media-controls-panel{
@@ -925,6 +855,82 @@ footer {
     text-shadow: 0 0 0px #000;
 
 }
+
+/* SANDBOX */
+
+.caja_ventilador{
+    position:relative;
+    width:100%;
+    display: flex;
+    margin:auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 600px;
+    gap:20px;
+    padding:10px;
+    background: #f8732e;
+    border:2px solid #fff;
+    border-radius:  20px 20px;
+}
+
+.caja_ventilador img {
+    display:block;
+    width:90%;
+    border-radius: 100%;
+    border:2px solid #000;
+    box-shadow: 0 0 30px #0003;
+    animation:wuiu 0.5s both infinite linear;
+    animation-play-state: paused;
+    transition: 1s;
+    filter: hue-rotate(160deg) contrast(1.1);
+}
+
+.caja_ventilador p {
+    position: absolute;
+    color:#000;
+    font-family: Sans-Serif;
+    font-size: 13px;
+    width:80px;
+}
+
+.caja_ventilador p.frase_1 {
+    bottom:30px;
+    left:20px;
+    transform: rotate(-10deg);
+}
+
+.caja_ventilador p.frase_2 {
+    right:20px;
+    bottom:30px;
+    transform: rotate(10deg);
+}
+
+.caja_ventilador .boton_encender {
+    padding:20px;
+    color:#fff;
+    background-color: transparent;
+    font-size:20px;
+    border-radius:100px;
+    border:2px solid #111;
+    transition: 0.2s;
+}
+
+.caja_ventilador .boton_encender:has(input:checked) {
+    color:#fff;
+    border:2px #111 solid;
+    background-color: #111;
+}
+
+.caja_ventilador:has(.boton_encender input:checked)  img {
+    animation-play-state: running;
+}
+
+.caja_ventilador .boton_encender input {
+    display:none;
+}
+
+
 
 @keyframes sacudir {
     40% {
