@@ -22,12 +22,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    -webkit-tap-highlight-color: transparent;
 }
 
-* {-webkit-tap-highlight-color: transparent;}
-
 html {
-    
 }
 
 body {
@@ -119,7 +117,7 @@ nav a {
     letter-spacing: 0.7px;
     display: none;
     font-size: 0.9rem ;
-    line-height: 13px;
+    line-height: 16px;
     text-decoration: none;
     color: #ddd;
     font-weight: bold;
@@ -192,9 +190,8 @@ nav a.app span {
 }
 
 nav .menu_button {
-    width:35px;
     align-self: start;
-    filter:invert();
+    font-size: 33px;
 }
 
 nav a:has(.menu_button) {
@@ -202,9 +199,8 @@ nav a:has(.menu_button) {
 }
 
 
-nav img {
-    width: 26px;
-  filter: invert();
+nav i {
+    font-size: 26px;
 }
 
 .nav_btn_active {
@@ -213,7 +209,7 @@ nav img {
     color: #111;
 }
 
-.nav_btn_active img {
+.nav_btn_active i {
     filter:none;
 }
 
@@ -454,6 +450,7 @@ footer {
     background-position: center;
     background-size: cover;
     transition: 0.8s;
+    background-image:linear-gradient(#0005, #0005), var(--bg-direction) ;
 }
 
 
@@ -469,43 +466,31 @@ footer {
 }
 
 .derek {
-    background-image:linear-gradient(#0005, #0005),  url(recursos/miembros/derek.jpg) ;
     background-position: 0 60%;
     color:#da8606;
-    border-color: #da8606;
 }
 
 .cristian {
-    background-image:linear-gradient(#0005, #0005),  url(recursos/miembros/cristian.jpg) ;
     background-position: 0 20%;
     color: #ccc;
-    border-color: #ccc;
 }
 
 .maiko {
-    background-image:linear-gradient(#0005, #0005),  url(recursos/miembros/maiko.jpg) ;
     color:#ffe2b9;
-    border-color:#ffe2b9;
 }
 .yordan{
-    background-image:linear-gradient(#0005, #0005),  url(recursos/miembros/yordan.jpg) ;
-    background-position: center;
     color:#00b4c4;
 }
 .ramzes {
-    background-image:linear-gradient(#0005, #0005),  url(recursos/miembros/ramz.jpg) ;
     color:#00b028;
 }
 .yoan {
-    background-image:linear-gradient(#0005, #0005),  url(recursos/miembros/yoan.jpg) ;
     color:#7ed0fb;
 }
 .alberto {
-    background-image:linear-gradient(#0005, #0005),  url(recursos/miembros/alberto.jpg) ;
     color:#f1bbfe;
 }
 .maikel {
-    background-image:linear-gradient(#0005, #0005),  url(recursos/miembros/maikel.webp) ;
     color:#d99e40;
 }
 
@@ -517,17 +502,17 @@ footer {
 
 .div_juegosespera h2 {
     border-bottom: solid #d05d 1px;
-    color: #d05;
+    color: inherit;
     text-shadow: 0 0 20px #d057;
 }
 
 .div_juegosespera {
     margin:auto;
-    color: #d05;
-    border: #d05 solid 1px;
+    color:#0a0a0a;
+    border: #0a0a0a solid 1px;
     padding: 10px 14px;
     border-radius: 7px;
-    background-color: #0a0a0a;
+    background-color: #d05a;
     box-shadow: 0 0 20px 5px #d054;
     overflow: scroll;
     height: 50px;
@@ -541,7 +526,10 @@ footer {
 
 .div_juegosespera:hover, .div_juegosespera:focus {
     height: 490px;
-    width: 330px;
+    width: clamp(100px,100%,1200px);
+    color: #d05;
+    border: #d05 solid 1px;
+    background-color: #0a0a0a;
 }
 
 .div_juegosespera li {
@@ -760,14 +748,6 @@ footer {
 
 /* MUSIC */
 
-.bg_music {
-    width:100%;
-    height: 100vh;
-    margin:0;
-    backdrop-filter: blur(40px);
-    
-}
-
 
 
 .music {
@@ -880,7 +860,7 @@ footer {
     border-radius: 100%;
     border:2px solid #000;
     box-shadow: 0 0 30px #0003;
-    animation:wuiu 0.5s both infinite linear;
+    animation:wuiu 0.4s both infinite linear;
     animation-play-state: paused;
     transition: 1s;
     filter: hue-rotate(160deg) contrast(1.1);
