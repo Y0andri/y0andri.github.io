@@ -43,6 +43,10 @@ footer, header {
     width:100vw;
 }
 
+.material-symbols-outlined {
+    font-size: 28px;
+}
+
 /*Header */
 
 header {
@@ -199,18 +203,10 @@ nav a:has(.menu_button) {
 }
 
 
-nav i {
-    font-size: 26px;
-}
-
 .nav_btn_active {
     background-color: #fffd;
     border-radius: 4px ;
     color: #111;
-}
-
-.nav_btn_active i {
-    filter:none;
 }
 
 nav div:hover a {
@@ -297,9 +293,9 @@ footer {
     border: none;
 }
 
-.modal a img {
-    display: block;
-    width: 25px;
+.modal a i {
+    font-size: 22px;
+    color: #000;
 }
 
 .modal p {

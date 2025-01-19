@@ -6,41 +6,13 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Los Discipulos</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 	<link rel="stylesheet" href="styles.css">
 	<link rel="icon" href="icon.jpg" type="image/jpg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <header id="header"></header>
-	<script>
-
-
-
-
-
-        document.addEventListener("DOMContentLoaded", function() {
-
-
-            fetch('componentes/header.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('header').innerHTML = data;
-                    // Resaltar el enlace activo
-                    const navLinks = document.querySelectorAll('.nav a');
-                    const currentPage = window.location.pathname.split('/').pop();
-                    navLinks.forEach(link => {
-                        if (link.getAttribute('href') === currentPage) {
-                            link.classList.add('nav_btn_active');
-                        }
-                    });
-                });
-                fetch('componentes/footer.html')
-                   .then(response => response.text())
-                   .then(data => {
-                       document.getElementById('footer').innerHTML = data;
-                   });
-        });
-    </script>
 	<div class="main_wrapper">
 		<main>
         <h2>Música:</h2>
