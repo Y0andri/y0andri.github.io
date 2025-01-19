@@ -45,6 +45,7 @@ footer, header {
 
 .material-symbols-outlined {
     font-size: 28px;
+    user-select: none;
 }
 
 /*Header */
