@@ -45,26 +45,142 @@ footer, header {
     width:100vw;
 }
 
+hr {
+    border: solid 0.5px #fafaffaa;
+    margin-bottom:10px;
+}
+
+ul {
+    list-style: none;
+}
+
 /*Header */
 
+i {
+    font-size: 28px;
+    display: grid;
+    place-content: center;
+}
+
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #000;
     position: sticky;
     top:0;
     z-index: 200;
+    height: 55px;
+    width:100%;
+    padding:5px 9px ;
 }
 
-i {
-    font-size: 24px;
+.nav_openner {
+    padding:5px;
+    border-radius: 2px;
+    color: #fff;
+    background: radial-gradient(#c81904aa, #c81904dd);
 }
+
+header input {
+    display:none;
+}
+
+.nav {
+    display:none;
+    position: fixed;
+    top:0;
+    left:0;
+    width:50%;
+    max-width: 300px;
+    background-color: #111;
+    height: 100dvh;
+    z-index: 100;
+}
+
+.nav_openner:has(input:checked) ~ .nav {
+    display:block;
+    animation: menu 0.4s both ;
+}
+
+.nav:has(input:checked) {
+    display:block;
+    animation: menu_out 0.4s both;
+}
+
+.nav_closer {
+    color: #fafaff;
+    position: absolute;
+    top:20px;
+    right:10px;
+    border: 1px solid #fafaff;
+    border-radius: 5px;
+}
+
+.nav_closer i {
+    font-size: 30px;
+}
+
+.nav .nav_logo {
+    width:54px;
+    height:54px;
+    object-fit: cover;
+    background-color: #fff;
+    margin-top:10px;
+    margin-left:20px;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    filter: brightness(2)  contrast(2);
+}
+
+.nav ul {
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+    padding:2px;
+}
+
+.nav li {
+    padding:2px;
+    width:100%;
+}
+
+.nav ul a {
+    padding:4px;
+    display:flex;
+    font-family: Sans-Serif;
+    text-transform: capitalize;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fafaff;
+}
+
+.nav a p {
+    font-size: 0.7rem;
+}
+
+.nav .nav_btn_active {
+    color:#000;
+    background-color: #fafaff;
+    border-radius: 5px;
+}
+
+.condiciones {
+    margin: auto;
+    color: #aaa;
+    text-decoration: none;
+}
+
 
 h1 {
-    text-align: center;
     font-family: saiyasans;
     font-size:  2rem;
-    padding: 9px 9px 9px 38px;
     color: #f8e828;
     text-shadow: 0 0 20px #f8e828aa;
+    margin:auto;
+    text-align: center;
+    flex-grow: 1;
 }
 
 h1 span {
@@ -72,151 +188,10 @@ h1 span {
     text-shadow: 0 0 20px #f00c;
 }
 
-hr {
-    align-self: stretch;
-    border: solid 1px #000;
-}
-
-nav {
-    text-align: center;
-    padding: 3px;
-    
-}
-
-nav div {
-    position:absolute;
-    margin: auto;
-    display: flex;
-    justify-content: start;
-    list-style: none;
-    width: 44px;
-    flex-flow: column;
-    height: 40px;
-    z-index: 6;
-    top:18px;
-    left:5px;
-    overflow: hidden;
-    border:1px solid #ddd;
-    border-radius: 3px ;
-    transition: 0.1s;
-    gap:2px;
-}
-
- nav div:hover {
-    position:fixed;
-    background:   linear-gradient(  #211, #112,#212)  ;
-    top:0;
-    left:0px;
-    height:100vh;
-    width: 190px;
-    border: none;
-    border-right:1px solid #111;
-    border-radius: 0;
-    box-shadow: 0 0 30px #ddd2;
-    z-index:100;
-}
-
-nav a {
-    position: relative;
-    top:0;
-    font-family: "pubgsans";
-    letter-spacing: 0.7px;
-    font-size: 0.9rem ;
-    line-height: 16px;
-    text-decoration: none;
-    color: #ddd;
-    font-weight: bold;
-    padding: 3px;
-}
-
-nav a.canal {
-    display:none;
-    text-align: start;
-    margin:10px;
-    padding:10px;
-    position: relative;
-    align-items: center;
-    gap:6px;
-    padding:8px;
-    font-family: Arial;
-    letter-spacing: 0px;
-    background-color: #3ee433;
-    color:#121;
-    border-radius: 10px;
-    font-weight: 500;
-    border:1.2px solid #121;
-    box-shadow: 0 0 15px #3ee433aa;
-    text-shadow: 0 0 5px #dfd6;
-}
-
-nav a.canal img {
-    width:50px;
-    border-radius:100%;
-    filter:none;
-    box-shadow: 0 0 10px #1113;
-    border:1.2px solid #121;
-    
-}
-
-nav a.app {
-    display:none;
-    align-items: center;
-    margin:10px;
-    padding:10px;
-    flex-flow:column;
-    position: relative;
-    align-items: center;
-    gap:6px;
-    padding:8px;
-    font-family: Arial;
-    letter-spacing: 0px;
-    background-color: #1d59ec;
-    color:#000;
-    border-radius: 10px;
-    font-weight: 500;
-    border:1px solid #000;
-    box-shadow: 0 0 15px #1d59ecaa;
-    text-shadow: 0 0 5px #dfd6;
-}
-
-nav a.app img {
-    width:50px;
-    border-radius: 10px;
-    filter:none;
-    box-shadow: 0 0 10px #ddd3;
-    border:1px solid #000;
-    
-}
-
-nav a.app span {
-    text-align: start;
-    align-self: start;
-    font-weight:400;
-}
-
-nav .menu_button {
-}
-
-nav .menu_button i {
-    align-self: center;
-    font-size: 38px;
-}
 
 
 
-.nav_btn_active {
-    background-color: #fffd;
-    border-radius: 4px ;
-    color: #111;
-}
 
-nav div:hover a {
-    display:block;
-}
-
-nav div:hover .canal , nav div:hover .app{
-    display: flex;
-}
 /*Main */ 
 
 .main_wrapper {
@@ -248,11 +223,13 @@ h2 {
 
 footer {
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #ddd;
     margin-top: auto;
     background-color: #060606;
     padding: 30px;
+    font-family: Sans-Serif;
+    font-weight: 800;
 }
 
 /* Modal */
@@ -286,11 +263,13 @@ footer {
 
 .modal a {
     position: absolute;
+    display:block;
     right: 0;
     top: 0;
     margin: 7px;
     background-color: transparent;
     border: none;
+    text-decoration: none;
 }
 
 .modal a i {
@@ -967,15 +946,35 @@ footer {
     }
 }
 
+@keyframes menu {
+    from {
+        transform: translateX(-100%) ;
+    }
+    to {
+        transform: translateX(0) ;
+    }
+}
+
+@keyframes menu_out {
+    0% {
+        display: block;
+        transform: translateX(0) ;
+    }
+    98% {
+        display:block;
+    }
+    100% {
+        display: none;
+        transform: translateX(-110%) ;
+    }
+}
+
 
 @media screen and (min-width: 1000px) {
     :root {
         font-size: 13px;
     }
     
-    nav {
-        min-height: 14px;
-    }
     
     .item_miembros p {
         font-size: 3rem;
