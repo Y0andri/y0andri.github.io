@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: "saiyasans";
   src: url("recursos/fuentes/Saiyan-Sans.ttf") format("truetype");
@@ -9,6 +10,7 @@
   src: url("recursos/fuentes/PUBG-SANS.ttf") format("truetype");
   font-weight: 600;
 }
+
 
 :root {
     font-size: 16px;
@@ -43,11 +45,6 @@ footer, header {
     width:100vw;
 }
 
-.material-symbols-outlined {
-    font-size: 28px;
-    user-select: none;
-}
-
 /*Header */
 
 header {
@@ -55,6 +52,10 @@ header {
     position: sticky;
     top:0;
     z-index: 200;
+}
+
+i {
+    font-size: 24px;
 }
 
 h1 {
@@ -120,7 +121,6 @@ nav a {
     top:0;
     font-family: "pubgsans";
     letter-spacing: 0.7px;
-    display: none;
     font-size: 0.9rem ;
     line-height: 16px;
     text-decoration: none;
@@ -195,13 +195,13 @@ nav a.app span {
 }
 
 nav .menu_button {
-    align-self: start;
-    font-size: 33px;
 }
 
-nav a:has(.menu_button) {
-    display:block;
+nav .menu_button i {
+    align-self: center;
+    font-size: 38px;
 }
+
 
 
 .nav_btn_active {
@@ -217,7 +217,6 @@ nav div:hover a {
 nav div:hover .canal , nav div:hover .app{
     display: flex;
 }
-
 /*Main */ 
 
 .main_wrapper {
@@ -295,7 +294,7 @@ footer {
 }
 
 .modal a i {
-    font-size: 22px;
+    font-size: 28px;
     color: #000;
 }
 
