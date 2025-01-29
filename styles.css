@@ -14,13 +14,15 @@
 
 
 
-:root {
-    font-size: 16px;
+html {
+    font-size: 10px;
     background-image: url('recursos/background.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+
 
 * {
     box-sizing: border-box;
@@ -59,7 +61,7 @@ ul {
 /*Header */
 
 i {
-    font-size: 28px;
+    font-size: 2.8rem;
     display: grid;
     place-content: center;
 }
@@ -72,7 +74,6 @@ header {
     position: sticky;
     top:0;
     z-index: 200;
-    height: clamp(65px,5vw,90px);
     width:100%;
     padding:5px 9px ;
 }
@@ -121,7 +122,7 @@ header input {
 }
 
 .nav_closer i {
-    font-size: 30px;
+    font-size: 2.8rem;
 }
 
 .nav_closer:active {
@@ -171,7 +172,7 @@ header input {
 
 .nav a p {
     font-weight: 400;
-    font-size: 0.7rem;
+    font-size: 1rem;
 }
 
 .nav .nav_btn_active {
@@ -195,7 +196,7 @@ header input {
 }
 
 .nav .canal p {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     font-weight: 400;
 }
 
@@ -204,7 +205,7 @@ header input {
 }
 
 .nav .canal i {
-    font-size: 34px;
+    font-size: 3.6rem;
     color: #3ab125;
     transition: 0.4s color;
 }
@@ -212,12 +213,13 @@ header input {
 
 h1 {
     font-family: saiyasans;
-    font-size:  clamp(2.2rem, 4vw ,2.9rem);
+    font-size: 3.3rem;
     color: #f8e828;
     text-shadow: 0 0 20px #f8e828aa;
     margin:auto;
     text-align: center;
     flex-grow: 1;
+    padding:.2em;
 }
 
 h1 span {
@@ -242,14 +244,14 @@ h1 span {
 }
 
 main {
-    font-size: 1rem;
+    font-size: 1.1rem;
     flex: 1 ;
     padding:25px;
 }
 
 h2 {
     font-family: "pubgsans";
-    font-size: 1.7rem;
+    font-size: 2.5rem;
     text-align: center;
     font-weight: 800;
     margin: 0 0 15px 0;
@@ -262,7 +264,7 @@ h2 {
 
 footer {
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.4rem;
     color: #ddd;
     margin-top: auto;
     background-color: #060606;
@@ -320,19 +322,18 @@ footer {
 }
 
 .modal a i {
-    font-size: 28px;
     color: #000;
 }
 
 .modal p {
     color:rgb(37, 37, 37);
-    font-size: 1.1rem;
+    font-size: 1.6rem;
     text-wrap: pretty;
     font-weight: 600;
 }
 
 .modal div p:first-of-type {
-    font-size: 1.3rem;
+    font-size: 1.9rem;
     font-weight: bolder;
     color:#1f1e1e;
 }
@@ -400,14 +401,14 @@ footer {
 
 .flex_photo p {
     padding: 9px;
-    font-size: clamp(0.7rem , 4.5vw, 1.5rem );
+    font-size: 1.6rem ;
     font-weight: 600;
     color:#ff3535;
 }
 
 .flex_photo span {
     display: inline-block;
-    font-size: clamp(0.5rem, 3vw, 1.2rem);
+    font-size: 1rem;
     padding: 3px ;
     margin: 0 0 8px 10px;
     font-style: italic;
@@ -461,12 +462,11 @@ footer {
 .item_miembros {
     display: flex;
     justify-content: center;
-    font-size: 1.4rem;
+    font-size: 2.1rem;
     gap:10px;
     font-weight: 800;
     align-items: center;
     border-radius: 100px;
-    padding: 5px;
     box-shadow: 0 0 20px #fff4;
     border: 1.2px solid;
     background-position: center;
@@ -484,7 +484,6 @@ footer {
 .cristian {
     background-position: 0 20%;
     color: #ccc;
-    font-size: 1.2rem;
 }
 
 .maiko {
@@ -508,7 +507,7 @@ footer {
 
 .item_miembros p {
     font-size: inherit;
-    padding:19px;
+    padding: 1.3em;
     text-shadow: 0 -1px 9px #000;
     transition: 0.8s;
 
@@ -521,12 +520,12 @@ footer {
 /* Games */
 
 .div_juegosespera h3 {
-    font-size: 1.5rem;
+    font-size: 2.4rem;
     border-bottom: solid #d05d 1px;
     color: inherit;
+    padding: 0.3em;
     text-align: center;
     text-shadow: 0 0 20px #d057;
-    padding:7px;
     margin-bottom: 5px;
 }
 
@@ -558,7 +557,7 @@ footer {
 }
 
 .div_juegosespera li {
-    font-size: 1.1rem;
+    font-size: 1.75rem;
 }
 
 .div_juegosespera ul ::marker {
@@ -582,11 +581,11 @@ footer {
     border-top:2px solid #fb9600dd;
 }
 
-.div_awards2024 h3 {
+.div_awards2024 h4 {
     text-align: center;
     color: #111;
-    font-size: 1.9rem;
-    padding:9px;
+    font-size: 2.9rem;
+    padding: 0.4em;
     
 }
 
@@ -625,7 +624,7 @@ footer {
 }
 
 .pestana_container {
-    font-size: clamp(1rem ,4vw, 1.7rem);
+    font-size: 1.4rem;
     font-weight:700;
     background-color: #111;
     border-radius: 0 0 10px 10px;
@@ -665,7 +664,7 @@ footer {
     align-items: center;
     border-radius: 6px;
     padding: 3px 3px 10px 3px;
-    border: 1.5px solid #000;
+    border: 1px solid #eeea;
 }
 
 
@@ -673,28 +672,34 @@ footer {
     margin: 8px 0 0 0;
     width:90%;
     border-radius: 10px;
-    border: 1.3px solid #111;
+    border: 1px solid #eeea;
 }
 
 .item_awards2024 p {
     text-shadow: 0 0 3px #ddd1;
     color: #fff;
-    font-size: clamp(0.4rem, 4vw, 1.4rem);
+    font-size: 1.8rem;
     text-align: center;
 }
 
 .item_awards2024 h4 {
+    font-size: 1.3rem;
     color: #111;
+    font-weight: bold;
 }
 
 .item_awards2024 div {
     display: flex;
+    flex-direction: column;
+    border:1px solid #eee;
+    border-radius: 5px;
     align-items: center;
+    margin:auto;
     justify-content: center;
-    padding:0 30px 0 0;
     gap:5px;
+    padding:.4em;
+    background-color: #111;
     align-self: start;
-    margin-left: 25px;
 }
 
 .item_awards2024 div img {
@@ -703,11 +708,12 @@ footer {
     border-radius: 100%;
     margin:0;
     padding:0;
+    border:1px solid #eee;
     object-fit: cover;
 }
 
 .item_awards2024 div h5 {
-    font-size: clamp(12px, 2vw, 90%);
+    font-size: 1rem ;
     margin: 0px 0 0 0px;
 }
 
@@ -729,7 +735,7 @@ footer {
     flex-flow: column;
     align-items: center;
     padding: 3px 3px 10px 3px;
-    border: 1.5px solid #000;
+    border: 1.1px solid #eeea;
     margin:auto;
     border-radius:6px;
 }
@@ -739,21 +745,21 @@ footer {
     margin: 15px 0 0 0;
     width:90%;
     border-radius: 10px;
-    border:1.5px solid #000;
+    border:1.5px solid #eeea;
 }
 
 .item_ganador p {
     text-shadow: 0 0 3px #ddd1;
     color: #fff;
-    font-size: 1.3rem;
+    font-size: 2.7rem;
     text-align: center;
 }
 
 .a_awards {
     color:#ddd;
     margin:7px;
-    font-size: 0.9rem;
-    font-family: Times New Roman;
+    font-size: 1.3rem;
+    font-family: Sans-Serif, Comic Sans MS;
     font-weight: bold;
     text-decoration:none;
 }
@@ -801,7 +807,7 @@ footer {
     text-align: center;
     font-weight: 500;
     padding: 15px 0 15px 0;
-    font-size: 1.6rem;
+    font-size: 2.7rem;
     color: #111;
     text-shadow: 0 0 10px #d00;
     
@@ -817,7 +823,7 @@ footer {
     box-shadow: 0 0 17px #000a;
     text-decoration: none;
     color: #b00;
-    font-size: 1.3rem;
+    font-size: 1.7rem;
 }
 
 .music audio {
@@ -878,9 +884,10 @@ footer {
     max-width: 600px;
     gap:20px;
     padding:10px;
-    background: #f8732e;
-    border:2px solid #fff;
-    border-radius:  20px 20px;
+    background: #fff7;
+    backdrop-filter: blur(20px);
+    border:1.4px solid #000;
+    border-radius: 20px;
 }
 
 .caja_ventilador img {
@@ -892,34 +899,15 @@ footer {
     animation:wuiu 0.4s both infinite linear;
     animation-play-state: paused;
     transition: 1s;
-    filter: hue-rotate(160deg) contrast(1.1);
-}
-
-.caja_ventilador p {
-    position: absolute;
-    color:#000;
-    font-family: Sans-Serif;
-    font-size: 13px;
-    width:80px;
-}
-
-.caja_ventilador p.frase_1 {
-    bottom:30px;
-    left:20px;
-    transform: rotate(-10deg);
-}
-
-.caja_ventilador p.frase_2 {
-    right:20px;
-    bottom:30px;
-    transform: rotate(10deg);
+    filter: hue-rotate(140deg) contrast(1.1) ;
 }
 
 .caja_ventilador .boton_encender {
-    padding:20px;
-    color:#fff;
-    background-color: transparent;
-    font-size:20px;
+    padding: 1em;
+    color:#000;
+    background-color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
     border-radius:100px;
     border:2px solid #111;
     transition: 0.2s;
@@ -1023,15 +1011,20 @@ footer {
     }
 }
 
+@media screen and (min-width: 590px) {
+    html {
+        font-size: 14px;
+    }
+}
+
 
 @media screen and (min-width: 800px) {
+    html {
+        font-size: 16px;
+    }
     
     .grid_awards2024 {
         grid-template-columns: 1fr 1fr 1fr;
     }
     
-    .item_miembros p {
-        font-size: 3rem;
-        padding:30px;
-    }
 }
