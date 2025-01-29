@@ -519,53 +519,40 @@ footer {
 }
 /* Games */
 
-.div_juegosespera h3 {
+.juegosespera {
+    background-color: #0f0a0a;
+    padding: 0 14px;
+    border-radius: 5px;
+    border: 1px solid #d05;
+    color:#d05;
+}
+
+.juegosespera summary {
+    list-style: none;
+}
+
+.juegosespera h3 {
     font-size: 2.4rem;
-    border-bottom: solid #d05d 1px;
     color: inherit;
-    padding: 0.3em;
+    padding: 0.5em;
     text-align: center;
     text-shadow: 0 0 20px #d057;
-    margin-bottom: 5px;
 }
 
-.div_juegosespera {
-    margin:auto;
-    color:#d05;
-    border: #d05 solid 1px;
-    padding: 0 14px 14px 14px;
-    border-radius: 7px;
-    background-color: #0a0a0a;
-    box-shadow: 0 0 20px 5px #d054;
-    height: 45px;
-    width: 250px;
-    transition: 0.3s ;
-    overflow: hidden;
+.juegosespera[open] {
+    padding-bottom: 14px;
 }
 
-.div_juegosespera li:nth-child(2n) {
+.juegosespera li:nth-child(2n) {
     color: #ddf;
 }
 
-.div_juegosespera:hover, .div_juegosespera:focus {
-    height: 480px;
-    width: clamp(100px,100%,1200px);
-    color: #d05;
-    border: #d05 solid 1px;
-    background-color: #0a0a0a;
-    overflow: scroll;
-}
-
-.div_juegosespera li {
+.juegosespera li {
     font-size: 1.75rem;
 }
 
-.div_juegosespera ul ::marker {
+.juegosespera ul ::marker {
     content: none;
-}
-
-.muyesperado {
-    color: #f4f;
 }
 
 
