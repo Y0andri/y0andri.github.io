@@ -1,8 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Oxanium:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap');
 
 @font-face {
-  font-family: "Orbitron";
-  src: url("recursos/fuentes/Orbitron.ttf") format("truetype");
+  font-family: "Oxanium";
+  src: url("recursos/fuentes/Oxanium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "BoldBait";
+  src: url("recursos/fuentes/BoldBait.ttf") format("truetype");
 }
 
 @font-face {
@@ -251,7 +255,7 @@ h1 span {
 main {
     font-size: 1.1rem;
     flex: 1 ;
-    padding: 50px 25px 25px 25px;
+    padding: 5rem 25px 25px 25px;
 }
 
 .h2_fixer {
@@ -266,14 +270,15 @@ main {
     position: relative;
     top:-2px;
     display: block;
-    font-family: "pubgsans";
+    font-family: "BoldBait";
+    letter-spacing: .1rem;
     font-size: 2.5rem;
     font-weight: 800;
     text-align: center;
     width:fit-content;
     margin: auto;
     color: #fff;
-    padding: 5px 20px;
+    padding: .3em .9em;
     background-color: #050505;
     text-transform: uppercase;
     border-radius: 0 0 15px 15px;
@@ -563,7 +568,7 @@ footer {
 .juegosespera {
     background-color: #0f0a0a;
     padding: 0 14px;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 1px solid #d05;
     color:#d05;
 }
@@ -590,6 +595,7 @@ footer {
 
 .juegosespera li {
     font-size: 1.75rem;
+    font-weight: 500;
 }
 
 .juegosespera ul ::marker {
