@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Oxanium:wght@200..800&display=swap');
 
 @font-face {
+  font-family: "Orbitron";
+  src: url("recursos/fuentes/Orbitron.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "saiyasans";
   src: url("recursos/fuentes/Saiyan-Sans.ttf") format("truetype");
   font-weight: 600;
@@ -70,10 +75,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient( to right, #000 50%, #14161f , #14161f);
+    background-color: #050505;
     position: sticky;
     top:0;
-    z-index: 200;
+    z-index: 100;
     width:100%;
     padding:5px 9px ;
 }
@@ -98,7 +103,7 @@ header input {
     max-width: 300px;
     background-color: #111;
     height: 100dvh;
-    z-index: 100;
+    z-index: 200;
 }
 
 .nav_openner:has(input:checked) ~ .nav {
@@ -215,7 +220,7 @@ h1 {
     font-family: saiyasans;
     font-size: 3.3rem;
     color: #f8e828;
-    text-shadow: 0 0 20px #f8e828aa;
+    text-shadow: 0 0 15px #f8e828aa;
     margin:auto;
     text-align: center;
     flex-grow: 1;
@@ -246,18 +251,54 @@ h1 span {
 main {
     font-size: 1.1rem;
     flex: 1 ;
-    padding:25px;
+    padding: 50px 25px 25px 25px;
 }
 
-h2 {
+.h2_fixer {
+    position: fixed;
+    top: calc(5.8rem + .2em + 5px);
+    left:0;
+    width:100%;
+    z-index: 90;
+}
+
+.h2_fixer h2 {
+    position: relative;
+    top:-2px;
+    display: block;
     font-family: "pubgsans";
     font-size: 2.5rem;
-    text-align: center;
     font-weight: 800;
-    margin: 0 0 15px 0;
+    text-align: center;
+    width:fit-content;
+    margin: auto;
     color: #fff;
-    text-shadow: 0 0 20px #fffa;
+    padding: 5px 20px;
+    background-color: #050505;
     text-transform: uppercase;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 0px 10px #fff1;
+}
+
+h2::before, h2::after {
+    position: absolute;
+    content:'';
+    width: 18px;
+    height: 18px;
+    background-color: transparent;
+}
+
+h2::before {
+    top:1.8px;
+    left: -18px;
+    border-top-right-radius: 50px;
+    box-shadow: 4px -4px 0 4px #050505;
+}
+h2::after {
+    top:1.8px;
+    right: -18px;
+    border-top-left-radius: 50px;
+    box-shadow: -4px -4px 0 4px #050505;
 }
 
 /*Footer */ 
@@ -379,7 +420,7 @@ footer {
 .flex_photo:active {
     border-radius: 7px;
     border: 1.5px solid #ff2525;
-    z-index: 3;
+    z-index: 10;
     backdrop-filter: blur(10px);
     transform: scale(1.06) ;
 }
@@ -402,7 +443,7 @@ footer {
 .flex_photo p {
     padding: 9px;
     font-size: 1.6rem ;
-    font-weight: 600;
+    font-weight: 500;
     color:#ff3535;
 }
 
