@@ -22,6 +22,7 @@ html {
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+    overflow-x: hidden;
 }
 
 
@@ -33,9 +34,6 @@ html {
     -webkit-tap-highlight-color: transparent;
 }
 
-html {
-}
-
 body {
     display: flex;
     flex-direction: column;
@@ -45,6 +43,7 @@ body {
     color: #eee;
     background-color: #111c;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 footer, header {
@@ -73,7 +72,8 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: #050505;
-    position: sticky;
+    position: fixed;
+    left:0;
     top:0;
     z-index: 100;
     width:100%;
@@ -249,7 +249,7 @@ h1 span {
 main {
     font-size: 1.1rem;
     flex: 1 ;
-    padding: 5rem 15px 25px 15px;
+    padding: calc(5.8rem + .2em + 5px + 5rem) 15px 25px 15px;
 }
 
 .h2_fixer {
@@ -264,7 +264,7 @@ main {
     position: relative;
     top:-2px;
     display: block;
-    font-family: "Oxanium" , Sans-Serif, Verdana ;
+    font-family: "BoldBait" , Sans-Serif;
     letter-spacing: .1rem;
     font-size: 2.5rem;
     font-weight: bold;
@@ -329,7 +329,7 @@ footer {
 }
 
 .main_index {
-    padding: 10px;
+    padding: calc(6rem + .2em + 5px ) 10px 10px 10px;
     backdrop-filter: blur(20px);
     background: linear-gradient(40deg, #0b111baa, #0c0f12);
     box-shadow: 0 0 190px #0b111b;
@@ -615,27 +615,63 @@ footer {
 }
 
 .card_front_miembros {
-    font-size: 2.1rem;
+    font-size: 2.8rem;
     font-family: "BoldBait";
     font-weight: bolder;
+    overflow: hidden;
+    display: grid;
+    place-content: center;
     z-index: 1;
 }
 
 .card_front_miembros p {
-    
     font-size: inherit;
     padding: 5px;
     text-shadow: 0 -1px 9px #000;
+}
 
+.card_front_miembros p:before {
+    display: grid;
+    place-content: center;
+    content:"›";
+    position:absolute;
+    top:0;
+    right:0;
+    height: 100%;
+    width:2.5rem;
+    background-color: #111;
+    text-shadow: none;
 }
 
 .card_back_miembros {
+    display:grid;
+    place-content: center;
+    grid-template-columns: 2fr 1fr;
+    gap:5px;
     transform: rotateY(180deg);
     background-color: #0a0a11;
+    padding: 10px;
+    overflow: hidden;
 }
 
 .card_back_miembros p {
-    
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.card_back_miembros p:last-child {
+    font-weight: 400;
+    font-style: italic;
+    color: #eee;
+}
+
+.card_back_miembros b {
+    border-radius:4px;
+    padding:2px;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+    background: linear-gradient(to right, #f00, #ffc603, #ff0000);
 }
 
 /* Games */
