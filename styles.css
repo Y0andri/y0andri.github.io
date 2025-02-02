@@ -674,6 +674,10 @@ footer {
     background: linear-gradient(to right, #f00, #ffc603, #ff0000);
 }
 
+.yoan  b {
+    background: linear-gradient(to right, #278100, #ffc719);
+}
+
 /* Games */
 
 .juegosespera {
