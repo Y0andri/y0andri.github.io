@@ -17,6 +17,9 @@
             <div class="h2_fixer">
 		  <h2>Games</h2>
 		  </div>
+		  <div class="blog_header"><h5>Blog Games</h5>
+		  <div id="blog"></div>
+		  </div>
 		    <details open class="juegosespera">
 			<summary><h3>Juegos en Espera</h3></summary>
 			<ul>
@@ -188,10 +191,26 @@
 			</div>
 			<br>
 			<br>
-		   
+
 		</main>
 	</div>
 	<footer id="footer"></footer>
-	
+    <script>
+        // Función para cargar el contenido del archivo blog.html
+        function loadBlogContent() {
+            fetch('blog.html')
+                .then(response => response.text())
+                .then(data => {
+                    // Insertar el contenido dentro del elemento con id "blog"
+                    document.getElementById('blog').innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error al cargar el archivo:', error);
+                });
+        }
+
+        // Llamar a la función para cargar el contenido cuando la página se carga
+        window.onload = loadBlogContent;
+    </script>
 </body>
 </html>

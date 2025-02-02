@@ -624,13 +624,13 @@ footer {
     z-index: 1;
 }
 
-.card_front_miembros p {
+.card_front_miembros > p {
     font-size: inherit;
     padding: 5px;
     text-shadow: 0 -1px 9px #000;
 }
 
-.card_front_miembros p:before {
+.card_front_miembros > p:before {
     display: grid;
     place-content: center;
     content:"›";
@@ -641,6 +641,54 @@ footer {
     width:2.5rem;
     background-color: #111;
     text-shadow: none;
+    
+}
+
+.skill_medal {
+    position: absolute;
+    bottom:0;
+    left:0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: end;
+    justify-items: start;
+    width:100%;
+    height:35%;
+    padding:.3rem;
+    gap:.5rem;
+}
+
+.skill_medal > div {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    gap:5px;
+    align-items: center;
+    background-color:#111 ;
+    padding: 0 .5rem;
+    border-radius: 2px 2px 6px 6px;
+    border:1px solid;
+}
+
+.skill_medal img {
+    height: 3rem;
+    margin:.2rem;
+}
+
+.skill_medal p {
+    color:#dedede;
+    font-size: .8rem;
+    font-weight: 500;
+    font-family: "Oxanium";
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 0 0 5px solid #fff;
+}
+
+.cristian .skill_medal img:first-child {
+    background-color: #f00;
+    border-radius: 50%;
+    padding:0;
 }
 
 .card_back_miembros {
@@ -680,7 +728,81 @@ footer {
     color: #ff1515;
 }
 
+
 /* Games */
+
+.blog_header {
+    background-color: #111;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+    border:1px solid #4879ff;
+    position: relative;
+    overflow: hidden;
+}
+
+.blog_header h5 {
+    color: #4879ff;
+    padding:1rem;
+    font-family: "Comic Sans MS";
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.blog_header h5:before {
+    content:"(Bloguer: CYBERGHOST10)";
+    position: absolute;
+    bottom:.5rem;
+    left:.5rem;
+    font-weight: 500;
+    color: #4879ff;
+    font-size: .5rem;
+    
+}
+
+#blog {
+    display: flex;
+    position: relative;
+    flex-flow: column;
+    overflow:auto;
+    background-image: url('recursos/whatsapp-background.jpg');
+    background-size: 200px;
+    color: #eef;
+    font-weight: 500;
+    font-family: Verdana;
+    padding: 1.4rem .5rem;
+    border-top: 1px solid #4879ff;
+    height: 40rem;
+    gap:1.4rem;
+    z-index: 40;
+}
+
+#blog p {
+    font-size:1.2rem;
+    position: relative;
+    margin-left: 1.6rem;
+    width:fit-content;
+    max-width: 80%;
+    padding:.8rem;
+    background-color: #272e30;
+    border-radius: 5px;
+    box-shadow: .5rem .5rem 5px  #0004;
+}
+
+#blog p:before {
+    content:" ";
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background-color: inherit;
+    border-radius: 5px;
+    transform: skew(40deg);
+    top: 0px ;
+    left: -0.3rem;
+    z-index:-1;
+    box-shadow: 0 0 10px #000;
+}
 
 .juegosespera {
     background-color: #0f0a0a;
