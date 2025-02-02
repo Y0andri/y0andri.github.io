@@ -664,6 +664,8 @@ footer {
     font-weight: 400;
     font-style: italic;
     color: #eee;
+    display: grid;
+    place-content: center;
 }
 
 .card_back_miembros b {
@@ -674,8 +676,8 @@ footer {
     background: linear-gradient(to right, #f00, #ffc603, #ff0000);
 }
 
-.yoan  b {
-    background: linear-gradient(to right, #278100, #ffc719);
+.cristian .card_back_miembros p:first-child {
+    color: #ff1515;
 }
 
 /* Games */
