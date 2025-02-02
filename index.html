@@ -3,8 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<linkrel="preload" href="componentes/header.html" as="document" crossorigin />
-	<linkrel="preload" href="recursos/fuentes/Oxanium.ttf" as="font" type="font/ttf" crossorigin />
   	<link rel="preload" href="recursos/fuentes/Saiyan-Sans.ttf" as="font" type="font/ttf" crossorigin />
   	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 	<link rel="stylesheet" href="styles.css">
@@ -29,17 +27,76 @@
 <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
 
 <!-- Meta Tags Generated with https://metatags.io -->
+	<script src="script.js"></script>
 </head>
 <body>
-	<dialog open class="modal">
-		<div>
-			<a href="yoandri.html"> <i class="bi bi-x-circle"></i> </a>
-			<img class="yoandri_modal" src="recursos/modal/yoandri_modal.png" alt="">
-			<p>¡Hola!</p>
-			<p>Bienvenido a la página web de Los Discípulos de Yoandri el Negro, aquí encontrarás información sobre nuestra comunidad, además de las actualizaciones más recientes sobre la vida de <span>Yoandri</span></p>
+    	<header id="header"></header>
+	<div class="main_wrapper">
+    	<main class="main_index">
+		<img class="img_portada" src="recursos/LDY_portada.jpg">
+    	    <br>
+    	<div class="dialogue_yoandri"> 
+    	<img src="recursos/modal/yoandri_modal.png">
+    	<section>
+    	<p><b id="user_name"></b></p>
+    	<br>
+		<p>
+		    Bienvenido a la página web de <b>Los Discípulos de Yoandri el Negro</b>, aquí encontrarás información sobre nuestra comunidad, además de las actualizaciones más recientes sobre la vida de <b>Yoandri</b>.
+		</p>
+		</section>
 		</div>
-	</dialog>
-	
+		<br>
+		<br>
+		<ul class="secciones_grid">
+        <li>
+            <a class="" href="yoandri.html">
+				<div>
+				    <i class="bi bi-calendar2-range"></i>
+				<p>YOANDRI</p>
+				</div>
+				<p>Aqui se publican periódicamente actualizaciones sobre la vida de Yoandri y lo relacionado a él.</p>
+			</a>
+        </li>
+        <li>
+            <a class="" href="games.html"> 
+            <p>Sección donde se pueden consultar los juegos más esperados por la comunidad y actualizaciones importantes sobre el mundo de los videojuegos.</p>
+            <div>
+				<i class="bi bi-controller"></i>
+				<p>GAMES</p> 
+			</div>
+			</a>
+        </li>
+        <li>
+            <a class="" href="miembros.html"> 
+            <div>
+				<i class="bi bi-people"></i>
+				<p>MIEMBROS</p> 
+			</div>
+			<p>Aqui se muestran los miembros pertenecientes a la comunidad asi como una breve descripción de los mismos.</p>
+			</a>
+        </li>
+        <li>
+            <a class="" href="musica.html">
+                <p>En esta sección puedes escuchar y descargar la música que vayan creando los discípulos de Yoandri.</p>
+                <div>
+                <i class="bi bi-music-note-beamed"></i>
+			    <p>MUSICA</p>
+			    </div>
+			</a>
+        </li>
+        <li>
+            <a class="" href="sandbox.html">
+                <div>
+				<i class="bi bi-box"></i>
+				<p>SANDBOX</p>
+				</div>
+				<p>Lugar de la pagina web donde se probarán elementos y funcionalidades que están necesariamente relacionados con Yoandri.</p>
+			</a>
+        </li>
+		</main>
+	</div>
+	<footer id="footer"></footer>
+
 
 </body>
 </html>

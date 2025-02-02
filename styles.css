@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap');
-
 @font-face {
   font-family: "Oxanium";
   src: url("recursos/fuentes/Oxanium.ttf") format("truetype");
@@ -15,17 +14,11 @@
   font-weight: 600;
 }
 
-@font-face {
-  font-family: "pubgsans";
-  src: url("recursos/fuentes/PUBG-SANS.ttf") format("truetype");
-  font-weight: 600;
-}
-
 
 
 html {
     font-size: 10px;
-    background-image: url('recursos/background.jpg');
+    background: url('recursos/background.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -180,6 +173,7 @@ header input {
 }
 
 .nav a p {
+    margin:2px;
     font-weight: 400;
     font-size: 1rem;
 }
@@ -255,7 +249,7 @@ h1 span {
 main {
     font-size: 1.1rem;
     flex: 1 ;
-    padding: 5rem 25px 25px 25px;
+    padding: 5rem 15px 25px 15px;
 }
 
 .h2_fixer {
@@ -317,6 +311,7 @@ footer {
     padding: 30px;
     font-family: Sans-Serif;
     font-weight: 800;
+    z-index: 100;
 }
 
 .condiciones {
@@ -327,68 +322,139 @@ footer {
     text-decoration: none;
 }
 
-/* Modal */
+/* Inicio */
 
-.modal {
-    position: absolute;
-    width: 100vw;
-    height: 100%;
-    background-color: #00000057;
-    border: none;
-    backdrop-filter: blur(7px);
+.main_wrapper:has(.main_index) {
+    animation:none;
 }
 
-.modal div {
-    position: relative;
-    margin: auto;
-    margin-top: 100px;
-    padding: 20px 20px;
-    width: 70%;
-    max-width: 500px;
-    border-radius: 12px;
-    background-color: #eeea;
-    box-shadow: 0 0 30px 10px #11111136 ;
+.main_index {
+    padding: 10px;
+    backdrop-filter: blur(20px);
+    background: linear-gradient(40deg, #0b111baa, #0c0f12);
+    box-shadow: 0 0 190px #0b111b;
 }
 
-.modal .yoandri_modal {
+.main_index .dialogue_yoandri {
+    display: grid;
+    padding: 5px;
+    grid-template-columns: 6rem 1fr;
+    width: 95%;
+    margin: 2rem auto 0 auto;
+    overflow: hidden;
+    gap:4px;
+}
+
+.main_index .dialogue_yoandri > img {
     display: block;
-    margin: auto;
-    height: 200px ;
+    width:5.5rem; 
+    height: 5.5rem ;
+    padding:5px;
+    object-fit: contain;
+    margin-bottom:auto;
+    border:2px solid #111;
+    background-color: #eef;
+    border-radius:100%;
 }
 
-.modal a {
-    position: absolute;
-    display:block;
-    right: 0;
-    top: 0;
-    margin: 7px;
-    background-color: transparent;
-    border: none;
+.main_index #user_name {
+    font-size: 2.5rem;
+}
+
+.main_index .dialogue_yoandri section {
+    position: relative;
+    padding:7px;
+    background-color: #eef;
+    border-radius: 10px;
+}
+
+.main_index section p {
+    color: #111;
+    font-size: 1.7rem;
+    font-weight: 200;
+    word-wrap: justify;
+}
+
+.main_index section br ~ p:first-letter {
+    font-size: 2rem;
+}
+
+
+.main_index b {
+    font-weight: 900;
+}
+
+.main_index .img_portada {
+    position: relative;
+    width:100%;
+    border-radius: 4px;
+}
+
+.main_index .secciones_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 10rem;
+    background-color: #eef;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    gap:1rem;
+    padding: 1rem;
+    margin: 0 1rem;
+}
+
+.secciones_grid li {
+    border-radius: 10px;
+    background-color: #0c0f12ee;
+    padding: .5rem;
+    overflow: hidden;
+    border: 1px solid #fff;
+}
+
+.secciones_grid a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-around;
+    color: #eef;
+    margin: 0;
+    gap:1rem;
+    padding:1rem;
+    border: 1px solid;
+    border-radius: 8px;
     text-decoration: none;
 }
 
-.modal a i {
-    color: #000;
+.secciones_grid a[href="yoandri.html"] div {
+    color: #ff8215;
+    text-shadow: 0 0 10px #000;
+}
+.secciones_grid a[href="games.html"] div {
+    color: #1eb7ff;
+    text-shadow: 0 0 10px #000;
+}
+.secciones_grid a[href="miembros.html"] div {
+    color: #ff4343;
+    text-shadow: 0 0 10px #000;
+}
+.secciones_grid a[href="musica.html"] div {
+    color: #ff65f9;
+    text-shadow: 0 0 10px #000;
+}
+.secciones_grid a[href="sandbox.html"] div {
+    color: #ffdd4b;
+    text-shadow: 0 0 10px #000;
 }
 
-.modal p {
-    color:rgb(37, 37, 37);
-    font-size: 1.6rem;
-    text-wrap: pretty;
-    font-weight: 600;
+.secciones_grid a div p {
+    margin-top:1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-.modal div p:first-of-type {
-    font-size: 1.9rem;
-    font-weight: bolder;
-    color:#1f1e1e;
-}
-
-.modal div span {
-    padding: 2px;
-    color: #fffc;
-    background-color: #141414;
-    border-radius: 4px;
+.secciones_grid a > p {
+    font-size:1.2rem;
+    text-align: center;
+    font-weight: 300;
 }
 
 /* Yoandri */
@@ -409,10 +475,10 @@ footer {
     position: relative;
     width: 100%;
     height: 100%;
-    background: #11111aaa;
+    background: #11111a;
     overflow: hidden;
-    border-radius: 3px 3px 15px 15px;
-    padding: 0 8px 8px 10px;
+    border-radius: 3px 3px 10px 10px;
+    padding: 5px ;
     box-shadow: 0 0 20px 2px #fff2;
     border-top: 3px solid #ff2525;
     transition: 0.1s;
@@ -468,7 +534,7 @@ footer {
 .flex_photo img {
     display: block;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 15px 15px 10px 10px;
     margin:auto;
     border: 1px solid #111;
     filter: contrast(1.1) brightness(1.1);
@@ -501,68 +567,77 @@ footer {
     grid-template-columns: 1fr ;
     grid-auto-rows: 1fr;
     grid-auto-columns: auto;
-    gap: 5px;
+    gap: 1.5rem;
     margin:auto;
 }
 
-.item_miembros {
-    display: flex;
-    justify-content: center;
-    font-size: 2.1rem;
-    gap:10px;
-    font-weight: 800;
-    align-items: center;
-    border-radius: 100px;
-    box-shadow: 0 0 20px #fff4;
-    border: 1.2px solid;
-    background-position: center;
-    background-size: cover;
-    transition: 0.8s;
-    background-image:linear-gradient(#0005, #0005), var(--bg-direction) ;
+.card_miembros {
+    position: relative;
+    width:100%;
+    height:15rem;
+    transform-style: preserve-3d;
+    transition: 1s transform;
 }
 
+.card_cont_miembros:hover .card_miembros {
+    transform: perspective(700px) rotateY(180deg);
+}
 
 .derek {
-    background-position: 0 60%;
     color:#da8606;
-}
-
-.cristian {
-    background-position: 0 20%;
+}.cristian {
     color: #ccc;
-}
-
-.maiko {
+}.maiko {
     color:#ffe2b9;
-}
-.yordan{
+}.yordan{
     color:#00b4c4;
-}
-.ramzes {
+}.ramzes {
     color:#00b028;
-}
-.yoan {
+}.yoan {
     color:#7ed0fb;
-}
-.alberto {
+}.alberto {
     color:#f1bbfe;
-}
-.maikel {
+}.maikel {
     color:#d99e40;
 }
 
-.item_miembros p {
-    font-size: inherit;
-    padding: 1.3em;
-    text-shadow: 0 -1px 9px #000;
+.card_front_miembros, .card_back_miembros{
+    height:100%;
+    width:100%;
+    position: absolute;
+    border-radius: 10px;
+    border: 1.2px solid;
+    backface-visibility: hidden;
+    background-image:linear-gradient(#0005, #0005), var(--bg-direction) ;
+    background-position: center center;
+    background-size: cover;
     transition: 0.8s;
+}
+
+.card_front_miembros {
+    font-size: 2.1rem;
+    font-family: "BoldBait";
+    font-weight: bolder;
+    z-index: 1;
+}
+
+.card_front_miembros p {
+    
+    font-size: inherit;
+    padding: 5px;
+    text-shadow: 0 -1px 9px #000;
 
 }
 
-
-.item_miembros:hover p{
-    opacity: 0;
+.card_back_miembros {
+    transform: rotateY(180deg);
+    background-color: #0a0a11;
 }
+
+.card_back_miembros p {
+    
+}
+
 /* Games */
 
 .juegosespera {
@@ -1052,9 +1127,13 @@ footer {
 }
 
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
     html {
         font-size: 16px;
+    }
+    
+    .grid_miembros {
+        grid-template-columns: 1fr 1fr;
     }
     
     .grid_awards2024 {
