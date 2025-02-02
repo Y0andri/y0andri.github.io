@@ -264,10 +264,10 @@ main {
     position: relative;
     top:-2px;
     display: block;
-    font-family: "BoldBait";
+    font-family: "Oxanium" , Sans-Serif, Verdana ;
     letter-spacing: .1rem;
     font-size: 2.5rem;
-    font-weight: 800;
+    font-weight: bold;
     text-align: center;
     width:fit-content;
     margin: auto;
