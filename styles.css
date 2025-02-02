@@ -805,6 +805,12 @@ footer {
     box-shadow: 0 0 10px #000;
 }
 
+#blog p a {
+    color: #379fff;
+    animation: rgb-text 2s both infinite alternate;
+    text-shadow: 0 0 10px;
+}
+
 .juegosespera {
     background-color: #0f0a0a;
     padding: 0 14px;
@@ -1215,6 +1221,24 @@ footer {
     }
     55% {
         transform: rotate(0deg);
+    }
+}
+
+@keyframes rgb-text {
+    0% {
+        color:#379fff;
+    }
+    25% {
+        #f6ff37
+    }
+    50% {
+        color:#ff6363;
+    }
+    75% {
+        color:#63ff74;
+    }
+    100% {
+        color:#fc63ff;
     }
 }
 
