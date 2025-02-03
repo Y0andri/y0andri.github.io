@@ -43,7 +43,7 @@
         var elemento = document.getElementById('user_name');
         elemento.innerHTML = 'Hola de nuevo, ' + nombreGuardado + '!';
     }
-
 });
+
 
 
