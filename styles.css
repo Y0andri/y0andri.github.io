@@ -186,6 +186,19 @@ header input {
 
 .nav a i {
     font-size: 2.5rem;
+    position: relative;
+}
+
+.nav a i.bi-newspaper:after {
+    content:"";
+    width: .8rem;
+    height: .8rem;
+    position: absolute;
+    top:-.2rem;
+    border-radius: 50%;
+    background-color: #0f0;
+    border: 2px solid #000;
+    right: -.2rem;
 }
 
 .nav .nav_btn_active {
