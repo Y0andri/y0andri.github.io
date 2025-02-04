@@ -357,6 +357,14 @@ footer {
     text-decoration: none;
 }
 
+footer a {
+    color: #aaa;
+    font-size: 1.6rem;
+    text-decoration: none;
+    font-weight: 400;
+    margin-left: 1rem;
+}
+
 /* Inicio */
 
 .main_wrapper:has(.main_index) {
