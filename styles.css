@@ -1328,6 +1328,12 @@ footer {
     }
 }
 
+@media screen and (max-width: 360px) {
+    html {
+        font-size: 8px;
+    }
+}
+
 @media screen and (min-width: 590px) {
     html {
         font-size: 14px;
