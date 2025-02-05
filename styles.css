@@ -792,7 +792,8 @@ main:has(#blog) {
     display: -webkit-flex;
     display:flex;
     position: relative;
-    flex-flow: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
     overflow:auto;
     color: #eee;
     font-weight: 500;
@@ -800,6 +801,10 @@ main:has(#blog) {
     height: min-content;
     gap:.7rem;
     z-index: 5;
+}
+
+#blog > * {
+    margin-top: 0.6rem;
 }
 
 #blog div {
