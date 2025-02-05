@@ -1353,6 +1353,12 @@ footer a {
     }
 }
 
+@media screen and (min-width:479px) and (max-width:481px) {
+    .card_front_miembros, .card_back_miembros{
+        background-color: #f00;
+    }
+}
+
 @media screen and (min-width: 590px) {
     html {
         font-size: 14px;
