@@ -440,7 +440,7 @@ footer a {
 
 .secciones_grid li {
     border-radius: 10px;
-    background-color: #0c0f12ee;
+    background-color: #222;
     padding: .5rem;
     overflow: hidden;
     border: 1px solid #fff;
@@ -493,6 +493,7 @@ footer a {
 }
 
 .secciones_grid a > p {
+    color: #eef;
     font-size:1.2rem;
     text-align: center;
     font-weight: 300;
