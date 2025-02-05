@@ -371,9 +371,9 @@ footer a {
 }
 
 .main_index .dialogue_yoandri {
-    display: grid;
+    display: -webkit-flex;
+    display: flex;
     padding: 5px;
-    grid-template-columns: 6rem 1fr;
     width: 95%;
     margin: 2rem auto 0 auto;
     overflow: hidden;
@@ -486,10 +486,17 @@ footer a {
     text-shadow: 0 0 10px #000;
 }
 
+.secciones_grid a div {
+    text-align: center;
+}
+
 .secciones_grid a div p {
     margin-top:1rem;
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+.secciones_grid a div i {
 }
 
 .secciones_grid a > p {
@@ -511,7 +518,7 @@ footer a {
     max-width: 750px ;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    -webkit-gap: 20px;
 }
 
 .flex_photo {
@@ -526,6 +533,7 @@ footer a {
     border-top: 3px solid #ff2525;
     transition: 0.1s;
     bottom: 0;
+    margin-bottom: 0.4rem;
     animation: aparecer_margin backwards linear;
     animation-timeline: view();
     animation-range: cover 8% cover 20%;
@@ -675,6 +683,7 @@ footer a {
 .card_front_miembros > p {
     font-size: inherit;
     padding: 5px;
+    text-align: center;
     text-shadow: 0 -1px 9px #000;
 }
 
