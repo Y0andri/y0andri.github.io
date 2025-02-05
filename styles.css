@@ -343,26 +343,18 @@ footer {
     color: #ddd;
     margin-top: auto;
     background-color: #060606;
-    padding: 30px;
+    padding: 2rem;
     font-family: Sans-Serif;
     font-weight: 800;
     z-index: 100;
 }
 
-.condiciones {
-
-    margin: auto;
-
-    color: #aaa;
-    text-decoration: none;
-}
-
 footer a {
-    color: #aaa;
-    font-size: 1.6rem;
+    margin:.5rem;
+    font-size: 1.2rem;
+    font-weight: 300; 
+    color:#ccc; 
     text-decoration: none;
-    font-weight: 400;
-    margin-left: 1rem;
 }
 
 /* Inicio */
@@ -772,36 +764,13 @@ footer a {
 }
 
 
-/* Games */
+/* Blog */
 
-.blog_header {
-    background-color: #111;
-    border-radius: 10px;
-    margin-bottom: 3rem;
-    border:1px solid #4879ff;
-    position: relative;
-    overflow: hidden;
-}
-
-.blog_header h5 {
-    color: #4879ff;
-    padding:1rem;
-    font-family: "Comic Sans MS";
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    position: relative;
-}
-
-.blog_header h5:before {
-    content:"(Bloguer: CYBERGHOST10)";
-    position: absolute;
-    bottom:.5rem;
-    left:.5rem;
-    font-weight: 500;
-    color: #4879ff;
-    font-size: .5rem;
-    
+main:has(#blog) {
+    padding: calc(5.8rem + .2em + 5px + 5rem) 1rem 2rem 1.7rem;
+    background-color: #0a0a0a;
+    background-size: 200px;
+    border: .5rem solid #111;
 }
 
 #blog {
@@ -809,32 +778,27 @@ footer a {
     position: relative;
     flex-flow: column;
     overflow:auto;
-    background-image: url('recursos/whatsapp-background.jpg');
-    background-size: 200px;
-    color: #eef;
+    color: #eee;
     font-weight: 500;
     font-family: Verdana;
-    border-radius: 15px;
-    padding: 1.4rem .5rem;
-    border: 1px solid #eef;
-    height: calc(100dvh - 20rem);
-    gap:1.4rem;
-    z-index: 40;
+    height: min-content;
+    gap:.7rem;
+    z-index: 5;
 }
 
 #blog div {
     font-size:1.2rem;
     position: relative;
-    margin-left: 1.6rem;
     width:fit-content;
-    max-width: 80%;
-    padding: .9rem;
-    background-color: #272e30;
-    border-radius: 5px;
-    box-shadow: .5rem .5rem 5px  #0004;
+    border-radius: 0 5px 5px 0;
+    max-width: 95%;
+    border-left: .3rem solid ;
+    padding: .9rem 1.3rem;
+    background-color: #1a1a1a;
 }
 
 #blog div:before {
+    display:none;
     content:" ";
     position: absolute;
     width: 2rem;
@@ -844,7 +808,7 @@ footer a {
     transform: skew(40deg);
     top: 0px ;
     left: -0.3rem;
-    z-index:-1;
+    z-index:-4;
     box-shadow: 0 0 10px #000;
 }
 
@@ -861,15 +825,17 @@ footer a {
 #blog div:has(img) {
     display:flex;
     flex-direction: column;
-    padding: .5rem;
-    border-radius: 9px 14px 14px 14px;
+    padding: .5rem 1.3rem;
+    border-radius: 0 5px 5px 0;
 }
 
 #blog div img {
     margin-bottom: .5rem ;
-    border-radius: 14px;
+    border-radius: 6px;
     width:100%;
 }
+
+/* Games */
 
 .juegosespera {
     background-color: #0f0a0a;
