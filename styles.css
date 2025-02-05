@@ -479,6 +479,10 @@ footer a {
     color: #ffdd4b;
     text-shadow: 0 0 10px #000;
 }
+.secciones_grid a[href="blog_page.html"] div {
+    color: #67ff66;
+    text-shadow: 0 0 10px #000;
+}
 
 .secciones_grid a div p {
     margin-top:1rem;
