@@ -41,7 +41,7 @@ body {
     align-items: center;
     font-family: "Oxanium";
     color: #eee;
-    background-color: #111c;
+    background-color: rgba(20,20,20,0.658);
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
@@ -781,7 +781,7 @@ footer a {
 
 /* Blog */
 
-main:has(#blog) {
+.main_blog {
     padding: calc(5.8rem + .2em + 5px + 5rem) 1rem 2rem 1.7rem;
     background-color: #0a0a0a;
     background-size: 200px;
