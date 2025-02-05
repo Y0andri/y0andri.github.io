@@ -838,14 +838,6 @@ main:has(#blog) {
     text-shadow: 0 0 10px;
 }
 
-#blog div:has(img) {
-    display: -webkit-flex;
-    display:flex;
-    flex-direction: column;
-    padding: .5rem 1.3rem;
-    border-radius: 0 5px 5px 0;
-}
-
 #blog div img {
     margin-bottom: .5rem ;
     border-radius: 6px;
