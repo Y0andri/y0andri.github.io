@@ -789,17 +789,12 @@ main:has(#blog) {
 }
 
 #blog {
-    display: -webkit-flex;
-    display:flex;
     position: relative;
-    -webkit-flex-direction: column;
-    flex-direction: column;
     overflow:auto;
     color: #eee;
     font-weight: 500;
     font-family: Verdana;
     height: min-content;
-    gap:.7rem;
     z-index: 5;
 }
 
