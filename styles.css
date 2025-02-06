@@ -513,7 +513,6 @@ footer a {
 
 .flex_gallery {
     margin: auto;
-    display:-webkit-flex;
     display: flex;
     max-width: 750px ;
     flex-direction: column;
