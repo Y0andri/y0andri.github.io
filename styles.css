@@ -518,7 +518,7 @@ footer a {
     max-width: 750px ;
     flex-direction: column;
     align-items: center;
-    -webkit-gap: 20px;
+    -webkit-gap: 2rem;
 }
 
 .flex_photo {
@@ -533,7 +533,6 @@ footer a {
     border-top: 3px solid #ff2525;
     transition: 0.1s;
     bottom: 0;
-    margin-bottom: 0.4rem;
     animation: aparecer_margin backwards linear;
     animation-timeline: view();
     animation-range: cover 8% cover 20%;
@@ -1358,6 +1357,15 @@ footer a {
 }
 
 @supports not (selector(:has)) {
+    
+    .flex_photo {
+        margin-bottom: 1.3rem;
+        -webkit-box-shadow: 0 0 20px rgba(250,250,255,0.200);
+    }
+    
+    .flex_photo p {
+        font-weight: 600;
+    }
     
     .main_blog {
         background-color: #111;
