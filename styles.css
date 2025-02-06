@@ -1356,7 +1356,7 @@ footer a {
     }
 }
 
-@supports not (selector(:has)) {
+@supports not (display: grid) {
     
     .flex_photo {
         margin-bottom: 1.3rem;
