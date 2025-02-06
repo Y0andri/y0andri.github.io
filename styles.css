@@ -816,7 +816,6 @@ footer a {
     border-left: .3rem solid ;
     padding: .9rem 1.3rem;
     background-color: #1a1a1a;
-    box-shadow: 0 0 10px #fff6;
 }
 
 #blog div:before {
@@ -1355,6 +1354,22 @@ footer a {
     
     html {
         background-size: contain;
+    }
+    
+    .card_front_miembros {
+        display: -webkit-flex;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .card_back_miembros {
+        display: -webkit-flex;
+        display: flex;
+    }
+    
+    .card_back_miembros p:nth-child(2) {
+        
     }
     
     .flex_photo {
