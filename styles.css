@@ -697,6 +697,7 @@ footer a {
     background-color: #111;
     transform-style: preserve-3d;
     transition: 1s transform;
+    border-radius:10px;
 }
 
 .card_cont_miembros:hover .card_miembros {
@@ -756,8 +757,13 @@ footer a {
 .card_front_miembros > p:before {
     margin:auto;
     content:"›";
-    padding-top: ;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position:absolute;
+    border-top-right-radius: 10px ;
+    border-bottom-right-radius: 10px;
     top:0;
     right:0;
     height: 100%;
