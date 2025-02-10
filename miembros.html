@@ -131,34 +131,5 @@
 		</main>
 	</div>
 	<footer id="footer"></footer>
-	
-    <script>
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    // Detectar la versión de Chrome
-    var isChrome = !!window.chrome && !!window.chrome.webstore;
-    var chromeVersion = isChrome ? navigator.userAgent.match(/Chrome\/(\d+)/) : null;
-    
-    if (chromeVersion && parseInt(chromeVersion[1]) === 50) {
-        // Eliminar el CSS original si existe
-        var oldCss = document.querySelector("link[href='styles.css']");
-        if (oldCss) {
-            oldCss.remove();
-        }
-
-        // Cargar el CSS compatible con Chrome 50
-        var newCss = document.createElement("link");
-        newCss.rel = "stylesheet";
-        newCss.href = "styles_fixed.css";
-        document.head.appendChild(newCss);
-
-        // Cargar el JS compatible con Chrome 50
-        var script = document.createElement("script");
-        script.src = "script_fixed.js";
-        document.body.appendChild(script);
-    }
-});
-</script>
 </body>
 </html>
