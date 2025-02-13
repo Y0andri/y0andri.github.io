@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>	
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="preload" href="recursos/fuentes/Saiyan-Sans.ttf" as="font" type="font/ttf" crossorigin />
+  	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="icon" href="recursos/icon.png" type="image/jpg" sizes="16x16">
+	<script src="script.js"></script>
+	<!-- Primary Meta Tags -->
+<title>Los Discípulos de Yoandri el Negro</title>
+<meta name="title" content="Los Discípulos de Yoandri el Negro" />
+<meta name="description" content="Aquí encontrarás información sobre nuestra comunidad, además de las actualizaciones más recientes sobre la vida de Yoandri." />
+</head>
+<body>
+    <div id="passwordForm">
+        <h5>Acceso restringido</h5>
+        <p>Ingresa la contraseña para continuar:</p>
+        <input type="password" id="passwordInput" placeholder="Contraseña" required>
+        <button onclick="checkPassword()">Acceder</button>
+        <p id="errorMessage">Socio si no te sabes la contraseña para que entras?</p>
+    </div>
+    <header id="header" ></header>
+    <div class="main_wrapper" id="protectedContent">
+        <main>
+            <div class="h2_fixer">
+                <h2>Documentos</h2>
+            </div>
+            
+            <div class="grid_documents">
+            <div class="documents_element">
+            <iframe 
+                src="https://docs.google.com/viewer?url=https://y0andri.github.io/recursos/pdf/Historia TCP 11no.docx&embedded=true"
+                width="100%" 
+                height="fit-content">
+            </iframe>
+            <p>Historia TCP 11no</p>
+            </div>
+            <div class="documents_element">
+            <iframe 
+                src="https://docs.google.com/viewer?url=https://y0andri.github.io/recursos/pdf/Física TCP 11no.docx&embedded=true"
+                width="100%" 
+                height="fit-content">
+            </iframe>
+            <p>Fisica TCP 11no (incompleto)</p>
+            </div>
+            <div class="documents_element">
+            <iframe 
+                src="https://docs.google.com/viewer?url=https://y0andri.github.io/recursos/pdf/Geografía TCP 11no.docx&embedded=true"
+                width="100%" 
+                height="fit-content">
+            </iframe>
+            <p>Geografía TCP 11no</p>
+            </div>
+            
+            </div>
+        </main>
+    </div>
+    <footer id="footer"></footer>
+
+    <script>
+        // Función para verificar la contraseña
+        function checkPassword() {
+            const correctPassword = "1234"; // Contraseña correcta
+            const passwordInput = document.getElementById("passwordInput").value;
+            const errorMessage = document.getElementById("errorMessage");
+            const protectedContent = document.getElementById("protectedContent");
+            const passwordForm = document.getElementById("passwordForm");
+
+            if (passwordInput === correctPassword) {
+                // Si la contraseña es correcta, muestra el contenido protegido
+                protectedContent.style.display = "block";
+                passwordForm.style.display = "none"; // Oculta el formulario
+
+                // Guarda en localStorage la hora en que se ingresó la contraseña correctamente
+                const expirationTime = new Date().getTime() + 30 * 60 * 1000; // 30 minutos
+                localStorage.setItem("passwordExpiration", expirationTime);
+            } else {
+                // Si la contraseña es incorrecta, muestra el mensaje de error
+                errorMessage.style.display = "block";
+            }
+        }
+
+        // Función para verificar si la contraseña ya fue ingresada y no ha expirado
+        function checkIfPasswordIsValid() {
+            const expirationTime = localStorage.getItem("passwordExpiration");
+            const currentTime = new Date().getTime();
+
+            if (expirationTime && currentTime < expirationTime) {
+                // Si la contraseña fue ingresada y no ha expirado, muestra el contenido protegido
+                document.getElementById("protectedContent").style.display = "block";
+                document.getElementById("passwordForm").style.display = "none";
+            } else {
+                // Si la contraseña no fue ingresada o ha expirado, muestra el formulario
+                document.getElementById("protectedContent").style.display = "none";
+                document.getElementById("passwordForm").style.display = "block";
+                localStorage.removeItem("passwordExpiration"); // Limpia el localStorage
+            }
+        }
+
+        // Verificar al cargar la página
+        window.onload = checkIfPasswordIsValid;
+    </script>
+</body>
+</html>

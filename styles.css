@@ -96,11 +96,11 @@ header input {
     position: fixed;
     top:0;
     left:0;
-    width:50%;
-    max-width: 300px;
+    width:55%;
+    max-width: 400px;
     background-color: #111;
     height: 100vh;
-    z-index: 200;
+    z-index: 300;
 }
 
 .nav_openner:has(input:checked) ~ .nav {
@@ -866,7 +866,7 @@ footer a {
 /* Blog */
 
 .main_blog {
-    padding: calc(5.8rem + .2em + 5px + 5rem) 1rem 2rem 1.7rem;
+    padding: calc(5.8rem + .2em + 5px + 5rem) 0rem 2rem 0rem;
     background-color: #0a0a0a;
     background-size: 200px;
     border: .5rem solid #111;
@@ -875,41 +875,39 @@ footer a {
 #blog {
     position: relative;
     overflow:auto;
-    color: #eee;
-    font-weight: 500;
-    font-family: Verdana;
-    height: min-content;
+    color: #112;
+    font-family: Sans-Serif;
+    padding:1.7rem;
+    font-weight: 700;
     z-index: 5;
 }
 
 #blog > * {
-    margin-top: 0.6rem;
+    margin-top: 0.8rem;
 }
 
 #blog div {
     font-size:1.2rem;
     position: relative;
     width:fit-content;
-    border-radius: 0 15px 15px 0;
+    border-radius: 15px;
     max-width: 95%;
-    border-left: .3rem solid ;
     padding: .9rem 1.3rem;
-    background-color: #1a1a1a;
+    background-color: #eef;
 }
 
 #blog div:before {
-    display:none;
     content:" ";
     position: absolute;
-    width: 2rem;
-    height: 2rem;
-    background-color: inherit;
-    border-radius: 5px;
-    transform: skew(40deg);
-    top: 0px ;
-    left: -0.3rem;
-    z-index:-4;
-    box-shadow: 0 0 10px #000;
+    width: 1rem;
+    height: 1rem;
+    background-color: #eef;
+    border-radius: 50%;
+    top: -0.4rem ;
+    left: -1rem;
+    margin:0;
+    padding:0;
+    
 }
 
 #blog p {
@@ -918,7 +916,9 @@ footer a {
 
 #blog div a {
     color: #379fff;
-    animation: rgb-text 2s both infinite alternate;
+    animation: rgb-text 5s both infinite alternate;
+    text-decoration: none;
+    border-bottom: 0.1rem dashed;
     text-shadow: 0 0 10px;
 }
 
@@ -1327,7 +1327,141 @@ footer a {
     display:none;
 }
 
+/* Docs */
 
+
+#protectedContent {
+    display: none;
+}
+
+#passwordForm {
+    position: absolute;
+    top:30%;
+    padding: 2rem;
+    width: 90%;
+    font-family: "Oxanium";
+    background-color: rgb(6,8,11);
+    color:#eee;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 2rem;
+    text-align: center;
+    box-shadow: 0 0 0px 3000px  #111a;
+}
+
+#passwordForm h5 {
+    font-size: 3rem;
+    padding: 1rem 0;
+    color: #c00;
+    border-bottom:0.15rem solid ;
+}
+
+#passwordForm p {
+    font-size: 1.5rem;
+    margin:1rem;
+    padding:1rem;
+    font-weight: 600;
+}
+
+#passwordForm input {
+    position: relative;
+    padding: 1.3rem;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius:10px;
+    outline:none;
+    background-color: transparent;
+    color:#eee;
+    box-sizing: border-box;
+    border:0.2rem solid #c00;
+    box-shadow: 0 0 10px #c00c;
+    
+}
+
+#passwordForm button {
+    padding: 1.5rem 2rem;
+    box-shadow: 0 0 20px #c00c;
+    margin-top:2rem;
+    font-size: 1.4rem;
+    font-family: inherit;
+    font-weight: 700;
+    background-color: #c00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+#passwordForm button:hover {
+    background-color: #eee;
+    color:#c22;
+    box-shadow: none;
+}
+
+p#errorMessage {
+    color: #fff;
+    font-size:1.4rem;
+    font-weight: 400;
+    border-radius: 0.4rem;
+    padding:0.5rem;
+    width:fit-content;
+    max-width: 70%;
+    margin:1.3rem  auto 1rem auto;
+    display: none;
+}
+
+.grid_documents {
+    display:-webkit-flex;
+    display: flex;
+    flex-flow: column;
+    justify-content: start;
+}
+
+.documents_element {
+    border-radius: 1rem;
+    background-color: #111;
+    color:rgb(30,109,248);
+    margin:0.4rem;
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.6rem;
+    border:0.15rem solid;
+}
+
+.documents_element iframe {
+    background-color: #fff;
+    color:#fff;
+    border:0.15rem solid rgb(30,109,248);
+    border-radius: 0.9rem;
+}
+
+.documents_element p {
+    padding:1rem;
+}
+
+
+@keyframes nain {
+    0% {
+        left:0;
+    }
+    25% {
+        left: 0.5rem;
+    }
+    
+    50% {
+        left:-0.5rem;
+    }
+    
+    75% {
+        left: 0.5rem;
+    }
+    
+    100% {
+        left:0;
+    }
+}
 
 @keyframes sacudir {
     40% {
@@ -1346,19 +1480,19 @@ footer a {
 
 @keyframes rgb-text {
     0% {
-        color:#379fff;
+        color:rgb(0,46,173);
     }
     25% {
-        #f6ff37
+        color: rgb(173,152,0);
     }
     50% {
-        color:#ff6363;
+        color:rgb(173,0,0);
     }
     75% {
-        color:#63ff74;
+        color:rgb(0,173,29);
     }
     100% {
-        color:#fc63ff;
+        color:rgb(173,0,149);
     }
 }
 
@@ -1432,7 +1566,8 @@ footer a {
 @supports not (display: grid) {
     
     html {
-        background-size: contain;
+        background: none;
+        background-color: rgb(13,14,29);
     }
     
     .card_front_miembros {
@@ -1465,9 +1600,7 @@ footer a {
     }
     
     #blog div {
-        border-top: 0.07rem solid #aaa;
-        border-right: 0.07rem solid #aaa;
-        border-bottom: 0.07rem solid #aaa;
+        
     }
 
 
