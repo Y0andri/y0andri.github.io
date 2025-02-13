@@ -1335,15 +1335,14 @@ footer a {
 }
 
 #passwordForm {
-    position: absolute;
-    top:30%;
+    position: relative;
     padding: 2rem;
     width: 90%;
     font-family: "Oxanium";
     background-color: rgb(6,8,11);
     color:#eee;
     max-width: 500px;
-    margin: 0 auto;
+    margin: auto auto 0 auto;
     border-radius: 2rem;
     text-align: center;
     box-shadow: 0 0 0px 3000px  #111a;
@@ -1358,7 +1357,7 @@ footer a {
 
 #passwordForm p {
     font-size: 1.5rem;
-    margin:1rem;
+    margin:2.5rem 1rem 1rem 1rem;
     padding:1rem;
     font-weight: 600;
 }
@@ -1379,9 +1378,10 @@ footer a {
 }
 
 #passwordForm button {
+    position: relative;
     padding: 1.5rem 2rem;
     box-shadow: 0 0 20px #c00c;
-    margin-top:2rem;
+    margin-top:1.3rem;
     font-size: 1.4rem;
     font-family: inherit;
     font-weight: 700;
@@ -1391,6 +1391,32 @@ footer a {
     border-radius: 5px;
     cursor: pointer;
     transition: 0.1s;
+}
+
+.loading_Contrasena {
+    display: flex;
+    padding:0.3rem;
+    width:100%;
+    margin-top:0.4rem;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.loading_Contrasena img {
+    display: block;
+    width:2.3rem;
+    background-color: #f00;
+    border-radius: 50%;
+    border:0.1rem solid #f00;
+    animation: loop 1.3s both infinite linear ;
+}
+
+.loading_Contrasena b {
+    display: block;
+    color: #f00;
+    margin:0.5rem auto 0 auto;
+    
 }
 
 #passwordForm button:hover {
@@ -1409,6 +1435,10 @@ p#errorMessage {
     max-width: 70%;
     margin:1.3rem  auto 1rem auto;
     display: none;
+}
+
+#protectedContent iframe {
+    height: 40rem;
 }
 
 .grid_documents {
@@ -1439,6 +1469,15 @@ p#errorMessage {
 
 .documents_element p {
     padding:1rem;
+}
+
+@keyframes loop {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 
