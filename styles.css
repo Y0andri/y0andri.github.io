@@ -237,8 +237,9 @@ header input {
 }
 
 
-h1 {
+#title_header {
     font-family: saiyasans;
+    text-decoration: none;
     font-size: 3.3rem;
     color: #f8e828;
     text-shadow: 0 0 15px #f8e828aa;
@@ -248,7 +249,7 @@ h1 {
     padding:.2em;
 }
 
-h1 span {
+#title_header span {
     color: #f00;
     text-shadow: 0 0 20px #f00c;
 }
@@ -287,7 +288,9 @@ main {
     padding: calc(5.8rem + .2em + 5px + 5rem) 15px 25px 15px;
 }
 
-.h2_fixer {
+
+
+.h1_fixer {
     position: fixed;
     top: calc(5.8rem + .2em + 5px);
     left:0;
@@ -295,7 +298,7 @@ main {
     z-index: 90;
 }
 
-.h2_fixer h2 {
+.h1_fixer h1 {
     position: relative;
     top:-2px;
     display: block;
@@ -314,7 +317,7 @@ main {
     box-shadow: 0 0px 10px #fff1;
 }
 
-h2::before, h2::after {
+.h1_fixer h1::before,.h1_fixer h1::after {
     position: absolute;
     content:'';
     width: 18px;
@@ -322,13 +325,13 @@ h2::before, h2::after {
     background-color: transparent;
 }
 
-h2::before {
+.h1_fixer h1::before {
     top:1.8px;
     left: -18px;
     border-top-right-radius: 50px;
     box-shadow: 4px -4px 0 4px #050505;
 }
-h2::after {
+.h1_fixer h1::after {
     top:1.8px;
     right: -18px;
     border-top-left-radius: 50px;
@@ -368,6 +371,16 @@ footer a {
     backdrop-filter: blur(20px);
     background: linear-gradient(40deg, #0b111baa, #0c0f12);
     box-shadow: 0 0 190px #0b111b;
+}
+
+.main_index h2 {
+    margin: 2rem 0 1rem 0;
+    padding:0.4rem;
+    border-radius: 0.5rem;
+    width:100%;
+    border-top: 0.1rem solid;
+    text-align: center;
+    font-size: 2.3rem;
 }
 
 .main_index .dialogue_yoandri {
@@ -417,6 +430,15 @@ footer a {
 
 .main_index b {
     font-weight: 900;
+    font-size: inherit;
+    color:inherit;
+}
+
+.main_index h1 {
+    font-weight: 900;
+    font-size: 1.7rem;
+    color: #111;
+    font-family: inherit;
 }
 
 .main_index .img_portada {
@@ -461,27 +483,27 @@ footer a {
     text-decoration: none;
 }
 
-.secciones_grid a[href="yoandri.html"] div {
+.secciones_grid a[href="https://y0andri.github.io/yoandri.html"] div {
     color: #ff8215;
     text-shadow: 0 0 10px #000;
 }
-.secciones_grid a[href="games.html"] div {
+.secciones_grid a[href="https://y0andri.github.io/games.html"] div {
     color: #1eb7ff;
     text-shadow: 0 0 10px #000;
 }
-.secciones_grid a[href="miembros.html"] div {
+.secciones_grid a[href="https://y0andri.github.io/miembros.html"] div {
     color: #ff4343;
     text-shadow: 0 0 10px #000;
 }
-.secciones_grid a[href="musica.html"] div {
+.secciones_grid a[href="https://y0andri.github.io/musica.html"] div {
     color: #ff65f9;
     text-shadow: 0 0 10px #000;
 }
-.secciones_grid a[href="sandbox.html"] div {
+.secciones_grid a[href="https://y0andri.github.io/sandbox.html"] div {
     color: #ffdd4b;
     text-shadow: 0 0 10px #000;
 }
-.secciones_grid a[href="blog_page.html"] div {
+.secciones_grid a[href="https://y0andri.github.io/blog_page.html"] div {
     color: #67ff66;
     text-shadow: 0 0 10px #000;
 }
@@ -507,7 +529,6 @@ footer a {
 }
 
 .timeline_discipulos {
-    margin-top:2rem;
     color:#111;
     width: 100%;
     padding: 2rem 2rem 2rem 1.5rem;
@@ -942,7 +963,7 @@ footer a {
     list-style: none;
 }
 
-.juegosespera h3 {
+.juegosespera h2 {
     font-size: 2.4rem;
     color: inherit;
     padding: 0.5em;
@@ -980,7 +1001,7 @@ footer a {
     border-top:2px solid #fb9600dd;
 }
 
-.div_awards2024 h4 {
+.div_awards2024 h2 {
     text-align: center;
     color: #111;
     font-size: 2.9rem;
@@ -1202,7 +1223,7 @@ footer a {
     animation: rotar 20s both infinite linear;
 }
 
-.music p {
+.music h2 {
     font-family: "Caesar Dressing";
     text-align: center;
     font-weight: 500;
@@ -1450,8 +1471,8 @@ p#errorMessage {
 
 .documents_element {
     border-radius: 1rem;
-    background-color: #111;
-    color:rgb(30,109,248);
+    background-color: rgb(30,109,248);
+    color:#111;
     margin:0.4rem;
     padding: 0.5rem;
     text-align: center;
@@ -1463,11 +1484,11 @@ p#errorMessage {
 .documents_element iframe {
     background-color: #fff;
     color:#fff;
-    border:0.15rem solid rgb(30,109,248);
+    border:0.15rem solid #111;
     border-radius: 0.9rem;
 }
 
-.documents_element p {
+.documents_element h2 {
     padding:1rem;
 }
 
