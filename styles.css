@@ -1717,16 +1717,16 @@ p#errorMessage {
     }
     
     .nav:before {
-    content:"=";
+    content:"☰";
     border-radius: 0.3rem;
     position: absolute;
-    font-size: 3.7rem;
-    padding-left: .2em;
-    font-weight: 700;
-    color:#111;
+    font-size: 2.9rem;
+    padding-left: .23em;
+    font-weight: 100;
+    color:#fff;
     top:0rem;
     left:0rem;
-    background-color: #f00;
+    background-color:#c81904;
     width: 4rem;
     height:4rem;
     z-index: 101;
@@ -1756,6 +1756,12 @@ p#errorMessage {
 
     .nav .canal {
         color: #aaa;
+    }
+    
+    .dialogue_yoandri img {
+        width: 5rem;
+        height:5rem;
+        aspect-ratio: none;
     }
     
     #footer {
