@@ -503,7 +503,7 @@ footer a {
     color: #ffdd4b;
     text-shadow: 0 0 10px #000;
 }
-.secciones_grid a[href="https://y0andri.github.io/blog_page.html"] div {
+.secciones_grid a[href="https://y0andri.github.io/blog-page.html"] div {
     color: #67ff66;
     text-shadow: 0 0 10px #000;
 }
@@ -597,14 +597,7 @@ footer a {
     border: .1rem solid #111;
     border-radius: 5px;
 }
-
-
-
 /* Yoandri */
-
-
-
-
 .flex_gallery {
     margin: auto;
     display: flex;
