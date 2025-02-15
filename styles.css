@@ -1084,7 +1084,7 @@ footer a {
     background: radial-gradient(#fb9600, #fb5a00);
     display: flex;
     justify-content: start;
-    gap:9px;
+    gap:0.9rem;
     flex-flow: column;
     align-items: center;
     border-radius: 6px;
@@ -1114,14 +1114,15 @@ footer a {
 }
 
 .item_awards2024 div {
+    display: -webkit-flex;
     display: flex;
     flex-direction: column;
     border:1px solid #eee;
-    border-radius: 5px;
+    border-radius: 0.5rem;
     align-items: center;
     margin:auto;
     justify-content: center;
-    gap:5px;
+    gap:0.5rem;
     padding:.4em;
     background-color: #111;
     align-self: start;
@@ -1190,7 +1191,7 @@ footer a {
 }
 
 .item_blue {
-    background: radial-gradient(#0094fb,#0054cffb);
+    background: radial-gradient(#0094fb,rgba(0,84,207,0.984));
     border-radius: 10px;
     padding:9px;
     border-bottom: 2px solid  #ddd;
@@ -1762,6 +1763,91 @@ p#errorMessage {
         width: 5rem;
         height:5rem;
         aspect-ratio: none;
+    }
+    
+    .juegosespera h2 {
+        padding: 0.7rem;
+        font-family: "BoldBait";
+        letter-spacing: 0.2rem;
+        font-weight: 600;
+        font-size: 2.9rem;
+    }
+    
+    summary {
+        outline: none;
+    }
+    
+    .juegosespera li {
+        font-weight: bold;
+    }
+    
+    .div_awards2024 h2 {
+        font-family: "BoldBait";
+        letter-spacing: 0.2rem;
+        font-weight: 600;
+    }
+    
+    .div_awards2024 p {
+        font-weight: bold;
+    }
+    
+    #pestana_apuestas, #pestana_novedades {
+        display:-webkit-flex;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: start;
+    }
+    #pestana_goty {
+        display: block;
+    }
+    
+    .pestana_pestana {
+        display: none;
+    }
+    
+    #pestana_goty:before, #pestana_novedades:before , #pestana_apuestas:before {
+        display: block;
+        margin:auto;
+        color:#fb5a00;
+        text-align: center;
+        width:100%;
+        font-family:"BoldBait";
+        letter-spacing: 0.2rem;
+        font-size: 2.4rem;
+        padding:0.7rem;
+        font-weight: 800;
+        border-radius: 15%;
+        border-top: 0.2rem solid;
+    }
+    
+    #pestana_apuestas:before {
+       content: "Apuestas para el GOTY";
+    }
+    #pestana_goty:before {
+       content: "Game of the Year";
+    }
+    #pestana_novedades:before {
+       content: "Novedades";
+       
+    }
+    
+    .item_awards2024, .item_blue {
+        width:35%;
+        flex-grow: 1;
+        margin:0.4rem;
+    }
+    
+    .item_awards2024 > * , .item_blue > * {
+        margin-top: 0.9rem;
+    }
+    
+    .item_awards2024 div {
+        margin-top: 0.5rem;
+    }
+    
+    #pestana_goty p {
+        margin-top:0.9rem;
     }
     
     #footer {
