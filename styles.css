@@ -1463,6 +1463,7 @@ p#errorMessage {
 }
 
 .documents_element {
+    position: relative;
     border-radius: 1rem;
     background-color: rgb(30,109,248);
     color:#111;
@@ -1481,7 +1482,28 @@ p#errorMessage {
     border-radius: 0.9rem;
 }
 
+.documents_element:before {
+    content: '«';
+    position: absolute;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:1.4rem;
+    height: 3.7rem;
+    top:1.9rem;
+    box-sizing: border-box;
+    padding:0.2rem;
+    right:0.4rem;
+    color:#fff;
+    pointer-events: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background-color: inherit;
+}
+
 .documents_element h2 {
+    font-size:1.7rem;
     padding:1rem;
 }
 
