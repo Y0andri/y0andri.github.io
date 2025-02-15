@@ -59,6 +59,13 @@ ul {
     list-style: none;
 }
 
+main > p {
+    margin-top:1.3rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 0 1rem;
+}
+
 /*Header */
 
 i {
@@ -376,7 +383,7 @@ footer a {
 .main_index h2 {
     margin: 2rem 0 1rem 0;
     padding:0.4rem;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     width:100%;
     border-top: 0.1rem solid;
     text-align: center;
@@ -451,12 +458,12 @@ footer a {
     display: -webkit-grid;
     display: grid;
     grid-template-columns: 1fr;
-    grid-auto-rows: 10rem;
+    grid-auto-rows: auto;
     background-color: #eef;
     border-radius: 10px;
     border: 1px solid #fff;
-    gap:1rem;
-    padding: 1rem;
+    gap:0.5rem;
+    padding: 0.5rem;
     margin: 0 1rem;
 }
 
@@ -497,6 +504,10 @@ footer a {
 }
 .secciones_grid a[href="https://y0andri.github.io/musica.html"] div {
     color: #ff65f9;
+    text-shadow: 0 0 10px #000;
+}
+.secciones_grid a[href="https://y0andri.github.io/docs.html"] div {
+    color: #844cfd;
     text-shadow: 0 0 10px #000;
 }
 .secciones_grid a[href="https://y0andri.github.io/sandbox.html"] div {
