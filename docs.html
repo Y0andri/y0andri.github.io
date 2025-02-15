@@ -14,50 +14,6 @@
 <meta name="description" content="Documentos escolares utilizados por Los Discípulos de Yoandri el Negro" />
 </head>
 <body>
-    <div id="passwordForm">
-        <h5>Acceso restringido</h5>
-        <p>Ingresa la contraseña para continuar:</p>
-        <input type="password" id="passwordInput" placeholder="Contraseña" required>
-       <div class="loading_Contrasena"> <img src="recursos/iconos/loading.svg" alt="svg icon loading"><b>Revisando si existe contraseña</b>
-       </div>
-        <button onclick="checkPassword()">Acceder</button>
-        <p id="errorMessage">Socio si no te sabes la contraseña para que entras?</p>
-    </div>
-    <header id="header" ></header>
-    <div class="main_wrapper" id="protectedContent">
-        <main>
-            <div class="h1_fixer">
-                <h1>Documentos</h1>
-            </div>
-            
-            <div class="grid_documents">
-            <div class="documents_element">
-            <iframe 
-                src="https://docs.google.com/viewer?url=https://y0andri.github.io/recursos/pdf/Historia TCP 11no.docx&embedded=true"
-                width="100%" >
-            </iframe>
-            <h2>Historia TCP 11no</h2>
-            </div>
-            <div class="documents_element">
-            <iframe 
-                src="https://docs.google.com/viewer?url=https://y0andri.github.io/recursos/pdf/Física TCP 11no.docx&embedded=true"
-                width="100%" >
-            </iframe>
-            <h2>Fisica TCP 11no (incompleto)</h2>
-            </div>
-            <div class="documents_element">
-            <iframe 
-                src="https://docs.google.com/viewer?url=https://y0andri.github.io/recursos/pdf/Geografía TCP 11no.docx&embedded=true"
-                width="100%" >
-            </iframe>
-            <h2>Geografía TCP 11no</h2>
-            </div>
-            
-            </div>
-        </main>
-    </div>
-    <footer id="footer"></footer>
-
     <script>
         // Función para verificar la contraseña
         function checkPassword() {
@@ -101,5 +57,53 @@
         // Verificar al cargar la página
         window.onload = checkIfPasswordIsValid;
     </script>
+    <div id="passwordForm">
+        <h5>Acceso restringido</h5>
+        <p>Ingresa la contraseña para continuar:</p>
+        <input type="password" id="passwordInput" placeholder="Contraseña" required>
+       <div class="loading_Contrasena"> <img src="recursos/iconos/loading.svg" alt="svg icon loading"><b>Revisando si existe contraseña</b>
+       </div>
+        <button onclick="checkPassword()">Acceder</button>
+        <p id="errorMessage">Socio si no te sabes la contraseña para que entras?</p>
+    </div>
+    <header id="header" ></header>
+    <div class="main_wrapper" id="protectedContent">
+        <main>
+            <div class="h1_fixer">
+                <h1>Documentos</h1>
+            </div>
+            
+            <div class="grid_documents">
+            <div class="documents_element">
+            <iframe 
+                src="https://docs.google.com/viewer?url=https://y0andri.github.io/recursos/pdf/Historia TCP 11no.docx&embedded=true"
+                width="100%" >
+            </iframe>
+            <h2>Historia TCP 11no</h2>
+            <a download href="recursos/pdf/Historia TCP 11no.docx">Descargar</a>
+            </div>
+            <div class="documents_element">
+            <iframe 
+                src="https://docs.google.com/viewer?url=https://y0andri.github.io/recursos/pdf/Física TCP 11no.docx&embedded=true"
+                width="100%" >
+            </iframe>
+            <h2>Fisica TCP 11no (incompleto)</h2>
+            <a download href="recursos/pdf/Física TCP 11no.docx">Descargar</a>
+            </div>
+            <div class="documents_element">
+            <iframe 
+                src="https://docs.google.com/viewer?url=https://y0andri.github.io/recursos/pdf/Geografía TCP 11no.docx&embedded=true"
+                width="100%" >
+            </iframe>
+            <h2>Geografía TCP 11no</h2>
+            <a download href="recursos/pdf/Geografía TCP 11no.docx">Descargar</a>
+            </div>
+            
+            </div>
+        </main>
+    </div>
+    <footer id="footer"></footer>
+
+
 </body>
 </html>

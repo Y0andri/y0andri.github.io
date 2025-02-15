@@ -1507,6 +1507,16 @@ p#errorMessage {
     padding:1rem;
 }
 
+.documents_element a {
+    display: block;
+    color:rgb(30,109,248);
+    background-color: #111;
+    text-decoration: none;
+    font-size: 1.4rem;
+    border-radius: 0.7rem;
+    padding:1rem;
+}
+
 @keyframes loop {
     0% {
         transform: rotate(0deg);
