@@ -1,4 +1,4 @@
-﻿User-agent: *
-Disallow: /componentes/
-Allow: /recursos/
+User-agent: *
+Disallow:
+
 Sitemap: https://y0andri.github.io/sitemap.xml
