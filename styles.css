@@ -78,7 +78,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #050505;
+    background-color: #111;
     position: fixed;
     left:0;
     top:0;
@@ -245,20 +245,22 @@ header input {
 
 
 #title_header {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: saiyasans;
     text-decoration: none;
     font-size: 3.3rem;
     color: #f8e828;
-    text-shadow: 0 0 15px #f8e828aa;
     margin:auto;
     text-align: center;
     flex-grow: 1;
-    padding:.2em;
+    padding:.3em .4em;
 }
 
-#title_header span {
-    color: #f00;
-    text-shadow: 0 0 20px #f00c;
+#title_header img {
+    height: 2.9rem;
 }
 
 
@@ -299,7 +301,7 @@ main {
 
 .h1_fixer {
     position: fixed;
-    top: calc(5.8rem + .2em + 5px);
+    top: calc(4.9rem + .3em + 5px);
     left:0;
     width:100%;
     z-index: 90;
