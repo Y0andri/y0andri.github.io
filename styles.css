@@ -1660,6 +1660,19 @@ p#errorMessage {
     }
 }
 
+@keyframes aparecer-blur {
+    0% {
+        opacity: 0;
+        height: 30vh;
+        width:20vw;
+    }
+    100% {
+        opacity: 1;
+        width: 55vw;
+        height:100vh;
+    }
+}
+
 @supports not (display: grid) {
     
     html {
@@ -1737,10 +1750,11 @@ p#errorMessage {
     .nav:hover, .nav:focus {
     position: absolute;
     top:0;
-    width:50vw;
+    width:55vw;
     max-width: 400px;
     height:100vh;
     border:none;
+    animation: aparecer-blur 0.3s both;
 }
 
     .nav:hover:before {
