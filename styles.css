@@ -78,7 +78,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #0a0a0a;
+    background-color: #000;
     position: fixed;
     left:0;
     top:0;
