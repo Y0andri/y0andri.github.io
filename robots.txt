@@ -1,4 +1,6 @@
 User-agent: *
 Disallow: /recursos/condiciones.html
-Allow: /recursos/
+Disallow: /recursos/pdf/
+Disallow: /recursos/goty/
+Disallow: /recursos/Los_Tanques_de_Versalles_Remix.mp3
 Sitemap: https://y0andri.github.io/sitemaps.xml
