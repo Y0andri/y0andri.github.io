@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url>
+	<loc>https://y0andri.github.io/</loc>
+	<lastmod>2025-02-17T15:58:10+01:00</lastmod>
+	<priority>1.0</priority>
+	<image:image>
+			<image:loc>https://y0andri.github.io/recursos/LDY_portada.jpg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://y0andri.github.io/recursos/modal/yoandri_modal.png</image:loc>
+	</image:image>
+</url>
+<url>
+	<loc>https://y0andri.github.io/yoandri.html</loc>
+	<lastmod>2025-02-17T15:58:10+01:00</lastmod>
+	<priority>0.9</priority>
+	<image:image>
+			<image:loc>https://y0andri.github.io/recursos/publicaciones/ynd-12.webp</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://y0andri.github.io/recursos/publicaciones/ynd-11.webp</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://y0andri.github.io/recursos/publicaciones/ynd-10.webp</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://y0andri.github.io/recursos/publicaciones/ynd-9.jpg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://y0andri.github.io/recursos/publicaciones/ynd-8.jpg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://y0andri.github.io/recursos/publicaciones/ynd-7.jpg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://y0andri.github.io/recursos/publicaciones/ynd-6.jpg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://y0andri.github.io/recursos/publicaciones/ynd-5.jpg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://y0andri.github.io/recursos/publicaciones/ynd-4.jpg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://y0andri.github.io/recursos/publicaciones/ynd-3.jpg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://y0andri.github.io/recursos/publicaciones/ynd-2.jpg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://y0andri.github.io/recursos/publicaciones/ynd-1.jpg</image:loc>
+	</image:image>
+</url>
+<url>
+	<loc>https://y0andri.github.io/games.html</loc>
+	<lastmod>2025-02-17T15:58:10+01:00</lastmod>
+	<priority>1.0</priority>
+	<image:image>
+			<image:loc>https://y0andri.github.io/recursos/goty/astrobot.jpg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://y0andri.github.io/recursos/goty/balatro.jpg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://y0andri.github.io/recursos/goty/wukong.jpg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://y0andri.github.io/recursos/miembros/yoan.jpg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://y0andri.github.io/recursos/miembros/cristian.jpg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://y0andri.github.io/recursos/miembros/yordan.jpg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://y0andri.github.io/recursos/goty/erdtree.jpg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://y0andri.github.io/recursos/miembros/derek.jpg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://y0andri.github.io/recursos/goty/rebirth.jpg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://y0andri.github.io/recursos/goty/metaphor.jpg</image:loc>
+	</image:image>
+</url>
+<url>
+	<loc>https://y0andri.github.io/miembros.html</loc>
+	<lastmod>2025-02-17T15:58:10+01:00</lastmod>
+	<priority>0.8</priority>
+	<image:image>
+			<image:loc>https://y0andri.github.io/recursos/iconos/m7.svg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://y0andri.github.io/recursos/iconos/m10.svg</image:loc>
+	</image:image>
+</url>
+<url>
+	<loc>https://y0andri.github.io/blog-page.html</loc>
+	<lastmod>2025-02-17T15:58:10+01:00</lastmod>
+	<priority>0.9</priority>
+</url>
+<url>
+	<loc>https://y0andri.github.io/musica.html</loc>
+	<lastmod>2025-02-17T15:58:10+01:00</lastmod>
+	<priority>0.8</priority>
+	<image:image>
+			<image:loc>https://y0andri.github.io/recursos/music.jpg</image:loc>
+	</image:image>
+</url>
+<url>
+	<loc>https://y0andri.github.io/docs.html</loc>
+	<lastmod>2025-02-17T15:58:10+01:00</lastmod>
+	<priority>0.8</priority>
+	<image:image>
+			<image:loc>https://y0andri.github.io/recursos/iconos/loading.svg</image:loc>
+	</image:image>
+</url>
+<url>
+	<loc>https://y0andri.github.io/sandbox.html</loc>
+	<lastmod>2025-02-17T15:58:10+01:00</lastmod>
+	<priority>0.8</priority>
+	<image:image>
+			<image:loc>https://y0andri.github.io/recursos/aspa.jpg</image:loc>
+	</image:image>
+</url>
+<url>
+	<loc>https://y0andri.github.io/recursos/pdf/Historia%20TCP%2011no.docx</loc>
+	<lastmod>2025-02-17T15:58:14+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://y0andri.github.io/recursos/pdf/F%C3%ADsica%20TCP%2011no.docx</loc>
+	<lastmod>2025-02-17T15:58:14+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://y0andri.github.io/recursos/pdf/Geograf%C3%ADa%20TCP%2011no.docx</loc>
+	<lastmod>2025-02-17T15:58:14+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+</urlset>
