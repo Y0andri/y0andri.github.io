@@ -34,6 +34,10 @@ html {
     -webkit-tap-highlight-color: transparent;
 }
 
+a {
+    color:inherit;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -288,7 +292,6 @@ header input {
     flex: 1;
     max-width: 1100px;
     margin:auto;
-    animation: aparecer 0.4s 0.5s backwards;
 }
 
 main {
@@ -299,15 +302,16 @@ main {
 
 
 
-.h1_fixer {
+.h1_fixer , .h1_false {
     position: fixed;
     top: calc(4.9rem + .3em + 5px);
     left:0;
     width:100%;
     z-index: 90;
+    animation: aparecer 0.2s 0.5s backwards;
 }
 
-.h1_fixer h1 {
+.h1_fixer h1 , .h1_false span {
     position: relative;
     top:-2px;
     display: block;
@@ -326,7 +330,8 @@ main {
     box-shadow: 0 0px 10px #fff1;
 }
 
-.h1_fixer h1::before,.h1_fixer h1::after {
+.h1_fixer h1::before,.h1_fixer h1::after,
+.h1_false span::before,.h1_false span::after{
     position: absolute;
     content:'';
     width: 18px;
@@ -334,13 +339,13 @@ main {
     background-color: transparent;
 }
 
-.h1_fixer h1::before {
+.h1_fixer h1::before, .h1_false span:before{
     top:1.8px;
     left: -18px;
     border-top-right-radius: 50px;
     box-shadow: 4px -4px 0 4px #050505;
 }
-.h1_fixer h1::after {
+.h1_fixer h1::after, .h1_false span:after{
     top:1.8px;
     right: -18px;
     border-top-left-radius: 50px;
@@ -969,7 +974,10 @@ footer a {
 }
 
 .juegosespera summary {
-    list-style: none;
+}
+
+.juegosespera summary::marker {
+    content: none;
 }
 
 .juegosespera h2 {
@@ -1533,6 +1541,53 @@ p#errorMessage {
     border-radius: 0.7rem;
     padding:1rem;
 }
+
+/* FaQ */
+
+#main_faq {
+    background-color: rgb(233,233,254);
+    color:#111;
+}
+
+#main_faq .question {
+    margin-top:1rem;
+    font-weight: 500;
+    overflow: hidden;
+    font-family: Sans-Serif;
+    border-radius: 0.8rem;
+    background-color: rgb(244,244, 255);
+    box-shadow: 0 0 1.9rem rgba(0,0,0,0.130);
+}
+
+#main_faq .question h1, .question h2 {
+    position: relative;
+    font-size: 1.5rem;
+    position: relative;
+    font-weight: bold;
+    padding:0.6rem;
+    color:#eef;
+    margin-bottom: 0.4rem;
+    background-color: #111;
+    border-radius: 0.8rem 0.8rem 0 0;
+}
+
+#main_faq .question h1::before, .question h2::before {
+    content:"•";
+    position: absolute;
+    right: 0.8rem;
+}
+
+#main_faq .question p {
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding: 0.7rem;
+}
+
+
+
+
+
+
 
 @keyframes loop {
     0% {
