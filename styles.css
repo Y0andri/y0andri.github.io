@@ -374,6 +374,16 @@ footer a {
     text-decoration: none;
 }
 
+.footer_flex {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    max-height:30vh ;
+}
+
 /* Inicio */
 
 .main_wrapper:has(.main_index) {
