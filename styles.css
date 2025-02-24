@@ -114,6 +114,7 @@ header input {
     max-width: 400px;
     background-color: #111;
     height: 100vh;
+    overflow: auto;
     z-index: 300;
 }
 
@@ -229,10 +230,8 @@ header input {
     color:#fffb;
     justify-content: center;
     align-items: center;
-    position: absolute;
     width:100%;
     bottom:40px;
-    left:0px;
 }
 
 .nav .canal p {
@@ -298,7 +297,6 @@ main {
     left:0;
     width:100%;
     z-index: 90;
-    animation: aparecer 0.2s 0.5s backwards;
 }
 
 .h1_fixer h1 , .h1_false span {
@@ -1581,6 +1579,32 @@ p#errorMessage {
     padding: 0.7rem;
 }
 
+/* Memed */
+
+.memes_flex {
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+}
+
+.memes_flex > div {
+    flex-grow: 1;
+    flex-basis:300px;
+    margin:0.8rem;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 1.2rem;
+}
+
+.memes_flex img {
+    width:100%;
+}
+
 
 /*Elements*/
 
@@ -1815,6 +1839,7 @@ p#errorMessage {
     max-width: 400px;
     height:100vh;
     border:none;
+    overflow-y: scroll;
     animation: aparecer-blur 0.3s both;
 }
 
