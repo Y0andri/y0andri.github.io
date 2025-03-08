@@ -151,11 +151,10 @@ header input {
     width:54px;
     height:54px;
     object-fit: cover;
-    background-color: #fff;
+    background-color: transparent;
     margin-top:10px;
     margin-left:20px;
-    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
-    filter: brightness(2)  contrast(2);
+    border-radius:100%;
 }
 
 .nav ul {
@@ -231,7 +230,6 @@ header input {
     justify-content: center;
     align-items: center;
     width:100%;
-    bottom:40px;
 }
 
 .nav .canal p {
@@ -1218,13 +1216,12 @@ h2 , .hx {
 
 
 .music {
-    background: #a00;
     border-radius: 20px;
     width: 80%;
     margin: auto;
     padding: 15px;
-    box-shadow: 0 0 10px #f00a;
     max-width: 400px;
+    margin-bottom:3rem;
 }
 
 .music img {
@@ -1233,7 +1230,6 @@ h2 , .hx {
     margin: auto;
     border-radius: 100%;
     box-shadow: 0 0 17px #000a;
-    animation: rotar 20s both infinite linear;
 }
 
 .music h2 {
@@ -1243,7 +1239,6 @@ h2 , .hx {
     padding: 15px 0 15px 0;
     font-size: 2.7rem;
     color: #111;
-    text-shadow: 0 0 10px #d00;
     
 }
 
@@ -1251,13 +1246,33 @@ h2 , .hx {
     margin: 6px 0 0 0 ;
     display: block;
     text-align: center;
-    border-radius: 10px;
-    background-color: #0a0a0a;
-    padding: 13px 20px 10px 20px ;
-    box-shadow: 0 0 17px #000a;
+    width: fit-content;
+    border-radius: 100px;
+    margin:auto;
+    background-color: transparent;
+    padding: 13px 10px 10px 14px ;
+    box-shadow: 0 0 17px #0002;
     text-decoration: none;
-    color: #b00;
+    font-weight: bold;
+    color: #000;
+    border:0.14rem solid #000;
     font-size: 1.7rem;
+    margin-bottom:0.8rem;
+}
+
+.music a i {
+    display: inline;
+    font-size: 1.7rem;
+    margin:0.8rem;
+}
+
+.music_tanques {
+    background: #a00;
+    box-shadow: 0 0 10px #f00a;
+}
+.music_marti {
+    background: rgb(248,237,204);
+    box-shadow: 0 0 10px rgb(248,237,204);
 }
 
 .music audio {
@@ -1272,26 +1287,26 @@ h2 , .hx {
 }
 
 .music audio::-webkit-media-controls-play-button{
-    background-color: #b00;
+    background-color: #eee;
     border-radius: 50px;
 }
 
 .music audio::-webkit-media-controls-timeline {
     border-radius: 50px;
-    background-color: #b00;
+    background-color: #eee;
     margin:5px;
     padding: 10px;
 }
 
 .music audio::-webkit-media-controls-mute-button{
-    background-color: #b00;
+    background-color: #eee;
     border-radius:50px;
 }
 
 .music audio::-webkit-media-controls-current-time-display {
     font-family: Sans-Serif;
     font-weight: 900;
-    color:#d00;
+    color:#eee;
     text-shadow: 0 0 0px #000;
     
     
@@ -1300,7 +1315,7 @@ h2 , .hx {
 .music audio::-webkit-media-controls-time-remaining-display {
     font-family: Sans-Serif;
     font-weight: 900;
-    color:#d00;
+    color:#eee;
     text-shadow: 0 0 0px #000;
 
 }
@@ -1590,6 +1605,7 @@ p#errorMessage {
 }
 
 .memes_flex > div {
+    position: relative;
     flex-grow: 1;
     flex-basis:300px;
     margin:0.8rem;
@@ -1602,7 +1618,23 @@ p#errorMessage {
 }
 
 .memes_flex img {
+    position: relative;
     width:100%;
+}
+
+.memes_flex div:before {
+    display: none;
+    content: " ";
+    position: absolute;
+    bottom:1rem;
+    left:1rem;
+    width:6rem;
+    height: 6rem;
+    background: url(recursos/publicaciones/Yoandri-El-Negro-en-la-escuela.jpg);
+    background-size: cover;
+    opacity: 0.5;
+    background-repeat: none;
+    z-index: 5;
 }
 
 
@@ -1810,7 +1842,7 @@ p#errorMessage {
         overflow:hidden;
         display:block;
         top:20%;
-        z-index:100;
+        z-index:140;
         border-radius:0.3rem;
         border:1px solid #111;
     }
