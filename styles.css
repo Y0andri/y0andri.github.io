@@ -924,6 +924,10 @@ h2 , .hx {
     background-color: #eef;
 }
 
+#blog div iframe {
+    width:100%;
+}
+
 #blog div:before {
     content:" ";
     position: absolute;
