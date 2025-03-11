@@ -911,7 +911,7 @@ h2 , .hx {
 }
 
 #blog > * {
-    margin-top: 0.8rem;
+    margin: 0.8rem 0;
 }
 
 #blog div {
@@ -955,7 +955,6 @@ h2 , .hx {
 }
 
 #blog div img {
-    margin-bottom: .5rem ;
     border-radius: 15px;
     width:100%;
 }
