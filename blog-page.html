@@ -19,6 +19,35 @@
 <meta name="description" content="Blog donde se suben constantemente actualizaciones sobre videojuegos." />
 
 	<script src="script.js"></script>
+	<script>
+
+        // URL del archivo de texto en GitHub Gist (enlace raw)
+
+        const urlGist = 'https://gist.githubusercontent.com/Y0andri/e819bcd285a9d7cd439b0ffb01d1e8da/raw/1b26064b95243407da93f501ca76808afb673f9d/blog.txt'; // Cambia esto por tu enlace
+
+        // Función para cargar y mostrar el contenido del archivo de texto
+        async function cargarTexto() {
+            try {
+                // Hacer una solicitud HTTP para obtener el contenido del archivo
+                const respuesta = await fetch(urlGist);
+                if (!respuesta.ok) {
+                    throw new Error('No se pudo cargar el archivo');
+                }
+
+                // Obtener el contenido como texto
+                const texto = await respuesta.text();
+
+                // Mostrar el contenido en el elemento HTML con id "contenido"
+                document.getElementById('blog').innerText = texto;
+            } catch (error) {
+                console.error('Error al cargar el archivo:', error);
+                document.getElementById('blog').innerText = 'Error al cargar el contenido.';
+            }
+        }
+
+        // Llamar a la función para cargar el texto cuando la página se cargue
+        cargarTexto();
+    </script>
 </head>
 <body>
     	<header id="header"></header>
@@ -50,33 +79,6 @@
         // Llamar a la función para cargar el contenido cuando la página se carga
         window.onload = loadBlogContent;
     </script> -->
-    <script>
-        // URL del archivo de texto en GitHub Gist (enlace raw)
-        const urlGist = 'https://gist.githubusercontent.com/Y0andri/e819bcd285a9d7cd439b0ffb01d1e8da/raw/1b26064b95243407da93f501ca76808afb673f9d/blog.txt'; // Cambia esto por tu enlace
-
-        // Función para cargar y mostrar el contenido del archivo de texto
-        async function cargarTexto() {
-            try {
-                // Hacer una solicitud HTTP para obtener el contenido del archivo
-                const respuesta = await fetch(urlGist);
-                if (!respuesta.ok) {
-                    throw new Error('No se pudo cargar el archivo');
-                }
-
-                // Obtener el contenido como texto
-                const texto = await respuesta.text();
-
-                // Mostrar el contenido en el elemento HTML con id "contenido"
-                document.getElementById('blog').innerText = texto;
-            } catch (error) {
-                console.error('Error al cargar el archivo:', error);
-                document.getElementById('blog').innerText = 'Error al cargar el contenido.';
-            }
-        }
-
-        // Llamar a la función para cargar el texto cuando la página se cargue
-        cargarTexto();
-    </script>
 
 </body>
 </html>
