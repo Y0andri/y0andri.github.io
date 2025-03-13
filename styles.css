@@ -925,7 +925,7 @@ h2 , .hx {
     width:fit-content;
     border-radius: 15px;
     max-width: 95%;
-    padding: .9rem 1.3rem;
+    padding: .9rem 1.3rem 1.8rem 1.3rem;
     background-color: #eef;
 }
 
@@ -945,6 +945,38 @@ h2 , .hx {
     margin:0;
     padding:0;
     
+}
+#blog div:after {
+    position: absolute;
+    width: fit-content;
+    font-size:1rem;
+    color:#fff;
+    text-transform: uppercase;
+    padding:1px 1.5rem 1px 1.5rem;
+    border-radius: 100px 2px 100px 2px;
+    bottom: 0rem ;
+    right: 0rem;
+    margin:0;
+}
+#blog div[cristian]:after {
+    content:"Cristian";
+    background-color:rgb(192,0,0) ;
+}
+#blog div[yordan]:after {
+    content:"Yordan";
+    background-color: rgb(0,143,145) ;
+}
+#blog div[derek]:after {
+    content:"Derek";
+    background-color: rgb(232,125,0);
+}
+#blog div[yoan]:after {
+    content:"Yoan";
+    background-color: rgb(0,109,216);
+}
+#blog div[maiko]:after {
+    content:"Maiko";
+    background-color:rgb(0,181,5) ;
 }
 
 #blog p {
