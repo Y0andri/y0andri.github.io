@@ -360,6 +360,11 @@ footer a {
     text-decoration: none;
 }
 
+footer a[download] {
+    font-weight: bold;
+    color:rgb(252,199,199);
+}
+
 .footer_flex {
     display: -webkit-flex;
     display: flex;
