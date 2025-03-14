@@ -19,6 +19,15 @@
 <meta name="description" content="Blog donde se suben constantemente actualizaciones sobre videojuegos." />
 
 	<script src="script.js"></script>
+	<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "2128c1e6-2449-4aa4-ac4c-e68b59c12a3a",
+    });
+  });
+</script>
 </head>
 <body>
     	<header id="header"></header>
@@ -80,29 +89,6 @@
         // Llamar a la función para cargar el texto cuando la página se cargue
         cargarTexto();
     </script> 
-    <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyALXk3V_KXW70xFSGvyc0Nb3uthqIRD9wM",
-    authDomain: "yoandri-ntf.firebaseapp.com",
-    projectId: "yoandri-ntf",
-    storageBucket: "yoandri-ntf.firebasestorage.app",
-    messagingSenderId: "744449923771",
-    appId: "1:744449923771:web:21f9b92878b1b662b4e79e",
-    measurementId: "G-BT0PDWKGL0"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
 
 </body>
 </html>
