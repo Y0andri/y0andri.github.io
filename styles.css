@@ -4,6 +4,10 @@
   src: url("recursos/fuentes/Oxanium.ttf") format("truetype");
 }
 @font-face {
+  font-family: "arvo";
+  src: url("recursos/fuentes/arvo.ttf") format("truetype");
+}
+@font-face {
   font-family: "BoldBait";
   src: url("recursos/fuentes/BoldBait.ttf") format("truetype");
 }
@@ -915,16 +919,13 @@ h2 , .hx {
     z-index: 5;
 }
 
-#blog > * {
-    margin: 0.8rem 0;
-}
-
 #blog div {
     font-size:1.2rem;
     position: relative;
     width:fit-content;
-    border-radius: 15px;
+    border-radius: 1.5rem;
     max-width: 95%;
+    margin: 0.8rem 0;
     padding: .9rem 1.3rem 1.8rem 1.3rem;
     background-color: #eef;
 }
@@ -984,7 +985,9 @@ h2 , .hx {
 }
 
 #blog div a {
-    color: #379fff;
+    color: rgb(170,0,76);
+    font-family: Arial;
+    font-weight: bold;
     animation: rgb-text 5s both infinite alternate;
     text-decoration: none;
     border-bottom: 0.1rem dashed;
@@ -992,9 +995,44 @@ h2 , .hx {
 }
 
 #blog div img {
-    margin:1rem 0;
-    border-radius: 15px;
+    margin:1rem 0 1rem 0;
+}
+
+#blog img {
+    border-radius: 1.5rem;
     width:100%;
+}
+
+#blog div:has(img ~ a) {
+    padding:0;
+    background-color: transparent;
+}
+
+#blog div:has(img ~ a) img {
+    margin:0;
+}
+
+#blog div img ~ a {
+    position: absolute;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "arvo";
+    bottom:0;
+    left:0;
+    text-align: center;
+    min-height: 30%;
+    font-size: 1.3rem;
+    border:none;
+    width: 100%;
+    letter-spacing: 0.05rem;
+    border-radius: 0 0 1.5rem 1.5rem;
+    padding: 0.9rem 0.4rem 1.5rem 0.4rem;
+    backdrop-filter:blur(12px);
+    background-color: rgba(0,0,0,0.227);
+    animation: destello both 7s infinite;
+    color: #eee;
 }
 
 #blog aside{
@@ -1809,6 +1847,27 @@ p#errorMessage {
     100% {
         transform: rotate(359.9deg);
         
+    }
+}
+
+@keyframes destello {
+    0% {
+        text-shadow: 0 0 15px #000;
+    }
+    80% {
+        text-shadow: 0 0 15px #000;
+    }
+    85% {
+        text-shadow: 0 0 25px rgba(255,255,255,0.683);
+    }
+    90% {
+        text-shadow: 0 0 15px #000;
+    }
+    95% {
+        text-shadow: 0 0 25px rgba(255,255,255,0.683);
+    }
+    100% {
+        text-shadow: 0 0 15px #000;
     }
 }
 

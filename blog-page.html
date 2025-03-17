@@ -84,7 +84,7 @@
                 document.getElementById('blog').innerHTML = texto;
             } catch (error) {
                 console.error('Error al cargar el archivo:', error);
-                document.getElementById('blog').innerHTML = '<span style="color:#fff; background-color:#111;" >Error al cargar el contenido, actualize la página.</span>';
+                document.getElementById('blog').innerHTML = '<div>Error al cargar el contenido, <a href="/blog-page.html">actualize la página.</a></div>';
             }
         }
 
