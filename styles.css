@@ -89,7 +89,7 @@ header {
     position: fixed;
     left:0;
     top:0;
-    z-index: 100;
+    z-index: 300;
     width:100%;
     padding:5px 9px ;
 }
@@ -997,6 +997,32 @@ h2 , .hx {
     width:100%;
 }
 
+#blog aside{
+    height: 100%;
+    width:100%;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+}
+
+#blog aside img{
+    display: block;
+    width:4.3rem;
+    background-color: #eee;
+    border-radius: 50%;
+    border:0.1rem solid #eee;
+    margin:1.5rem;
+    animation: loop 1.3s both infinite linear ;
+}
+
+#blog aside span {
+    display: block;
+    font-size: 2rem;
+}
+
 /* Games */
 
 .juegosespera {
@@ -1829,7 +1855,6 @@ p#errorMessage {
         width: 55vw;
     }
 }
-
 
 @supports not (selector(:has(*))) {
     
