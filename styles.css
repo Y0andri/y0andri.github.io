@@ -915,6 +915,7 @@ h2 , .hx {
     font-family: Sans-Serif;
     padding:1.7rem;
     font-weight: 700;
+    width:100%;
     z-index: 5;
 }
 
@@ -923,7 +924,7 @@ h2 , .hx {
     position: relative;
     width:fit-content;
     border-radius: 1.5rem;
-    max-width: 95%;
+    width: 95%;
     margin: 0.8rem 0;
     padding: .9rem 1.3rem 1.8rem 1.3rem;
     background-color: #eef;
