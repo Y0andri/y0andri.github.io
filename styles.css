@@ -152,8 +152,8 @@ header input {
 }
 
 .nav .nav_logo {
-    width:54px;
-    height:54px;
+    width:5.4rem;
+    height:5.4rem;
     object-fit: cover;
     background-color: transparent;
     margin-top:10px;
@@ -906,7 +906,6 @@ h2 , .hx {
     padding: calc(5.8rem + .2em + 5px + 5rem) 0rem 2rem 0rem;
     background-color: #0a0a0a;
     background-size: 200px;
-    border: .5rem solid #111;
 }
 
 #blog {
@@ -996,12 +995,11 @@ h2 , .hx {
 
 #blog div img {
     margin:1rem 0 1rem 0;
-    min-width: 100%;
+    width: 100%;
 }
 
 #blog img {
     border-radius: 1.5rem;
-    width:100%;
 }
 
 #blog div:has(img ~ a) {
@@ -1032,8 +1030,24 @@ h2 , .hx {
     padding: 0.9rem 0.4rem 1.5rem 0.4rem;
     backdrop-filter:blur(12px);
     background-color: rgba(0,0,0,0.227);
-    animation: destello both 7s infinite;
+    animation: none;
+    text-shadow: 0 0 10rem #000;
     color: #eee;
+}
+
+#blog div img ~ a:before {
+    content:"GAME NEWS";
+    position: absolute;
+    top: -1.6rem;
+    left:0;
+    font-family: "arvo";
+    font-size: 1rem;
+    white-space: nowrap;
+    padding:0.2rem 0.5rem;
+    border-radius: 0 0.4rem 0.4rem 0;
+    font-style: italic;
+    color:#fff;
+    background-color: rgb(99,0,243);
 }
 
 #blog aside{
@@ -1784,6 +1798,16 @@ p#errorMessage {
     }
 }
 
+
+@keyframes paneo {
+    0% {
+        left:-10rem;
+    }
+    100% {
+        left:110%;
+    }
+}
+
 @keyframes sacudir {
     40% {
         transform: rotate(0deg);
@@ -2127,6 +2151,9 @@ p#errorMessage {
     html {
         font-size: 14px;
     }
+    .main_blog {
+        padding-left: 1.5rem;
+    }
 }
 
 
@@ -2142,5 +2169,7 @@ p#errorMessage {
     .grid_awards2024 {
         grid-template-columns: 1fr 1fr 1fr;
     }
-    
+    .main_blog {
+        
+    }
 }
