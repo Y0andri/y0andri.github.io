@@ -366,7 +366,7 @@ footer a {
 
 footer a[download] {
     font-weight: bold;
-    color:rgb(252,199,199);
+    color: rgb(104,120,255);
 }
 
 .footer_flex {
@@ -1756,6 +1756,55 @@ p#errorMessage {
     opacity: 0.5;
     background-repeat: none;
     z-index: 5;
+}
+
+/* Ayuda */
+
+.link_container {
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: wrap ;
+    justify-content: center;
+    align-items: start;
+}
+
+.link_container a {
+    font-family: "oxanium";
+    font-size: 1.6rem;
+    flex: 1;
+    flex-basis: 45%;
+    font-weight: 600;
+    padding: 0.7rem;
+    margin:0.6rem;
+    border-radius: 0.4rem;
+    border:0.15rem solid #e23;
+    background: linear-gradient(to right, rgb(14,14,14), rgb(37,37,37));
+    text-align: center;
+}
+
+.blog_tuto {
+    padding:1.5rem;
+    font-size: 1.4rem;
+}
+
+.blog_tuto ol {
+    background-color: #111;
+    border-radius:0.4rem;
+    border:0.1rem solid #eee;
+    padding:1rem;
+    padding-left:2rem;
+    font-family: "arvo";
+}
+
+.blog_tuto li {
+    margin:0.5rem;
+}
+
+.blog_tuto li img {
+    display: block;
+    height: 15rem;
+    margin: 1rem;
+    border-radius: 1rem;
 }
 
 
