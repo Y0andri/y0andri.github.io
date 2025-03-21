@@ -996,7 +996,9 @@ h2 , .hx {
 
 #blog div img {
     margin:1rem 0 1rem 0;
+    min-width: 100%;
     width: 100%;
+    min-height: 14rem;
 }
 
 #blog img {
@@ -1010,6 +1012,7 @@ h2 , .hx {
 
 #blog div:has(img ~ a) img {
     margin:0;
+    background-color: #fff;
 }
 
 #blog div img ~ a {
