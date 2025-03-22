@@ -1090,9 +1090,6 @@ h2 , .hx {
     color:#d05;
 }
 
-.juegosespera summary {
-}
-
 .juegosespera summary::marker {
     content: none;
 }
@@ -1498,6 +1495,27 @@ h2 , .hx {
 
 .caja_ventilador .boton_encender input {
     display:none;
+}
+
+.contact_marico {
+    display: -webkit-flex;
+    text-decoration: none;
+    font-family: "BoldBait";
+    display: flex;
+    padding:2rem;
+    background-color: rgb(253,0,194);
+    color:#fff;
+    font-size: 2.3rem;
+    border-radius: 1rem;
+    margin: auto;
+    border: 0.15rem solid ;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.contact_marico > * {
+    margin:0.8rem;
 }
 
 /* Docs */
