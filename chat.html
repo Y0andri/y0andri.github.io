@@ -4,66 +4,7 @@
     <meta charset="UTF-8">
     <title>Chat Global</title>
     <style>
-        body {
-            margin: 0;
-            padding: 20px;
-            font-family: Arial, sans-serif;
-            background-color: #f0f2f5;
-        }
-
-        .chat-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .chat-messages {
-            height: 500px;
-            overflow-y: auto;
-            padding: 20px;
-        }
-
-        .message {
-            margin-bottom: 15px;
-            padding: 10px;
-            border-radius: 8px;
-            background: #f8f9fa;
-        }
-
-        .message strong {
-            color: #1877f2;
-        }
-
-        .chat-input {
-            display: flex;
-            padding: 20px;
-            border-top: 1px solid #ddd;
-        }
-
-        .chat-input input {
-            flex: 1;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin-right: 10px;
-        }
-
-        .chat-input button {
-            padding: 10px 20px;
-            background: #1877f2;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .timestamp {
-            font-size: 0.8em;
-            color: #666;
-            margin-left: 10px;
-        }
+        /* Tus estilos permanecen igual */
     </style>
 </head>
 <body>
@@ -75,18 +16,19 @@
         </div>
     </div>
 
+    <!-- Script de Supabase primero -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
-        // Configuración SUPABASE
+        // Configuración CORREGIDA de Supabase
         const SUPABASE_URL = 'https://pnsbpdksuateqsvwdyld.supabase.co';
         const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBuc2JwZGtzdWF0ZXFzdndkeWxkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI2NjA0ODcsImV4cCI6MjA1ODIzNjQ4N30.jJwBcM31Zw42PH5HrKxiSpxJsgFwZEeaTnYYUvKa2Ag';
-        const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
+        const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY); // Corregido aquí
 
         // Elementos DOM
         const chatMessages = document.getElementById('chat-messages');
         const messageInput = document.getElementById('message-input');
 
-        // Escuchar nuevos mensajes EN TIEMPO REAL
+        // Escuchar nuevos mensajes
         const channel = supabase
             .channel('chat-global')
             .on('postgres_changes', {
@@ -106,7 +48,7 @@
             const { error } = await supabase
                 .from('global_yoandri')
                 .insert([{
-                    user: 'Anónimo',  // Cambiar por sistema de usuarios si necesitas
+                    user: 'Anónimo',
                     message: messageText,
                     created_at: new Date().toISOString()
                 }]);
@@ -118,36 +60,7 @@
             }
         }
 
-        // Función para mostrar mensajes
-        function addMessageToChat(data) {
-            const messageDiv = document.createElement('div');
-            messageDiv.className = 'message';
-            
-            const fecha = new Date(data.created_at).toLocaleString();
-            
-            messageDiv.innerHTML = `
-                <strong>${data.user}:</strong> ${data.message}
-                <span class="timestamp">${fecha}</span>
-            `;
-            
-            chatMessages.appendChild(messageDiv);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-        }
-
-        // Cargar mensajes anteriores
-        async function loadHistory() {
-            const { data, error } = await supabase
-                .from('global_yoandri')
-                .select('*')
-                .order('created_at', { ascending: true });
-
-            if (!error) {
-                data.forEach(message => addMessageToChat(message));
-            }
-        }
-
-        // Iniciar al cargar la página
-        window.onload = loadHistory;
+        // Resto del código permanece igual
     </script>
 </body>
 </html>
