@@ -1503,14 +1503,18 @@ h2 , .hx {
     font-family: "BoldBait";
     display: flex;
     padding:2rem;
-    background-color: rgb(253,0,194);
-    color:#fff;
+    background: linear-gradient(rgba(0,0,0,0.593), rgba(0,0,0,0.593)) , url('https://i0.wp.com/www.cronicalibre.com/wp-content/uploads/2024/02/Captura-de-pantalla-591.png?fit=714%2C449&ssl=1');
+    background-size: cover;
+    color:rgb(252,67,192);
+    text-align: center;
     font-size: 2.3rem;
     border-radius: 1rem;
     margin: auto;
     border: 0.15rem solid ;
     justify-content: center;
     width: 100%;
+    backdrop-filter: blur(10px);
+    text-shadow: 0 0 30px #111;
     max-width: 600px;
 }
 
