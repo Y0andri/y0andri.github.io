@@ -1,66 +1,75 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Chat Global</title>
+    <title>Chat con GitHub Gist</title>
     <style>
-        /* Tus estilos permanecen igual */
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 20px auto; }
+        #chat { border: 1px solid #ddd; padding: 10px; height: 400px; overflow-y: auto; }
+        #input { width: 80%; padding: 8px; }
+        button { padding: 8px 15px; background: #28a745; color: white; border: none; }
+        .msg { margin: 5px 0; padding: 5px; background: #f8f9fa; }
     </style>
 </head>
 <body>
-    <div class="chat-container">
-        <div class="chat-messages" id="chat-messages"></div>
-        <div class="chat-input">
-            <input type="text" id="message-input" placeholder="Escribe tu mensaje...">
-            <button onclick="sendMessage()">Enviar</button>
-        </div>
-    </div>
+    <div id="chat"></div>
+    <input type="text" id="input" placeholder="Escribe tu mensaje...">
+    <button onclick="enviarMensaje()">Enviar</button>
 
-    <!-- Script de Supabase primero -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
-        // Configuración CORREGIDA de Supabase
-        const SUPABASE_URL = 'https://pnsbpdksuateqsvwdyld.supabase.co';
-        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBuc2JwZGtzdWF0ZXFzdndkeWxkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI2NjA0ODcsImV4cCI6MjA1ODIzNjQ4N30.jJwBcM31Zw42PH5HrKxiSpxJsgFwZEeaTnYYUvKa2Ag';
-        const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY); // Corregido aquí
+        // Configuración
+        const GIST_ID = "e819bcd285a9d7cd439b0ffb01d1e8da"; // Reemplaza con tu ID
+        const GH_TOKEN = "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"; // ¡NO lo publiques en GitHub Pages!
+        const ARCHIVO = "blog.txt";
 
-        // Elementos DOM
-        const chatMessages = document.getElementById('chat-messages');
-        const messageInput = document.getElementById('message-input');
-
-        // Escuchar nuevos mensajes
-        const channel = supabase
-            .channel('chat-global')
-            .on('postgres_changes', {
-                event: 'INSERT',
-                schema: 'public',
-                table: 'global_yoandri'
-            }, (payload) => {
-                addMessageToChat(payload.new);
-            })
-            .subscribe();
-
-        // Función para enviar mensajes
-        async function sendMessage() {
-            const messageText = messageInput.value.trim();
-            if (!messageText) return;
-
-            const { error } = await supabase
-                .from('global_yoandri')
-                .insert([{
-                    user: 'Anónimo',
-                    message: messageText,
-                    created_at: new Date().toISOString()
-                }]);
-
-            if (error) {
-                console.error('Error:', error);
-            } else {
-                messageInput.value = '';
-            }
+        // Obtener mensajes del Gist
+        async function obtenerChat() {
+            const url = `https://api.github.com/gists/${GIST_ID}`;
+            const respuesta = await fetch(url, {
+                headers: { "Authorization": `Bearer ${GH_TOKEN}` }
+            });
+            const gist = await respuesta.json();
+            return gist.files[ARCHIVO].content;
         }
 
-        // Resto del código permanece igual
+        // Actualizar el Gist con un nuevo mensaje
+        async function actualizarChat(mensaje) {
+            const contenido = await obtenerChat();
+            const nuevoContenido = contenido + "\n" + mensaje;
+
+            await fetch(`https://api.github.com/gists/${GIST_ID}`, {
+                method: "PATCH",
+                headers: {
+                    "Authorization": `Bearer ${GH_TOKEN}`,
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    files: { [ARCHIVO]: { content: nuevoContenido } }
+                })
+            });
+        }
+
+        // Mostrar mensajes en el HTML
+        async function mostrarChat() {
+            const contenido = await obtenerChat();
+            const lineas = contenido.split("\n");
+            document.getElementById("chat").innerHTML = lineas
+                .map(linea => `<div class="msg">${linea}</div>`)
+                .join("");
+        }
+
+        // Enviar mensaje
+        async function enviarMensaje() {
+            const input = document.getElementById("input");
+            const mensaje = `[${new Date().toLocaleTimeString()}] Usuario: ${input.value}`;
+            
+            await actualizarChat(mensaje);
+            input.value = "";
+            await mostrarChat();
+        }
+
+        // Actualizar cada 5 segundos
+        setInterval(mostrarChat, 5000);
+        mostrarChat(); // Cargar al inicio
     </script>
 </body>
 </html>
