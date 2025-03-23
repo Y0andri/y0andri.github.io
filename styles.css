@@ -1522,6 +1522,60 @@ h2 , .hx {
     margin:0.8rem;
 }
 
+.container_meme_gen {
+    width: 85%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+.meme_gen {
+    width: 100%;
+    display: block;
+}
+
+.container_meme_gen p {
+    display: -webkit-flex;
+    display: flex;
+    position: absolute;
+    font-size:1.4rem;
+    align-items: center;
+    justify-content: center;
+    height: 49%;
+    text-align: center;
+    font-family: "arvo";
+    font-weight: bold;
+    color:#111;
+}
+
+.context_meme {
+    display: block;
+    background-color:#fff; 
+    width:85%; 
+    max-width: 800px;
+    padding:0.8rem; 
+    color:#111; 
+    font-family: "arvo" ; 
+    text-align: center;
+    font-size:1.5rem; 
+    font-weight:bold;
+    margin:auto;
+}
+
+.container_meme_gen p:first-of-type {
+    top:1%;
+    right:0;
+    padding:3%;
+    width: 55%;
+}
+
+.container_meme_gen p:last-of-type {
+    bottom:1%;
+    right:0;
+    padding:3%;
+    width: 55%;
+}
+
 /* Docs */
 
 
