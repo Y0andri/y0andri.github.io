@@ -539,9 +539,6 @@ h2 , .hx {
     font-weight: bold;
 }
 
-.secciones_grid a div i {
-}
-
 .secciones_grid a > p {
     color: #eef;
     font-size:1.2rem;
@@ -1443,6 +1440,157 @@ h2 , .hx {
 
 /* SANDBOX */
 
+#math_form {
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.8rem;
+    border: 0.2rem solid #f00;
+    padding:0.6rem;
+    border-radius: 1rem;
+}
+
+#math_form > * {
+    display: block;
+    flex:1;
+    text-align: center;
+    margin:0.5rem;
+    padding:0.4rem;
+}
+
+#math_form label div {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+}
+
+.div_resultado {
+    min-height: 5rem;
+    background-color: rgb(80, 81, 90);
+    border-radius: 0.7rem;
+    box-shadow: 0 0 50px 10px rgba(255, 255, 255, 0.231);
+}
+
+#math_form label div {
+    display: flex;
+    align-items: center;
+    font-size: 2.2rem;
+}
+
+#math_form label div > * {
+    margin:.4rem;
+}
+
+#math_form input::placeholder {
+    color:#eef;
+    opacity: 0.4;
+    text-align: center;
+}
+
+#math_form input {
+    color:#fff;
+    outline: none;
+    outline-offset: none;
+    width:100%;
+    min-width: 6rem;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: inherit;
+    border-radius: 100rem;
+    background-color: rgba(255, 255, 255, 0.294);
+    text-align: center;
+}
+
+#math_form .btn_container {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn_container button {
+    flex:1;
+}
+
+#math_form button {
+    font-size: 1em;
+    padding: 1rem ;
+    text-wrap: nowrap;
+    font-family: 'oxanium';
+    color: #eef;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border:none;
+    margin:0.3rem;
+    background-color: rgb(232, 90, 87);
+    box-shadow: 0 0 30px rgba(238, 238, 255, 0.39);
+    
+}
+
+#math_form h3, #math_form label {
+    font-family: 'oxanium';
+    font-size: 1.2em;
+    font-weight: bold;
+    margin:0.5rem;
+}
+
+#resultado {
+    padding:2rem;
+    width:fit-content;
+    margin:auto;
+    font-weight: bold;
+    min-width: 100%;
+    padding:2rem;
+}
+
+
+
+#gen_html_blog {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    background-color: #eef;
+    border-radius:3rem;
+    max-width: 50rem;
+    margin:3rem auto;
+}
+
+#gen_html_blog label , #gen_html_blog input, #gen_html_blog textarea {
+    display: block;
+    font-family: "oxanium";
+    color:#111;
+    font-size: 1.8rem;
+}
+
+#gen_html_blog label {
+    margin: 0rem auto  0rem auto;
+    font-size: 2rem;
+    padding: 1rem 0.5rem;
+    width: 80%;
+    font-weight: 600;
+}
+
+#gen_html_blog input, 
+#gen_html_blog textarea {
+    display: block;
+    outline: none;
+    outline-offset: none;
+    width: 80%;
+    border-radius: 1rem;
+    background: linear-gradient(to right,#fff, transparent);
+    margin: 0rem auto 2.5rem auto;
+    padding:1rem;
+    resize: none;
+    scrollbar-width: thin;
+    border: 0.15rem solid #111;
+}
+
+#gen_html_blog textarea {
+    min-height:15rem;
+}
+
 .caja_ventilador{
     position:relative;
     width:100%;
@@ -2095,6 +2243,7 @@ p#errorMessage {
     .flex_photo {
         margin-bottom: 1.3rem;
         -webkit-box-shadow: 0 0 20px rgba(250,250,255,0.200);
+        box-shadow: 0 0 20px rgba(250,250,255,0.200);
     }
     
     .flex_photo p {
@@ -2297,8 +2446,5 @@ p#errorMessage {
     
     .grid_awards2024 {
         grid-template-columns: 1fr 1fr 1fr;
-    }
-    .main_blog {
-        
     }
 }
