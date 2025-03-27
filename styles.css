@@ -1497,6 +1497,16 @@ h2 , .hx {
     text-align: center;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]{
+    -moz-appearance: textfield;
+}
+
 #math_form .btn_container {
     display: -webkit-flex;
     display: flex;
