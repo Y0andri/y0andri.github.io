@@ -24,6 +24,41 @@
 		 <div class="h1_fixer">
         <h1>Sandbox</h1>
         </div>
+		<form id="math_form">
+			<label>Punto A:<div>(
+				<input required placeholder="X" id="aX" type="number">
+				;
+				<input required placeholder="Y" id="aY" type="number">
+				)
+				</div></label>
+			
+			<label>Punto B:<div>(
+				<input required placeholder="X" id="bX" type="number">
+				;
+				<input required placeholder="Y" id="bY" type="number">
+				)
+				</div></label>
+		<div>
+			<h3>Calcular:</h3>
+			<div class="btn_container">
+			<button id="btn_mediana" type="button">Mediana</button>
+			<button id="btn_puntomedio" type="button">Punto Medio</button>
+			<button id="btn_longitud" type="button">Longitud</button>
+			</div>
+		</div>
+		<div class="div_resultado">
+			<h3>Resultado:</h3>
+			<div id="resultado"></div>
+		</div>
+		</form>
+		<div id="gen_html_blog">
+				<form>
+					<label for="nombre">Nombre: </label>
+					<input type="text" placeholder="Nombre.." id="nombre">
+					<label for="mensaje">Mensaje: </label>
+					<textarea placeholder="Escribe el mensaje.." id="mensaje"> </textarea>
+				</form>
+		</div>
         <div class="caja_ventilador">
 		       <img src="recursos/aspa.jpg" alt="aspa de ventilador azul">
 		       <label class="boton_encender"><input type="checkbox">ENCENDER</label>
@@ -46,5 +81,6 @@
 		</main>
 	</div>
 	<footer id="footer"></footer>
+	<script src="js/math.js"></script>
 </body>
 </html>
