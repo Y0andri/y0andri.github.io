@@ -1,6 +1,6 @@
 
 const outResultado = document.getElementById('resultado');
-const btnMediana = document.getElementById('btn_mediana');
+const btnPendiente = document.getElementById('btn_pendiente');
 const btnPuntoMedio = document.getElementById('btn_puntomedio'); 
 const btnLongitud = document.getElementById('btn_longitud');
 
@@ -11,7 +11,7 @@ const inputs = ()=>{
     bY = document.getElementById('bY').value;
 }
 
-const mediana = ()=>{
+const pendiente = ()=>{
     inputs();
     while (!aX || !aY || !bX || !bY) {
         return "rellena todos los campos";
@@ -57,8 +57,8 @@ const puntoMedio = ()=>{
 
 
 
-btnMediana.addEventListener('click', function(event){
-    outResultado.innerText = mediana();
+btnPendiente.addEventListener('click', function(event){
+    outResultado.innerText = pendiente();
 })
 btnPuntoMedio.addEventListener('click', function(event){
     outResultado.innerText = puntoMedio();
