@@ -1468,9 +1468,9 @@ h2 , .hx {
 
 .div_resultado {
     min-height: 5rem;
-    background-color: rgb(80, 81, 90);
+    background-color: rgb(60, 62, 79);
     border-radius: 0.7rem;
-    box-shadow: 0 0 50px 10px rgba(255, 255, 255, 0.231);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.133);
 }
 
 #math_form label div > * {
@@ -1493,7 +1493,7 @@ h2 , .hx {
     padding: 0.5rem 1rem;
     font-size: inherit;
     border-radius: 100rem;
-    background-color: rgba(255, 255, 255, 0.294);
+    background-color: rgba(155, 155, 155, 0.176);
     text-align: center;
 }
 
@@ -1514,23 +1514,20 @@ input[type=number]{
     flex-wrap: wrap;
 }
 
-.btn_container button {
-    flex:1;
-}
-
 #math_form button {
     font-size: 0.8em;
     padding: 1rem ;
     text-wrap: nowrap;
     font-family: 'oxanium';
     color: #eef;
-    border-radius: 1rem;
+    border-radius: 10rem;
     text-transform: uppercase;
     font-weight: bold;
     border:none;
     margin:0.3rem;
-    background-color: rgb(232, 90, 87);
-    box-shadow: 0 0 30px rgba(238, 238, 255, 0.39);
+    flex:1;
+    background-color: rgb(172, 21, 18);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.233);
     
 }
 
@@ -1538,7 +1535,7 @@ input[type=number]{
     font-family: 'oxanium';
     font-size: 1.2em;
     font-weight: bold;
-    margin:0.5rem;
+    margin-bottom:0.5rem;
 }
 
 #resultado {
