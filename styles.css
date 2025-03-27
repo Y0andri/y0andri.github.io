@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 @font-face {
   font-family: "Oxanium";
   src: url("recursos/fuentes/Oxanium.ttf") format("truetype");
@@ -48,7 +49,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     align-items: center;
-    font-family: "Oxanium";
+    font-family: "Urbanist";
     color: #dde;
     background-color: rgba(20,20,20,0.658);
     scroll-behavior: smooth;
@@ -103,6 +104,10 @@ header {
     border-radius: 2px;
     color: #fff;
     background: radial-gradient(#c81904aa, #c81904dd);
+}
+
+.nav_openner i {
+    font-size: 2rem;
 }
 
 header input {
@@ -264,11 +269,12 @@ header input {
     margin:auto;
     text-align: center;
     flex-grow: 1;
-    padding:.3em .4em;
+    padding: .1em .4em;
 }
 
 #title_header img {
     height: 2.9rem;
+    max-height: 7vh;
 }
 
 
@@ -461,7 +467,13 @@ h2 , .hx {
 .main_index .img_portada {
     position: relative;
     width:100%;
-    border-radius: 4px;
+    max-height: 150px;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.img_portada img {
+    width:100%;
 }
 
 .main_index .secciones_grid {
@@ -722,13 +734,14 @@ h2 , .hx {
     grid-auto-rows: 1fr;
     grid-auto-columns: auto;
     margin:auto;
+    gap:0.5rem;
 }
 
 .card_miembros {
     position: relative;
     width:100%;
     height:15rem;
-    margin: 1rem 0;
+    margin: 0.7rem 0;
     background-color: #111;
     transform-style: preserve-3d;
     transition: 1s transform;
@@ -846,7 +859,7 @@ h2 , .hx {
     color:#dedede;
     font-size: .8rem;
     font-weight: 500;
-    font-family: "Oxanium";
+    font-family: "Urbanist";
     text-align: center;
     text-shadow: 0 0 5px solid #fff;
 }
@@ -1518,7 +1531,7 @@ input[type=number]{
     font-size: 0.8em;
     padding: 1rem ;
     text-wrap: nowrap;
-    font-family: 'oxanium';
+    font-family: 'Urbanist';
     color: #eef;
     border-radius: 10rem;
     text-transform: uppercase;
@@ -1532,7 +1545,7 @@ input[type=number]{
 }
 
 #math_form h3, #math_form label {
-    font-family: 'oxanium';
+    font-family: 'Urbanist';
     font-size: 1.2em;
     font-weight: bold;
     margin-bottom:0.5rem;
@@ -1562,7 +1575,7 @@ input[type=number]{
 
 #gen_html_blog label , #gen_html_blog input, #gen_html_blog textarea {
     display: block;
-    font-family: "oxanium";
+    font-family: "Urbanist";
     color:#111;
     font-size: 1.8rem;
 }
@@ -1738,7 +1751,7 @@ input[type=number]{
     position: relative;
     padding: 2rem;
     width: 90%;
-    font-family: "Oxanium";
+    font-family: "Urbanist";
     background-color: rgb(6,8,11);
     color:#eee;
     max-width: 500px;
@@ -1999,7 +2012,7 @@ p#errorMessage {
 }
 
 .link_container a {
-    font-family: "oxanium";
+    font-family: "Urbanist";
     font-size: 1.6rem;
     flex: 1;
     flex-basis: 45%;
@@ -2430,7 +2443,7 @@ p#errorMessage {
 
 @media screen and (min-width: 590px) {
     html {
-        font-size: 14px;
+        font-size: 12px;
     }
     .main_blog {
         padding-left: 1.5rem;
@@ -2440,7 +2453,7 @@ p#errorMessage {
 
 @media screen and (min-width: 1000px) {
     html {
-        font-size: 16px;
+        font-size: 14px;
     }
     
     .grid_miembros {
