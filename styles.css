@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap');
+
 @font-face {
   font-family: "Oxanium";
   src: url("recursos/fuentes/Oxanium.ttf") format("truetype");
@@ -49,7 +52,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     align-items: center;
-    font-family: "Urbanist";
+    font-family: "Outfit";
     color: #dde;
     background-color: rgba(20,20,20,0.658);
     scroll-behavior: smooth;
@@ -125,6 +128,10 @@ header input {
     height: 100vh;
     overflow: auto;
     z-index: 300;
+}
+
+.nav::-webkit-scrollbar {
+    display: none;
 }
 
 .nav_openner:has(input:checked) ~ .nav {
@@ -262,9 +269,7 @@ header input {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: saiyasans;
     text-decoration: none;
-    font-size: 3.3rem;
     color: #f8e828;
     margin:auto;
     text-align: center;
@@ -301,7 +306,7 @@ main {
 
 .h1_fixer , .h1_false {
     position: fixed;
-    top: calc(4.9rem + .3em + 5px);
+    top: calc(3.3rem + .1em + 5px);
     left:0;
     width:100%;
     z-index: 90;
@@ -311,7 +316,7 @@ main {
     position: relative;
     top:-2px;
     display: block;
-    font-family: "BoldBait" , Sans-Serif;
+    font-family: "Bebas Neue" , Sans-Serif;
     letter-spacing: .1rem;
     font-size: 2.5rem;
     font-weight: bold;
@@ -635,14 +640,14 @@ h2 , .hx {
     margin: auto;
     display: flex;
     max-width: 750px ;
-    flex-direction: column;
-    align-items: center;
+    flex-flow: wrap;
+    justify-content: center;
     gap: 2rem;
 }
 
 .flex_photo {
     position: relative;
-    width: 100%;
+    flex:1 1 30rem;
     height: 100%;
     background: #11111a;
     overflow: hidden;
@@ -786,7 +791,7 @@ h2 , .hx {
 .card_front_miembros {
     font-size: 2.8rem;
     letter-spacing: 1px;
-    font-family: "BoldBait";
+    font-family: "Bebas Neue";
     font-weight: bolder;
     overflow: hidden;
     display: -webkit-grid;
@@ -859,7 +864,7 @@ h2 , .hx {
     color:#dedede;
     font-size: .8rem;
     font-weight: 500;
-    font-family: "Urbanist";
+    font-family: "Outfit";
     text-align: center;
     text-shadow: 0 0 5px solid #fff;
 }
@@ -1531,7 +1536,7 @@ input[type=number]{
     font-size: 0.8em;
     padding: 1rem ;
     text-wrap: nowrap;
-    font-family: 'Urbanist';
+    font-family: 'Outfit';
     color: #eef;
     border-radius: 10rem;
     text-transform: uppercase;
@@ -1545,7 +1550,7 @@ input[type=number]{
 }
 
 #math_form h3, #math_form label {
-    font-family: 'Urbanist';
+    font-family: 'Outfit';
     font-size: 1.2em;
     font-weight: bold;
     margin-bottom:0.5rem;
@@ -1575,7 +1580,7 @@ input[type=number]{
 
 #gen_html_blog label , #gen_html_blog input, #gen_html_blog textarea {
     display: block;
-    font-family: "Urbanist";
+    font-family: "Outfit";
     color:#111;
     font-size: 1.8rem;
 }
@@ -1664,7 +1669,7 @@ input[type=number]{
 .contact_marico {
     display: -webkit-flex;
     text-decoration: none;
-    font-family: "BoldBait";
+    font-family: "Bebas Neue";
     display: flex;
     padding:2rem;
     background: linear-gradient(rgba(0,0,0,0.593), rgba(0,0,0,0.593)) , url('https://i0.wp.com/www.cronicalibre.com/wp-content/uploads/2024/02/Captura-de-pantalla-591.png?fit=714%2C449&ssl=1');
@@ -1751,7 +1756,7 @@ input[type=number]{
     position: relative;
     padding: 2rem;
     width: 90%;
-    font-family: "Urbanist";
+    font-family: "Outfit";
     background-color: rgb(6,8,11);
     color:#eee;
     max-width: 500px;
@@ -2012,7 +2017,7 @@ p#errorMessage {
 }
 
 .link_container a {
-    font-family: "Urbanist";
+    font-family: "Outfit";
     font-size: 1.6rem;
     flex: 1;
     flex-basis: 45%;
@@ -2347,7 +2352,7 @@ p#errorMessage {
     
     .juegosespera h2 {
         padding: 0.7rem;
-        font-family: "BoldBait";
+        font-family: "Bebas Neue";
         letter-spacing: 0.2rem;
         font-weight: 600;
         font-size: 2.9rem;
@@ -2362,7 +2367,7 @@ p#errorMessage {
     }
     
     .div_awards2024 h2 {
-        font-family: "BoldBait";
+        font-family: "Bebas Neue";
         letter-spacing: 0.2rem;
         font-weight: 600;
     }
@@ -2392,7 +2397,7 @@ p#errorMessage {
         color:#fb5a00;
         text-align: center;
         width:100%;
-        font-family:"BoldBait";
+        font-family:"Bebas Neue";
         letter-spacing: 0.2rem;
         font-size: 2.4rem;
         padding:0.7rem;
