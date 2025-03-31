@@ -25,9 +25,9 @@
 
     
     
-    themeSwitch.addEventListener('click', ()=>{
+    themeSwitch.addEventListener('click', function(){
         body.classList.toggle("light");
-        if(body.classList.item(0) == "light") {
+        if(body.classList.contains("light")) {
           localStorage.setItem("tema", 'light');
         }
         else {
