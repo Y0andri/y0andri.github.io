@@ -17,21 +17,10 @@
 <title>Yoandri El Negro - Blog Gamer</title>
 <meta name="title" content="Yoandri El Negro - Blog Gamer" />
 <meta name="description" content="Blog donde se suben constantemente actualizaciones sobre videojuegos." />
-
-	<script src="script.js"></script>
-	<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-<script>
-  window.OneSignalDeferred = window.OneSignalDeferred || [];
-  OneSignalDeferred.push(async function(OneSignal) {
-    await OneSignal.init({
-      appId: "2128c1e6-2449-4aa4-ac4c-e68b59c12a3a",
-    });
-  });
-</script>
 </head>
 <body>
-    	<header id="header"></header>
-	<div class="main_wrapper">
+    <header id="header"></header>
+    <script src="js/componentes.js"></script>
     	<main class="main_blog">
     	    <div class="h1_fixer">
     	        <h1>Blog</h1>
@@ -62,7 +51,6 @@
         </aside>
 	    </div>
 		</main>
-	</div>
 	<footer id="footer"></footer>
 	
   <script>
@@ -90,6 +78,6 @@
     // Ejecutar al cargar la página
     cargarTexto();
 </script>
-
+	<script src="script.js"></script>
 </body>
 </html>

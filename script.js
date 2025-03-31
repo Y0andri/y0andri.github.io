@@ -1,25 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Cargar el header
-  fetch('componentes/header.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('header').innerHTML = data;
-      // Resaltar el enlace activo
-      const navLinks = document.querySelectorAll('.nav a');
-      const currentPage = window.location.pathname.split('/').pop();
-      navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPage) {
-          link.classList.add('nav_btn_active');
-        }
-      });
-    });
-
-  // Cargar el footer
-  fetch('componentes/footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer').innerHTML = data;
-    });
 
   // Comprobar si ya se ha preguntado el nombre del usuario
   if (!localStorage.getItem('nombreUsuario')) {
@@ -44,6 +23,20 @@ document.addEventListener("DOMContentLoaded", function () {
     var elemento = document.getElementById('user_name');
     elemento.innerHTML = 'Hola de nuevo, ' + nombreGuardado + '!';
   }
+  
+  
+  
+  
 });
+
+  // Inicializador de Tema
+  let tema = localStorage.getItem("tema");
+if(localStorage.getItem("tema")) {
+      document.body.classList.add(tema);
+    }
+
+
+
+
 
 

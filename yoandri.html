@@ -15,20 +15,11 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/recursos/favicon/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Los Discípulos" />
     <link rel="manifest" href="/recursos/favicon/site.webmanifest" />
-	<script src="script.js"></script>
-	<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-<script>
-  window.OneSignalDeferred = window.OneSignalDeferred || [];
-  OneSignalDeferred.push(async function(OneSignal) {
-    await OneSignal.init({
-      appId: "2128c1e6-2449-4aa4-ac4c-e68b59c12a3a",
-    });
-  });
-</script>
 </head>
 <body>
+    
     <header id="header"></header>
-	<div class="main_wrapper">
+    <script src="js/componentes.js"></script>
 		<main>
 		    <div class="h1_fixer">
 			<h1>Publicaciones</h1>
@@ -133,8 +124,7 @@
 				</div>
 			</div>
 		</main>
-	</div>
 	<footer id="footer"></footer>
-
+	<script src="script.js"></script>
 </body>
 </html>
