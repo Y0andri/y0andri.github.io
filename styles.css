@@ -161,8 +161,8 @@ header input {
     top:0;
     left:0;
     flex-direction: column;
-    width:55%;
-    max-width: 20rem;
+    width:60%;
+    max-width: 400px;
     background-color: var(--color-p-2);
     height: 100vh;
     overflow: auto;
@@ -236,12 +236,14 @@ header input {
     align-items: center;
     text-decoration: none;
     color: var(--color-t-1);
+    border-radius: .5rem;
     transition: .2s;
 }
 
-.nav ul a:active {
+.nav ul a:hover {
     letter-spacing: 0.5px;
     font-weight: 800;
+    background-color: rgba(125,125,125,0.464);
 }
 
 .nav a p {
@@ -271,7 +273,6 @@ header input {
 .nav .nav_btn_active {
     color: var(--color-p-2);
     background: linear-gradient(to right,var(--color-v-1), var(--color-v-2));
-    border-radius: 5px;
 }
 
 .nav .nav_btn_active i {
