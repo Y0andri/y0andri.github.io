@@ -1096,7 +1096,7 @@ h2 , .hx {
     background-color: rgba(0,0,0,0.227);
     animation: none;
     text-shadow: 0 0 10rem #000;
-    color: var(--color-t-1);
+    color: #eef;
 }
 
 #blog div img ~ a:before {
@@ -1110,7 +1110,7 @@ h2 , .hx {
     padding:0.2rem 0.5rem;
     border-radius: 0 0.4rem 0.4rem 0;
     font-style: italic;
-    color:var(--color-t-1);
+    color: #eef;
     background-color: rgb(99,0,243);
 }
 
@@ -1128,7 +1128,7 @@ h2 , .hx {
 #blog aside img{
     display: block;
     width:4.3rem;
-    background-color: var(--color-t-1) ;
+    background-color: var(--color-v-1) ;
     border-radius: 50%;
     border:0.1rem solid var(--color-t-1);
     margin:1.5rem;
@@ -2286,7 +2286,6 @@ p#errorMessage {
     
     html {
         background: none;
-        background-color: rgb(13,14,29);
     }
     
     .card_front_miembros {
@@ -2427,6 +2426,7 @@ p#errorMessage {
         justify-content: start;
         align-items: start;
     }
+    
     #pestana_goty {
         display: block;
     }
