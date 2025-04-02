@@ -2328,65 +2328,7 @@ p#errorMessage {
     }
 
 
-    .nav_openner {
-        display:none;
-    }
-    
-    .nav {
-        position: absolute;
-        width:4rem;
-        height:4rem;
-        overflow:hidden;
-        display:block;
-        top:20%;
-        z-index:140;
-        border-radius:0.3rem;
-        border:1px solid var(--color-p-1);
-    }
-    
-    .nav:before {
-    content:"☰";
-    border-radius: 0.3rem;
-    position: absolute;
-    font-size: 2.9rem;
-    padding-left: .23em;
-    font-weight: 100;
-    color:var(--color-t-1);
-    top:0rem;
-    left:0rem;
-    background-color:var(--color-v-1);
-    width: 4rem;
-    height:4rem;
-    z-index: 101;
-    transition: none;
-}
 
-    .nav:hover, .nav:focus {
-    position: absolute;
-    top:0;
-    width:55vw;
-    max-width: 400px;
-    height:100vh;
-    border:none;
-    overflow-y: scroll;
-    animation: aparecer-blur 0.3s both;
-}
-
-    .nav:hover:before {
-    opacity:0;
-}
-
-    .nav .nav_logo {
-        border-radius: 50%;
-    }
-
-    .nav .nav_closer {
-        display:none;
-    }
-
-    .nav .canal {
-        color: var(--color-t-2);
-    }
     
     .dialogue_yoandri img {
         width: 5rem;
