@@ -34,6 +34,19 @@
           localStorage.removeItem("tema");
         }
     } )
+    
+    const navOpenner = document.getElementById("nav_openner");
+    const navCloser = document.getElementById("nav_closer");
+    const nav = document.getElementById("nav");
+    
+    navOpenner.addEventListener("click", ()=>{
+        nav.classList.toggle("nav--active");
+    })
+    navCloser.addEventListener("click", ()=>{
+        nav.classList.remove("nav--active");
+    })
+    
+    
       
     });
 
