@@ -2289,6 +2289,10 @@ p#errorMessage {
         background: none;
     }
     
+    #title_header {
+        width:400px;
+    }
+    
     .card_front_miembros {
         display: -webkit-flex;
         display:flex;
