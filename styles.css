@@ -145,6 +145,7 @@ header {
     border-radius: .3rem;
     color: var(--color-b-t);
     background: radial-gradient(var(--color-v-1), var(--color-v-2));
+    border:none;
 }
 
 .nav_openner i {
@@ -156,10 +157,10 @@ header input {
 }
 
 .nav {
-    display:none;
+    display:flex;
     position: fixed;
     top:0;
-    left:0;
+    left:-105%;
     flex-direction: column;
     width:60%;
     max-width: 400px;
@@ -167,20 +168,15 @@ header input {
     height: 100vh;
     overflow: auto;
     z-index: 300;
+    transition: 0.4s ease ;
+}
+
+.nav--active {
+    left:0;
 }
 
 .nav::-webkit-scrollbar {
     display: none;
-}
-
-.nav_openner:has(input:checked) ~ .nav {
-    display:flex;
-    animation: menu 0.4s both ;
-}
-
-.nav:has(input:checked) {
-    display:block;
-    animation: menu_out 0.4s both;
 }
 
 .nav_closer {
@@ -192,6 +188,7 @@ header input {
     padding:0.3rem;
     border-radius: 100px;
     transition: 0.2s;
+    border:none;
 }
 
 .nav_closer i {
@@ -971,7 +968,7 @@ h2 , .hx {
 #blog {
     position: relative;
     overflow:auto;
-    color: var(--color-p-1);
+    color: #111;
     font-family: Sans-Serif;
     padding:1.7rem;
     font-weight: 700;
@@ -987,7 +984,8 @@ h2 , .hx {
     width: 95%;
     margin: 0.8rem 0;
     padding: .9rem 1.3rem 1.8rem 1.3rem;
-    background-color: var(--color-t-1);
+    background-color: #eef;
+    border:1px solid #111;
 }
 
 #blog div iframe {
@@ -999,7 +997,8 @@ h2 , .hx {
     position: absolute;
     width: 1rem;
     height: 1rem;
-    background-color: var(--color-t-1);
+    background-color: #eef;
+    border:1px solid #111;
     border-radius: 50%;
     top: -0.4rem ;
     left: -1rem;
@@ -1011,7 +1010,7 @@ h2 , .hx {
     position: absolute;
     width: fit-content;
     font-size:1rem;
-    color:var(--color-t-1);
+    color:#eef;
     text-transform: uppercase;
     padding:1px 1.5rem 1px 1.5rem;
     border-radius: 100px 2px 100px 2px;
@@ -1128,9 +1127,11 @@ h2 , .hx {
 #blog aside img{
     display: block;
     width:4.3rem;
-    background-color: var(--color-v-1) ;
+    background-color: transparent ;
     border-radius: 50%;
-    border:0.1rem solid var(--color-t-1);
+    color: ;
+    background-color: #eee;
+    padding:5px;
     margin:1.5rem;
     animation: loop 1.3s both infinite linear ;
 }
@@ -2259,11 +2260,11 @@ p#errorMessage {
 
 @keyframes menu_out {
     0% {
-        display: block;
+        display: flex;
         transform: translateX(0) ;
     }
     98% {
-        display:block;
+        display:flex;
     }
     100% {
         display: none;
