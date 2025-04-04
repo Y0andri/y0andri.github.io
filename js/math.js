@@ -50,9 +50,11 @@ const puntoMedio = ()=>{
     while (!aX || !aY || !bX || !bY) {
         return "rellena todos los campos";
     }
-    let y = aY + bY;
-    let x = aX + bX;
-    return "(" + x / 2 + ";" + y / 2 + ")";
+    let yy = aY + bY;
+    let xx = aX + bX;
+    let x = xx / 2;
+    let y = yy / 2;
+    return `(${x};${y})`;
 }
 
 
