@@ -45,15 +45,17 @@ const longitud = ()=>{
     }
 }
 
-const puntoMedio = ()=>{
+const puntoMedio = () => {
     inputs();
     while (!aX || !aY || !bX || !bY) {
         return "rellena todos los campos";
     }
-    let yy = aY + bY;
-    let xx = aX + bX;
+    
+    let yy = Number(aY) + Number(bY);
+    let xx = Number(aX) + Number(bX);
     let x = xx / 2;
     let y = yy / 2;
+    
     return `(${x};${y})`;
 }
 
