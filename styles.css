@@ -1102,17 +1102,17 @@ h2 , .hx {
     border-radius: 1.5rem;
 }
 
-#blog div:has(img ~ a) {
+#blog div:has(img + a) {
     padding:0;
     background-color: transparent;
 }
 
-#blog div:has(img ~ a) img {
+#blog div:has(img + a) img {
     margin:0;
     background-color: var(--color-t-1);
 }
 
-#blog div img ~ a {
+#blog div img + a {
     position: absolute;
     display: -webkit-flex;
     display: flex;
@@ -1136,7 +1136,7 @@ h2 , .hx {
     color: #eef;
 }
 
-#blog div img ~ a:before {
+#blog div img + a:before {
     content:"GAME NEWS";
     position: absolute;
     top: -1.6rem;
@@ -2148,9 +2148,14 @@ p#errorMessage {
 
 .resaltar {
     background-color: var(--color-v-1);
-    color:var(--color-t-1);
+    color: #eee;
     border-radius: 999px;
     padding: 0 4px;
+}
+
+
+.underline {
+    text-decoration: underline;
 }
 
 
@@ -2367,7 +2372,7 @@ p#errorMessage {
         background-color: var(--color-p-3);
     }
     
-    #blog div img ~ a {
+    #blog div img + a {
         background-color: var(--color-t-1);
         border-top:0.15rem solid var(--color-p-1);
         color:#111;
