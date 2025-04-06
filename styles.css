@@ -2160,7 +2160,7 @@ p#errorMessage {
 
 .new-i {
     display: inline;
-    font-size: inherit;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
