@@ -2156,6 +2156,9 @@ p#errorMessage {
 
 .underline {
     text-decoration: underline;
+    font-size: inherit;
+    font-weight: bold;
+    display: inline;
 }
 
 
