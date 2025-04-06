@@ -675,6 +675,59 @@ h2 , .hx {
 .timeline_discipulos div:first-child p:after {
     top: 0;
 }
+
+/*Modal Name */
+.modal-username {
+    position: fixed;
+    display: -webkit-flex;
+    display: flex;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    flex-direction: column;
+    width:70%;
+    max-width: 400px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    min-height: 16rem;
+    background-color: var(--color-p-2);
+    border:0.1rem solid var(--color-t-1);
+    border-radius: 2rem;
+    z-index: 99;
+}
+
+.modal-username__text {
+    color:var(--color-t-1);
+    font-size: 2rem;
+    margin:2rem 0;
+}
+
+.modal-username__input {
+    outline: none;
+    outline-offset: none;
+    padding:1rem;
+    font-size: 1.5rem;
+    background-color: var(--color-p-3);
+    border:none;
+    border:0.1rem solid var(--color-t-1);
+    border-radius: 10rem;
+    color:var(--color-t-1);
+}
+
+.modal-username__button {
+    font-size: 1.5rem;
+    margin:3rem;
+    padding: 1.4rem 2rem;
+    color:var(--color-t-1);
+    border-radius: 1rem;
+    border:none;
+    background-color: var(--color-v-2);
+}
+
+.desactivado {
+    display: none;
+}
 /* Yoandri */
 .flex_gallery {
     margin: auto;
@@ -699,21 +752,6 @@ h2 , .hx {
     box-shadow: 0 0 30px 2px rgba(78,78,78,0.432);
     border-top: 3px solid #ff2525;
     transition: 0.1s;
-}
-
-.flex_photo:active {
-    border-radius: 7px;
-    border: 1.5px solid #ff2525;
-    z-index: 10;
-    backdrop-filter: blur(10px);
-    transform: scale(1.06) ;
-}
-
-
-.flex_photo:first-child:active {
-    border-radius: 7px;
-    border: 1.5px solid #00dd00;
-    z-index: 10;
 }
 
 .flex_photo:first-child {
@@ -1751,6 +1789,7 @@ input[type=number]{
     display: flex;
     position: absolute;
     font-size:1.4rem;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 49%;
@@ -2107,7 +2146,12 @@ p#errorMessage {
     border-top: 0.1rem solid;
 }
 
-
+.resaltar {
+    background-color: var(--color-v-1);
+    color:var(--color-t-1);
+    border-radius: 999px;
+    padding: 0 4px;
+}
 
 
 @keyframes loop {
