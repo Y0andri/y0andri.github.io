@@ -1,4 +1,6 @@
 /*Gacha */
+@import url('https://fonts.googleapis.com/css2?family=Micro+5&display=swap');
+
 :root {
     --shadow-depth: inset 0 0.2rem 0.3rem rgba(0, 0, 0, 0.2), 0 0.1rem 0.3rem rgba(255, 255, 255, 0.3);  
     --shadow-raised: inset 0 0.3rem 0.3rem rgba(255, 255, 255, 0.2),0 0.3rem 0.4rem rgba(0, 0, 0, 0.3); 
@@ -212,11 +214,11 @@ main {
 }
 
 .gacha__contadores > p {
-    font-family: "Times New Roman";
+    font-family: "Micro 5";
     font-weight:800;
     flex:1;
     text-align: center;
-    font-size: 2.1rem;
+    font-size: 4.5rem;
     height: 100%;
     line-height: 5rem;
 }
