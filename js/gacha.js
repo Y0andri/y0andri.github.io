@@ -99,7 +99,7 @@ btnGacha.addEventListener("click", ()=>{
             horaVolver = horaVolver + "am"
         }
         errText.classList.add('show-text');
-        errText.innerHTML = `Tu ludopatía tendrá que esperar 2 horas. <br> <b class="b-gacha">Vuelve a las `  + horaVolver + "</b>";
+        errText.innerHTML = `Tu ludopatía tendrá que esperar una hora. <br> <b class="b-gacha">Vuelve a las `  + horaVolver + "</b>";
         setTimeout(()=>{
             errText.classList.remove('show-text');
         }, 6000)
