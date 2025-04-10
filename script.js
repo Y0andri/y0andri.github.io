@@ -1,32 +1,38 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+document.addEventListener("DOMContentLoaded", function () {
   // Comprobar si ya se ha preguntado el nombre del usuario
-  if (!localStorage.getItem('nombreUsuario')) {
-    // Preguntar el nombre del usuario
-    var nombre = prompt('Hola ¿Cómo te llamas?');
+  if (!localStorage.getItem('Usuarios')) {
+    const modalName = document.querySelector(".modal-username");
+    const buttonName = document.querySelector(".modal-username__button");
+    const inputName = document.querySelector(".modal-username__input"); // Referencia al input, no al value
+    
+    modalName.classList.remove("desactivado");
 
-    // Guardar el nombre en localStorage
-    localStorage.setItem('nombreUsuario', nombre);
+    buttonName.addEventListener("click", () => {
+      const nombre = inputName.value; // Obtener el valor y eliminar espacios en blanco
+      
+      if (nombre) { // Solo si el nombre no está vacío
+        // Guardar el nombre en localStorage
+        localStorage.setItem('Usuarios', nombre);
 
-    // Seleccionar el elemento por su ID
-    var elemento = document.getElementById('user_name');
+        // Mostrar el nombre del usuario en el elemento
+        const elemento = document.getElementById('user_name');
+        elemento.innerHTML = 'Bienvenido, ' + nombre + '!';
 
-    // Mostrar el nombre del usuario en el elemento
-    if (nombre) {
-      elemento.innerHTML = 'Bienvenido, ' + nombre + '!';
-    } else {
-      elemento.innerHTML = 'Hola, visitante!';
-    }
+        // Ocultar el modal
+        modalName.classList.add("desactivado");
+      } else {
+        alert("Por favor, introduce tu nombre.");
+      }
+    });
   } else {
     // Si ya se ha guardado el nombre, mostrarlo directamente
-    var nombreGuardado = localStorage.getItem('nombreUsuario');
-    var elemento = document.getElementById('user_name');
+    const nombreGuardado = localStorage.getItem('Usuarios');
+    const elemento = document.getElementById('user_name');
     elemento.innerHTML = 'Hola de nuevo, ' + nombreGuardado + '!';
   }
-  
-  
-  
-  
+});
 });
 
   // Inicializador de Tema
@@ -34,6 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
 if(localStorage.getItem("tema")) {
       document.body.classList.add(tema);
     }
+    
+    
 
 
 
