@@ -3,6 +3,10 @@ const errText = document.querySelector('.gacha__limite');
 const gachaTreasures = document.querySelector('.gacha__treasures');
 const yoandriLoad = document.querySelector('.yoandri-ludo');
 const monedaCantidad = document.querySelector('.moneda-cantidad');
+const soundCard1 = document.querySelector('.sound-card1');
+const soundCard234 = document.querySelector('.sound-card234');
+const soundCard5 = document.querySelector('.sound-card5');
+const soundCard6 = document.querySelector('.sound-card6');
 const cont1 = document.querySelector('p.level1');
 const cont2 = document.querySelector('p.level2');
 const cont3 = document.querySelector('p.level3');
@@ -70,6 +74,11 @@ function showContadores(){
     cont6.innerText = contador6;
 }
 
+function playSound(a) {
+    a.currentTime = 0;
+    a.play();
+}
+
 function difHoras (){
     if(!localStorage.getItem('tiradaDate')) {
     return 0
@@ -122,6 +131,8 @@ btnGacha.addEventListener("click", ()=>{
     let fecha = `${dia},${mes},${año}`;
     monedasActual = Number(localStorage.getItem('cantMonedas')) + difHoras();
     
+    
+    
     if( monedasActual == 0) {
         errText.classList.add('show-text');
         errText.innerHTML = `La ludopatía no acepta pobres. <br> <b class="b-gacha">Vuelve cuando tengas monedas</b> `;
@@ -144,6 +155,20 @@ btnGacha.addEventListener("click", ()=>{
         showTreasure();
         showContadores();
         yoandriLoad.classList.remove('show-yoandri');
+        if(recompensa == 1) {
+        soundCard1.currentTime = 0;
+        soundCard1.playbackRate = 2.0;
+        soundCard1.play();
+        }
+        if(recompensa == 2 || recompensa == 3 || recompensa == 4) {
+            playSound(soundCard234);
+        }
+        if(recompensa == 5) {
+            playSound(soundCard5);
+        }
+        if(recompensa == 6) {
+            playSound(soundCard6);
+        }
         }, 4000)
     }
 })
