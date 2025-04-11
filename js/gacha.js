@@ -7,23 +7,27 @@ const cont2 = document.querySelector('p.level2');
 const cont3 = document.querySelector('p.level3');
 const cont4 = document.querySelector('p.level4');
 const cont5 = document.querySelector('p.level5');
+const cont6 = document.querySelector('p.level6');
 
 const obtenerRecompensa = ()=>{
-    let numRandom = Math.floor(Math.random()*100+1);
-    if(numRandom <= 35) {
+    let numRandom = Math.floor(Math.random()*1000+1);
+    if(numRandom <= 400) {
         return "1" ;
     }
-    if(numRandom <= 65) {
+    if(numRandom <= 700) {
         return "2" ;
     }
-    if(numRandom <= 85) {
+    if(numRandom <= 900) {
         return "3" ;
     }
-    if(numRandom <= 97) {
+    if(numRandom <= 970) {
         return "4" ;
     }
-    if(numRandom <= 100) {
+    if(numRandom <= 995) {
         return "5" ;
+    }
+    if(numRandom <= 1000) {
+        return "6" ;
     }
     
 }
@@ -36,6 +40,7 @@ function showContadores(){
     var contador3 = 0;
     var contador4 = 0;
     var contador5 = 0;
+    var contador6 = 0;
     for(element of treasuresArray) {
         if(element == 1){
             contador1++;
@@ -52,12 +57,16 @@ function showContadores(){
         if(element == 5){
             contador5++;
         }
+        if(element == 6){
+            contador6++;
+        }
     }
     cont1.innerText = contador1;
     cont2.innerText = contador2;
     cont3.innerText = contador3;
     cont4.innerText = contador4;
     cont5.innerText = contador5;
+    cont6.innerText = contador6;
 }
 
 function showTreasure(){
