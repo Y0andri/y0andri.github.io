@@ -196,26 +196,25 @@ main {
     width: 100%;
 }
 
-.gacha__treasures article {
+.gacha__treasures img {
     margin: 1rem 0;
     background-color: #eff;
     display: -webkit-flex;
     display: flex;
-    padding: 0.5rem;
     position: relative;
-    border-radius: 0.9rem;
+    border-radius: 0.2rem;
     align-items: center;
     width:100%;
     overflow: hidden;
-    min-height: 10rem;
-    aspect-ratio: 21/9;
+    object-fit: contain;
     box-shadow: 0rem 0rem 1rem rgba(17,17,17,0.326);
+    filter: contrast(1.3);
     
     border:0.2rem solid #111;
     transition: 0.4s;
 }
 
-.gacha__treasures article:first-child::before {
+.gacha__treasures img:first-child::before {
     content:"Última tirada";
     display: block;
     position: absolute;
@@ -229,7 +228,7 @@ main {
     background-color: rgba(255,255,255,0.463);
 }
 
-.gacha__treasures article:first-child {
+.gacha__treasures img:first-child {
     animation: shows 1.2s both ease;
 }
 
@@ -272,7 +271,7 @@ main {
 }
 
 
-.gacha__treasures article:hover {
+.gacha__treasures img:hover {
     transform: 
     perspective(30rem) 
     rotateY(0deg) 
@@ -290,36 +289,6 @@ main {
     border-radius: 100px;
 }
 
-article.rango1 {
-    background: url("recursos/gacha/card1.jpg");
-    background-size:cover;
-    background-position: center;
-}
-article.rango2 {
-    background: url("recursos/gacha/card2.jpg");
-    background-size:cover;
-    background-position: center;
-}
-article.rango3 {
-    background: url("recursos/gacha/card3.jpg");
-    background-size:cover;
-    background-position: center;
-}
-article.rango4 {
-    background: url("recursos/gacha/card4.jpg");
-    background-size:cover;
-    background-position: center;
-}
-article.rango5 {
-    background: url("recursos/gacha/card5.jpg");
-    background-size:cover;
-    background-position: center;
-}
-article.rango6 {
-    background: url("recursos/gacha/card6.jpg");
-    background-size:cover;
-    background-position: center;
-}
 
 @keyframes zoomo {
     0% {
@@ -337,7 +306,7 @@ article.rango6 {
         scale:0.7;
     }
     100% {
-        filter:blur(0px);
+        filter:blur(0px) contrast(1.2);
         opacity: 1;
         scale:1
     }
