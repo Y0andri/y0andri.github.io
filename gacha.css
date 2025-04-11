@@ -202,16 +202,30 @@ main {
     display: -webkit-flex;
     display: flex;
     padding: 0.5rem;
+    position: relative;
     border-radius: 0.9rem;
     align-items: center;
     width:100%;
     overflow: hidden;
     min-height: 10rem;
-    aspect-ratio: 17/9;
+    aspect-ratio: 21/9;
     box-shadow: 0rem 0rem 1rem rgba(17,17,17,0.326);
     animation: shows 1s both;
     border:0.2rem solid #111;
     transition: 0.4s;
+}
+
+.gacha__treasures article:first-child::before {
+    content:"Última tirada";
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    font-size:1rem;
+    color:#fff;
+    padding:0.1rem 0.4rem;
+    border-radius: 10rem;
+    background-color: #d00;
 }
 
 .gacha-h2, .gacha-h3 {
