@@ -67,7 +67,7 @@ main {
     max-width: 300px;
     overflow: hidden;
     border-radius:3rem;
-    margin:1rem 0;
+    margin:0rem 0;
 }
 
 .gacha__img img {
@@ -104,6 +104,23 @@ main {
     
 }
 
+.moneda-container {
+    color:rgb(255,207,14);
+    display: -webkit-flex;
+    display: flex;
+    padding:0.7rem 1rem;
+    border-radius: 1rem;
+    font-size:2rem;
+    background-color: #111;
+}
+
+
+
+.moneda-cantidad {
+    margin-left:0.7rem;
+    font-weight: 500;
+}
+
 .level1 {
     background-color:rgb(123,123,123) ;
 }
@@ -133,6 +150,7 @@ main {
     align-items: center;
     bottom:0;
     font-weight: 800;
+    margin-bottom:1.6rem;
     border-radius: 100px;
     cursor: pointer;
     border:0.2rem solid;
@@ -197,7 +215,7 @@ main {
 }
 
 .gacha-h2, .gacha-h3 {
-    margin:1rem 0; 
+    margin:3rem 0; 
     color:#000;
     font-size: 3rem;
     padding:0;
