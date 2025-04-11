@@ -76,25 +76,31 @@ main {
 }
 
 .gacha__guide {
-    height:20rem;
+    height:fit-content;
     overflow: hidden;
     display: -webkit-flex;
     display: flex;
+    justify-content: space-around;
     width: 100%;
+    flex-flow: wrap;
     border-radius: 1rem;
-    border:0.2rem solid #111;
 }
 
 .gacha__guide > * {
-    flex:1;
     display:-webkit-flex;
+    margin:0.1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding:0.4rem;
-    color:#fff;
+    font-size: 1.6rem;
+    border-radius: 100%;
+    color:#111;
+    width: 8rem;
+    height:8rem;
     font-weight: 800;
+    border:0.2rem solid #111;
     
 }
 
@@ -105,13 +111,16 @@ main {
     background-color:rgb(0,216,32) ;
 }
 .level3 {
-    background-color:rgb(22,123,255) ;
+    background-color:rgb(73,152,255) ;
 }
 .level4 {
-    background-color: rgb(187,26,253);
+    background-color: rgb(203,75,255);
 }
 .level5 {
-    background-color: rgb(255,56,56);
+    background-color: rgb(255,97,97);
+}
+.level6 {
+    background-color: rgb(255,226,101);
 }
 
 .gacha__button {
@@ -180,9 +189,10 @@ main {
     width:100%;
     overflow: hidden;
     min-height: 10rem;
-    aspect-ratio: 21/9;
+    aspect-ratio: 17/9;
     box-shadow: 0rem 0rem 1rem rgba(17,17,17,0.326);
     animation: shows 1s both;
+    border:0.2rem solid #111;
     transition: 0.4s;
 }
 
@@ -206,7 +216,7 @@ main {
     height: 5rem;
     border:0.2rem solid #111;
     border-radius: 1rem;
-    color:#fff;
+    color:#111;
     display: -webkit-flex;
     display: flex;
     align-items: center ;
@@ -230,7 +240,7 @@ main {
     rotateY(0deg) 
     rotateX(7deg) 
     scale(1.1);
-    border:0.2rem solid #111;
+    
     z-index:30;
 }
 
@@ -264,6 +274,11 @@ article.rango4 {
 }
 article.rango5 {
     background: url("recursos/gacha/card5.jpg");
+    background-size:cover;
+    background-position: center;
+}
+article.rango6 {
+    background: url("recursos/gacha/card6.jpg");
     background-size:cover;
     background-position: center;
 }
