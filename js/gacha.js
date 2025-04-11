@@ -87,7 +87,7 @@ function showTreasure(){
     let treasuresString = localStorage.getItem('allTreasures');
     let treasuresArray = JSON.parse(treasuresString) || [];
     for (treasure of treasuresArray) {
-    gachaTreasures.insertAdjacentHTML('afterbegin', `<article class="rango${treasure}"></article>`);
+    gachaTreasures.insertAdjacentHTML('afterbegin', `<img src="recursos/gacha/card${treasure}.jpg"></img>`);
 }
 }
 
