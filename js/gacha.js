@@ -2,6 +2,7 @@ const btnGacha = document.querySelector('.gacha__button');
 const errText = document.querySelector('.gacha__limite');
 const gachaTreasures = document.querySelector('.gacha__treasures');
 const yoandriLoad = document.querySelector('.yoandri-ludo');
+const monedaCantidad = document.querySelector('.moneda-cantidad');
 const cont1 = document.querySelector('p.level1');
 const cont2 = document.querySelector('p.level2');
 const cont3 = document.querySelector('p.level3');
@@ -69,6 +70,19 @@ function showContadores(){
     cont6.innerText = contador6;
 }
 
+function difHoras (){
+    if(!localStorage.getItem('tiradaDate')) {
+    return 0
+    }
+    else {
+    var tiradaDateStr = localStorage.getItem('tiradaDate');
+    var tiradaDate = Number(tiradaDateStr);
+    }
+    let date = new Date();
+    diferencia = Math.floor((date - tiradaDate) / (1000 * 60 * 60));
+    return diferencia ;
+}
+
 function showTreasure(){
     let treasuresString = localStorage.getItem('allTreasures');
     let treasuresArray = JSON.parse(treasuresString) || [];
@@ -81,6 +95,17 @@ if (!localStorage.getItem("allTreasures") || localStorage.getItem("allTreasures"
         let allTreasures = [];
         localStorage.setItem("allTreasures", JSON.stringify(allTreasures));
         }
+        
+
+function showMonedas(){
+if(!localStorage.getItem('cantMonedas')) {
+    localStorage.setItem('cantMonedas', 3);
+}
+var monedasActual = Number(localStorage.getItem('cantMonedas')) + difHoras();
+monedaCantidad.innerText = monedasActual;
+}
+
+showMonedas();
     
 showTreasure();
 
@@ -95,20 +120,11 @@ btnGacha.addEventListener("click", ()=>{
     let dia = date.getDate();
     let hora = date.getHours();
     let fecha = `${dia},${mes},${año}`;
+    monedasActual = Number(localStorage.getItem('cantMonedas')) + difHoras();
     
-    const ultHoraTirada = Number(localStorage.getItem("tiradaHora")) || -100;
-    const ultDiaTirada = Number(localStorage.getItem('tiradaDia')) || -1;
-    
-    if( dia === ultDiaTirada && hora < ultHoraTirada + 1) {
-        let horaVolver = ultHoraTirada + 1;
-        if (horaVolver >= 12) {
-            horaVolver = (horaVolver - 12) + "pm";
-        }
-        else {
-            horaVolver = horaVolver + "am"
-        }
+    if( monedasActual == 0) {
         errText.classList.add('show-text');
-        errText.innerHTML = `Tu ludopatía tendrá que esperar una hora. <br> <b class="b-gacha">Vuelve a las `  + horaVolver + "</b>";
+        errText.innerHTML = `La ludopatía no acepta pobres. <br> <b class="b-gacha">Vuelve cuando tengas monedas</b> `;
         setTimeout(()=>{
             errText.classList.remove('show-text');
         }, 6000)
@@ -121,9 +137,9 @@ btnGacha.addEventListener("click", ()=>{
         let treasuresArray = JSON.parse(treasuresString) || [];
         treasuresArray.push(recompensa);
         localStorage.setItem('allTreasures', JSON.stringify(treasuresArray));
-        localStorage.setItem("tiradaDia", dia );
-        localStorage.setItem("tiradaHora", hora );
-        localStorage.setItem("tiradaMes", mes)
+        localStorage.setItem("tiradaDate", Date.now());
+        localStorage.setItem('cantMonedas', monedasActual - 1);
+        showMonedas();
         gachaTreasures.innerHTML = " ";
         showTreasure();
         showContadores();
