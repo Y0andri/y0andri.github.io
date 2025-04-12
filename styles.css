@@ -120,7 +120,7 @@ main > p {
 
 /*Header */
 
-i {
+i.bi {
     font-size: 2.8rem;
     display: grid;
     place-content: center;
@@ -321,6 +321,8 @@ header input {
     transition: 0.4s color;
     border-radius: 100%;
 }
+
+
 
 
 #title_header {
