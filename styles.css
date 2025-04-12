@@ -2183,6 +2183,7 @@ p#errorMessage {
 
 .blog_tuto li {
     margin:0.5rem;
+    line-height: 1.5;
 }
 
 .blog_tuto li img {
