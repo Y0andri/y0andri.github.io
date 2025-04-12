@@ -598,6 +598,9 @@ h2 , .hx {
 .secciones_grid a[href="https://y0andri.github.io/blog-page.html"] div {
     color: #0ca712;
 }
+.secciones_grid a[href="https://y0andri.github.io/gacha.html"] div {
+    color: rgb(229,184,0);
+}
 
 .secciones_grid a div {
     text-align: center;
