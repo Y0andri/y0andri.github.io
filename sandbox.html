@@ -24,6 +24,29 @@
         <h1>Sandbox</h1>
         </div>
 		<h2>Calculadora</h2>
+				<div id="gen_html_blog">
+                    <h2>Generador de Codigo HTML</h2>
+                    <br>
+					<label for="nombre">Nombre: </label>
+
+                    <select id="nombre">
+                        <option value="" hidden >Selecciona tu nombre</option>
+                        <option value="cristian">Cristian</option>
+                        <option value="yoan">Yoan</option>
+                        <option value="derek">Derek</option>
+                        <option value="maiko">Maiko</option>
+                        <option value="yordan">Yordan</option>
+                    </select>
+					<label for="imagen">Imágen: </label>
+					<input type="text" placeholder="Enlace de la imágen.." id="imagen">
+					<label for="mensaje">Mensaje: </label>
+					<textarea placeholder="Escribe el mensaje.." id="mensaje"> </textarea>
+					<button class="btn-gen-html">Generar</button>
+					<h2>Codigo:</h2>
+					<div class="resultado-codigo">
+					    
+					</div>
+		</div>
 		<form id="math_form">
 			<div>
 			<label>Punto A:<div>(
@@ -52,14 +75,7 @@
 			<div id="resultado"></div>
 		</div>
 		</form>
-		<div id="gen_html_blog">
-				<form>
-					<label for="nombre">Nombre: </label>
-					<input type="text" placeholder="Nombre.." id="nombre">
-					<label for="mensaje">Mensaje: </label>
-					<textarea placeholder="Escribe el mensaje.." id="mensaje"> </textarea>
-				</form>
-		</div>
+
         <div class="caja_ventilador">
 		       <img src="recursos/aspa.jpg" alt="aspa de ventilador azul">
 		       <label class="boton_encender"><input type="checkbox">ENCENDER</label>
@@ -83,5 +99,6 @@
 	<footer id="footer"></footer>
 	<script src="js/math.js"></script>
 	<script src="script.js"></script>
+	<script src="js/genHTML.js"></script>
 </body>
 </html>

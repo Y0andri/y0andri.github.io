@@ -1011,6 +1011,12 @@ h2 , .hx {
     padding: calc(5.8rem + .2em + 5px + 5rem) 0rem 2rem 0rem;
 }
 
+.botones-blog {
+    display: flex;
+    width: fit-content;
+    margin: auto;
+}
+
 #blog {
     position: relative;
     overflow:auto;
@@ -1656,14 +1662,20 @@ input[type=number]{
 
 
 
+
+/* Gen html */
+
+
 #gen_html_blog {
     display: -webkit-flex;
     display: flex;
     justify-content: center;
     flex-flow: column wrap;
-    border-radius:3rem;
+    border-radius:0.5rem;
     max-width: 50rem;
+    background-color: var(--color-p-3);
     margin:3rem auto;
+    box-shadow: 0 0.3rem 1rem var(--color-s);
 }
 
 #gen_html_blog label , #gen_html_blog input, #gen_html_blog textarea {
@@ -1682,23 +1694,56 @@ input[type=number]{
 }
 
 #gen_html_blog input, 
-#gen_html_blog textarea {
+#gen_html_blog textarea, #gen_html_blog select {
     display: block;
     outline: none;
     outline-offset: none;
     width: 80%;
-    border-radius: 1rem;
-    background: #fff;
-    color:var(--color-p-1);
+    border-radius: 0.4rem;
+    background: transparent ;
+    color:var(--color-t-1);
     margin: 0rem auto 2.5rem auto;
     padding:1rem;
     resize: none;
     scrollbar-width: thin;
-    border: 0.15rem solid var(--color-p-1);
+    border: 0.1rem solid var(--color-t-1);
+}
+
+.btn-gen-html {
+    width:fit-content;
+    padding: 1.2rem 2rem;
+    border:none;
+    font-size: 1.8rem;
+    border-radius: 10rem;
+    margin: auto;
+    background-color: var(--color-v-2);
+    color:var(--color-t-1);
+    transition: 0.3s;
+}
+
+.btn-gen-html:active {
+    background-color: var(--color-p-1);
+}
+
+#gen_html_blog select {
+    background-color: var(--color-s);
 }
 
 #gen_html_blog textarea {
     min-height:15rem;
+}
+
+
+.resultado-codigo {
+    border: 0.1rem solid var(--color-t-1);
+    min-height: 4rem;
+    width: 80%;
+    margin: 0rem auto 2.5rem auto;
+    border-radius: 0.6rem;
+    font-size: 1.4rem;
+    color:var(--color-p-1);
+    padding: 3rem 1.3rem;
+    background-color: var(--color-t-1);
 }
 
 .caja_ventilador{
