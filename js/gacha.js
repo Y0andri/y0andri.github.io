@@ -7,12 +7,12 @@ const soundCard1 = document.querySelector('.sound-card1');
 const soundCard234 = document.querySelector('.sound-card234');
 const soundCard5 = document.querySelector('.sound-card5');
 const soundCard6 = document.querySelector('.sound-card6');
-const cont1 = document.querySelector('p.level1');
-const cont2 = document.querySelector('p.level2');
-const cont3 = document.querySelector('p.level3');
-const cont4 = document.querySelector('p.level4');
-const cont5 = document.querySelector('p.level5');
-const cont6 = document.querySelector('p.level6');
+const cont1 = document.querySelector('a.level1');
+const cont2 = document.querySelector('a.level2');
+const cont3 = document.querySelector('a.level3');
+const cont4 = document.querySelector('a.level4');
+const cont5 = document.querySelector('a.level5');
+const cont6 = document.querySelector('a.level6');
 
 const obtenerRecompensa = ()=>{
     let numRandom = Math.floor(Math.random()*1000+1);
@@ -35,7 +35,7 @@ const obtenerRecompensa = ()=>{
         return "6" ;
     }
     
-}
+};
 
 function showContadores(){
     let treasuresString = localStorage.getItem('allTreasures');
@@ -46,7 +46,7 @@ function showContadores(){
     var contador4 = 0;
     var contador5 = 0;
     var contador6 = 0;
-    for(element of treasuresArray) {
+    for(let element of treasuresArray) {
         if(element == 1){
             contador1++;
         }
@@ -81,7 +81,7 @@ function playSound(a) {
 
 function difHoras (){
     if(!localStorage.getItem('tiradaDate')) {
-    return 0
+    return 0;
     }
     else {
     var tiradaDateStr = localStorage.getItem('tiradaDate');
@@ -95,8 +95,8 @@ function difHoras (){
 function showTreasure(){
     let treasuresString = localStorage.getItem('allTreasures');
     let treasuresArray = JSON.parse(treasuresString) || [];
-    for (treasure of treasuresArray) {
-    gachaTreasures.insertAdjacentHTML('afterbegin', `<img src="recursos/gacha/card${treasure}.jpg"></img>`);
+    for (let treasure of treasuresArray) {
+    gachaTreasures.insertAdjacentHTML('afterbegin', `<img id="img-level-${treasure}" src="recursos/gacha/card${treasure}.jpg"></img>`);
 }
 }
 
@@ -138,7 +138,7 @@ btnGacha.addEventListener("click", ()=>{
         errText.innerHTML = `La ludopatía no acepta pobres. <br> <b class="b-gacha">Vuelve cuando tengas monedas</b> `;
         setTimeout(()=>{
             errText.classList.remove('show-text');
-        }, 6000)
+        }, 6000);
     }
     else {
         yoandriLoad.classList.add('show-yoandri');
