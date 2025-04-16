@@ -1,13 +1,13 @@
 const saludo = ()=>{
     let fecha = new Date();
     let hora = fecha.getHours();
-    if(fecha <= 5 || fecha >= 20) {
+    if(hora <= 5 || hora >= 20) {
         return "Buenas noches";
     }
-    if(fecha < 20 || fecha > 12) {
+    if(hora < 20 || hora > 12) {
         return "Buenas tardes";
     }
-    if(fecha <= 12 || fecha > 5) {
+    if(hora <= 12 || hora > 5) {
         return "Buenas tardes";
     }
 }
