@@ -116,6 +116,7 @@ main > p {
     font-size: 1.5rem;
     font-weight: 400;
     padding: 0 1rem;
+    line-height: 1.4;
 }
 
 /*Header */
@@ -271,7 +272,7 @@ header input {
 }
 
 .nav .nav_btn_active {
-    color: var(--color-p-2);
+    color: #eef;
     background: linear-gradient(to right,var(--color-v-1), var(--color-v-2));
 }
 
@@ -465,6 +466,10 @@ footer a[download] {
     padding: calc(6rem + .2em + 5px ) 10px 10px 10px;
 }
 
+.h1-index {
+    display: inline;
+}
+
 h2 , .hx {
     margin: 1rem auto 0.3rem auto;
     padding:0.8rem;
@@ -479,7 +484,8 @@ h2 , .hx {
     display: flex;
     padding: 5px;
     width: 95%;
-    margin: 2rem auto 0 auto;
+    max-width: 700px;
+    margin: 2rem 0 ;
     overflow: hidden;
     gap:4px;
     filter: drop-shadow(0 0 10px var(--color-s));
@@ -499,6 +505,7 @@ h2 , .hx {
 
 .main_index #user_name {
     font-size: 2.5rem;
+    color: var(--color-t-1);
 }
 
 .main_index .dialogue_yoandri section {
@@ -509,26 +516,22 @@ h2 , .hx {
     border: 1px solid var(--color-t-1);
 }
 
-.main_index section p {
-    color: var(--color-t-1);
-    font-size: 1.7rem;
-    font-weight: 200;
+.main_index section p, .main_index section h1 {
+    color: var(--color-t-2);
+    font-size: 1.6rem;
+    font-weight: 400;
     word-wrap: justify;
-}
-
-.main_index section br ~ p:first-letter {
-    font-size: 2rem;
 }
 
 
 .main_index b {
-    font-weight: 900;
+    font-weight: 800;
     font-size: inherit;
     color:inherit;
 }
 
 .main_index h1 {
-    font-weight: 900;
+    font-weight: 500;
     font-size: 1.7rem;
     color: var(--color-t-1);
     font-family: inherit;
@@ -684,7 +687,20 @@ h2 , .hx {
     top: 0;
 }
 
+
+
 /*Modal Name */
+
+.modal-username-bg {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 110vw;
+    height: 110vh;
+    z-index: 600;
+    background-color: rgba(0,0,0,0.57);
+}
+
 .modal-username {
     position: fixed;
     display: -webkit-flex;
@@ -700,9 +716,10 @@ h2 , .hx {
     justify-content: center;
     min-height: 16rem;
     background-color: var(--color-p-2);
-    border:0.1rem solid var(--color-t-1);
-    border-radius: 2rem;
-    z-index: 99;
+    
+    border-radius: 1rem;
+    animation: aparecer 0.5s both;
+    z-index: 610;
 }
 
 .modal-username__text {
@@ -718,16 +735,22 @@ h2 , .hx {
     font-size: 1.5rem;
     background-color: var(--color-p-3);
     border:none;
-    border:0.1rem solid var(--color-t-1);
+    border:0.06rem solid var(--color-t-1);
     border-radius: 10rem;
     color:var(--color-t-1);
+    transition: 0.3s border;
+}
+
+.modal-username__input:hover {
+    border:0.2rem solid var(--color-v-1);
 }
 
 .modal-username__button {
     font-size: 1.5rem;
     margin:3rem;
-    padding: 1.4rem 2rem;
-    color:var(--color-t-1);
+    padding: 1.4rem 2.5rem;
+    color: #fff;
+    font-weight: 500;
     border-radius: 1rem;
     border:none;
     background-color: var(--color-v-2);
@@ -2196,6 +2219,11 @@ p#errorMessage {
 
 /*Elements*/
 
+.non-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
 .border-top {
     border-top: 0.1rem solid;
 }
@@ -2218,6 +2246,11 @@ p#errorMessage {
     font-weight: bold;
 }
 
+.sacudir {
+    transition: 0s;
+    border:0.15rem solid var(--color-v-1);
+    animation: sacudir 0.5s both;
+}
 
 @keyframes loop {
     0% {
@@ -2261,16 +2294,16 @@ p#errorMessage {
 }
 
 @keyframes sacudir {
-    40% {
+    0% {
         transform: rotate(0deg);
     }
-    45% {
+    30% {
         transform: rotate(3deg);
     }
-    50% {
+    64% {
         transform: rotate(-3deg);
     }
-    55% {
+    100% {
         transform: rotate(0deg);
     }
 }
