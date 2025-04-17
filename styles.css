@@ -286,6 +286,10 @@ header input {
     opacity: 0.8;
 }
 
+.btn-alt {
+    
+}
+
 .nav ul {
     flex:1;
     display:flex;
@@ -2527,6 +2531,7 @@ p#errorMessage {
     
     #title_header {
         width:400px;
+        padding: 0 4rem ;
     }
     
     .card_front_miembros {
@@ -2581,7 +2586,7 @@ p#errorMessage {
         display:block;
         top:20%;
         z-index:600;
-        left:0;
+        left:0.5rem;
         border-radius:0.3rem;
         border:1px solid #111;
     }
@@ -2606,6 +2611,7 @@ p#errorMessage {
     .nav:hover, .nav:focus {
     position: absolute;
     top:0;
+    left:0;
     width:55vw;
     max-width: 400px;
     height:100vh;
@@ -2641,8 +2647,6 @@ p#errorMessage {
     }
     
     div.modal-theme-bg.desactivado {
-        display: -webkit-flex;
-        display: flex;
         position: relative;
         width: 100%;
         height: auto;
@@ -2670,6 +2674,24 @@ p#errorMessage {
         font-size: 1.3rem;
     }
 
+    .btn-alt {
+        display: -webkit-flex;
+        display: flex;
+        width: 100%;
+        
+    }
+    
+    .btn-alt button {
+        flex:1;
+        border:none;
+        background-color: #111;
+        color:#fff;
+        border-radius: 10rem;
+        font-size: 1.8rem;
+        padding:0.4rem;
+        margin:0.3rem;
+        border:1px solid;
+    }
 
 
     

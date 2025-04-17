@@ -214,7 +214,10 @@ html {
 }
 
 .gacha__treasures img:first-child {
-    animation: shows 1.6s forward ease;
+    filter:blur(0px) contrast(1.2);
+    opacity: 1;
+    transform:scale(1);
+    animation: shows 1.6s backwards ease;
 }
 
 
