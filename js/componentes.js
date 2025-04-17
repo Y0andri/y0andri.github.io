@@ -40,20 +40,22 @@
     const btnLight = document.querySelector(".theme-light");
     const btnDbz = document.querySelector(".theme-dbz");
     
-    const ponerTema = (tEma)=>{
+    function ponerTema(tEma){
         body.className = " ";
         body.classList.add(tEma);
         localStorage.setItem("tema", tEma);
+        themeBg.classList.toggle("desactivado");
+        body.classList.remove("non-scroll");
     }
     
 
-    btnLight.addEventListener('click', ()=>{
+    btnLight.addEventListener('click', function(){
         ponerTema("Light");
     } )
-    btnDark.addEventListener('click', ()=>{
+    btnDark.addEventListener('click', function(){
         ponerTema("Dark");
     } )
-    btnDbz.addEventListener('click', ()=>{
+    btnDbz.addEventListener('click', function(){
         ponerTema("Dbz");
     } )
     
@@ -64,12 +66,12 @@
     } )
     
     for(let btn of btnTheme){
-    btn.addEventListener("click",(e)=>{
+    btn.addEventListener("click",function(e){
         e.stopPropagation();
     })
     }
     
-    themeBg.addEventListener('click', ()=>{
+    themeBg.addEventListener('click', function(){
         themeBg.classList.toggle("desactivado");
         body.classList.remove("non-scroll");
     })
