@@ -13,27 +13,9 @@
       });
       
       
-    // Temas
-
       
-    
-
-
-    let tema = localStorage.getItem("tema");
-    const themeSwitch = document.getElementById("theme-changer");
-    const body = document.querySelector("body");
-
-    
-    
-    themeSwitch.addEventListener('click', function(){
-        body.classList.toggle("light");
-        if(body.classList.contains("light")) {
-          localStorage.setItem("tema", 'light');
-        }
-        else {
-          localStorage.removeItem("tema");
-        }
-    } )
+      
+      //Menu
     
     const navOpenner = document.getElementById("nav_openner");
     const navCloser = document.getElementById("nav_closer");
@@ -45,6 +27,56 @@
     navCloser.addEventListener("click", ()=>{
         nav.classList.remove("nav--active");
     })
+      
+    // Temas
+
+      
+    let tema = localStorage.getItem("tema");
+    const themeOpenner = document.querySelector(".btn-theme");
+    const themeBg = document.querySelector(".modal-theme-bg");
+    const body = document.querySelector("body");
+    const btnTheme = document.querySelectorAll('.modal-theme button');
+    const btnDark = document.querySelector(".theme-dark");
+    const btnLight = document.querySelector(".theme-light");
+    const btnDbz = document.querySelector(".theme-dbz");
+    
+    const ponerTema = (tEma)=>{
+        body.className = " ";
+        body.classList.add(tEma);
+        localStorage.setItem("tema", tEma);
+    }
+    
+
+    btnLight.addEventListener('click', ()=>{
+        ponerTema("Light");
+    } )
+    btnDark.addEventListener('click', ()=>{
+        ponerTema("Dark");
+    } )
+    btnDbz.addEventListener('click', ()=>{
+        ponerTema("Dbz");
+    } )
+    
+    
+    themeOpenner.addEventListener('click', function(e){
+        themeBg.classList.toggle("desactivado");
+        body.classList.add("non-scroll");
+    } )
+    
+    for(let btn of btnTheme){
+    btn.addEventListener("click",(e)=>{
+        e.stopPropagation();
+    })
+    }
+    
+    themeBg.addEventListener('click', ()=>{
+        themeBg.classList.toggle("desactivado");
+        body.classList.remove("non-scroll");
+    })
+    
+    
+    
+  
     
     
       
