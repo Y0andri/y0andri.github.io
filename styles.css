@@ -34,20 +34,20 @@
     --color-s:rgba(255,255,255,0.124);
     --color-bg-t:rgba(20,20,30,0.930);
 }
-.dark {
+.Dark {
     --color-p-1:#020203;
     --color-p-2:#0a0a0f;
     --color-p-3:#15151f;
     --color-v-1:#d80d0d;
     --color-v-2:#bd0000;
     --color-t-1:#eaeef4;
-    --color-t-2:#c2c2c2;
+    --color-t-2:#ddd;
     --color-b-t:#eef;
     --color-s:rgba(255,255,255,0.124);
     --color-bg-t:rgba(20,20,30,0.930);
 }
 
-.light {
+.Light {
     --color-p-1:#eceef7;
     --color-p-2:#f3f6fa;
     --color-p-3:#e5e5eb;
@@ -58,6 +58,22 @@
     --color-b-t:#eef;
     --color-s: rgba(20,20,22,0.120);
     --color-bg-t:rgba(241,242,243,0.9);
+}
+.Dbz {
+--color-p-3: #f3c337;  /* Amarillo dorado claro (como el pelo de Goku SSJ) */
+--color-p-2: #FFC000;  /* Amarillo dorado más intenso */
+--color-p-1: #FFA500;  /* Naranja (como el gi tradicional) */
+
+--color-v-1: #FF0000;  /* Rojo vivo (como el símbolo del kanji) */
+--color-v-2: #CC0000;  /* Rojo más oscuro */
+
+--color-t-1: #00285A;  /* Azul oscuro (como el pantalón de Goku) */
+--color-t-2: #004A8F;  /* Azul medio */
+
+--color-b-t: #F0F8FF;  /* Azul muy claro (para contrastes) */
+
+    --color-s: rgba(20,20,22,0.120);
+    --color-bg-t:rgba(60,197,212,0.792);
 }
 
 
@@ -122,7 +138,7 @@ main > p {
 /*Header */
 
 i.bi {
-    font-size: 2.8rem;
+    font-size: inherit;
     display: grid;
     place-content: center;
 }
@@ -182,10 +198,7 @@ header input {
 
 .nav_closer {
     color: var(--color-t-1);
-    position: absolute;
     background-color: rgba(127,127,127,0.506);
-    top:20px;
-    right:10px;
     padding:0.3rem;
     border-radius: 100px;
     transition: 0.2s;
@@ -201,9 +214,76 @@ header input {
     height:5.4rem;
     object-fit: cover;
     background-color: transparent;
-    margin-top:10px;
-    margin-left:20px;
     border-radius:100%;
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding:0 1rem;
+    padding-top: 1rem;
+}
+
+.btn-theme {
+    padding:1rem;
+    border:0.1rem solid;
+    border-radius: 10rem;
+    font-size: 2rem;
+    width: 6rem;
+    background-color: var(--color-p-3);
+    color:var(--color-t-1);
+    box-shadow: 0 0 1rem 0.1rem var(--color-s);
+}
+
+.modal-theme-bg {
+    display:-webkit-flex;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed ;
+    background-color: rgba(0,0,0,0.77);
+    top:0;
+    left:0;
+    width: 100vw;
+    height:100vh;
+    z-index: 600;
+    animation: aparecer 0.5s both;
+}
+
+.modal-theme {
+    background-color: var(--color-p-3);
+    color:var(--color-t-1);
+    display:-webkit-flex;
+    display: flex;
+    flex-flow: column;
+    position:relative;
+    padding: 1.5rem;
+    min-height: 25rem;
+    z-index: 601;
+    border-radius: 1rem;
+}
+
+.modal-theme h2 {
+    margin:1rem 0;
+}
+
+.modal-theme button {
+    border:none;
+    flex:1;
+    margin:0.5rem 0;
+    background-color: var(--color-v-2);
+    color:#fff;
+    border-radius: 0.7rem;
+    font-weight: bold;
+    transition: 0.3s;
+    padding: 1rem;
+    font-size: 1.7rem;
+}
+
+.modal-theme button:active {
+    transform: scale(1.1);
+    opacity: 0.8;
 }
 
 .nav ul {
@@ -595,7 +675,7 @@ h2 , .hx {
     color: #ff5af9;
 }
 .secciones_grid a[href="https://y0andri.github.io/docs.html"] div {
-    color: #7b29ff;
+    color: #f5ecff;
 }
 .secciones_grid a[href="https://y0andri.github.io/sandbox.html"] div {
     color: #ffae03;
@@ -608,14 +688,28 @@ h2 , .hx {
 }
 
 .secciones_grid a div {
-    text-align: center;
-    width:10rem;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width:9rem;
+    height:9rem;
+    background-color: #000;
+    padding:1.2rem;
+    border-radius: 100%;
+    border:0.1rem solid;
+}
+
+.secciones_grid i {
+    font-size: 2.4rem;
 }
 
 .secciones_grid a div p {
     margin-top:1rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .secciones_grid a > p {

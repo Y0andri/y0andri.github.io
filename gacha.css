@@ -219,8 +219,10 @@ main {
 }
 
 .gacha__treasures img:first-child {
-    animation: shows 1.6s both ease;
+    animation: shows 1.6s forward ease;
 }
+
+
 
 .gacha-h2, .gacha-h3 {
     margin:3rem 0; 
