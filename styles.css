@@ -2618,6 +2618,10 @@ p#errorMessage {
     opacity:0;
 }
 
+    .nav-header {
+        flex-wrap: wrap;
+    }
+
     .nav .nav_logo {
         border-radius: 50%;
     }
@@ -2634,6 +2638,36 @@ p#errorMessage {
         position:absolute;
         width: 100%;
         height: 100%;
+    }
+    
+    div.modal-theme-bg.desactivado {
+        display: -webkit-flex;
+        display: flex;
+        position: relative;
+        width: 100%;
+        height: auto;
+        background-color: transparent;
+        
+    }
+    
+    .modal-theme {
+        width: 100%;
+        min-height: 0;
+        height: auto;
+        padding:0.5rem;
+    }
+    
+    .btn-theme {
+        display: none;
+    }
+    
+    .modal-theme h2 {
+        display: none;
+    }
+    
+    .modal-theme button {
+        padding: 0.8rem 0;
+        font-size: 1.3rem;
     }
 
 
