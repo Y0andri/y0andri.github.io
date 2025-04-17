@@ -10,11 +10,6 @@ html {
     scroll-behavior: smooth;
 }
 
-main {
-    background-color: rgb(232,208,68);
-    
-}
-
 .yoandri-ludo {
     display: none;
     position: fixed;
@@ -226,7 +221,7 @@ main {
 
 .gacha-h2, .gacha-h3 {
     margin:3rem 0; 
-    color:#000;
+    color:var(--color-t-1);
     font-size: 3rem;
     padding:0;
     font-weight: 700;
