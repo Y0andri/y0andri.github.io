@@ -2630,6 +2630,11 @@ p#errorMessage {
         color: #aaa;
     }
     
+    .modal-theme-bg {
+        position:absolute;
+        width: 100%;
+        height: 100%;
+    }
 
 
 
