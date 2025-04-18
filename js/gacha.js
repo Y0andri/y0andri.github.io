@@ -7,6 +7,7 @@ const soundCard1 = document.querySelector('.sound-card1');
 const soundCard234 = document.querySelector('.sound-card234');
 const soundCard5 = document.querySelector('.sound-card5');
 const soundCard6 = document.querySelector('.sound-card6');
+const popupCanjear = document.querySelector('.popup-canjear');
 const cont = [
 document.querySelectorAll('.level1'),
 document.querySelectorAll('.level2'),
@@ -139,6 +140,12 @@ canjLevel2.addEventListener('click',()=>{
         canjear("1",cantidad,"2");
         showTreasure();
         showContadores();
+        popupCanjear.innerHTML = '<img src="recursos/gacha/card2.jpg" alt="">' ;
+        popupCanjear.classList.add("popup-active");
+        setTimeout(()=>{
+            popupCanjear.classList.remove("popup-active");
+        },1500)
+        
     }
     else {
         cont[0][0].classList.add("shake");
@@ -155,6 +162,11 @@ canjLevel3.addEventListener('click',()=>{
         canjear("2",cantidad,"3");
         showTreasure();
         showContadores();
+        popupCanjear.innerHTML = '<img src="recursos/gacha/card3.jpg" alt="">' ;
+        popupCanjear.classList.add("popup-active");
+        setTimeout(()=>{
+            popupCanjear.classList.remove("popup-active");
+        },1500)
     }
     else {
         cont[1][0].classList.add("shake");
@@ -171,6 +183,11 @@ canjLevel4.addEventListener('click',()=>{
         canjear("3",cantidad,"4");
         showTreasure();
         showContadores();
+        popupCanjear.innerHTML = '<img src="recursos/gacha/card4.jpg" alt="">' ;
+        popupCanjear.classList.add("popup-active");
+        setTimeout(()=>{
+            popupCanjear.classList.remove("popup-active");
+        },1500)
     }
     else {
         cont[2][0].classList.add("shake");
@@ -187,6 +204,11 @@ canjLevel5.addEventListener('click',()=>{
         canjear("4",cantidad,"5");
         showTreasure();
         showContadores();
+        popupCanjear.classList.add("popup-active");
+        popupCanjear.innerHTML = '<img src="recursos/gacha/card5.jpg" alt="">' ;
+        setTimeout(()=>{
+            popupCanjear.classList.remove("popup-active");
+        },1500)
     }
     else {
         cont[3][0].classList.add("shake");
