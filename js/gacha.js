@@ -76,12 +76,11 @@ function showContadores(){
             contador[i]++ ;
         }
     }
+    }for(let i = 0; i < 6; i++) {
+    for(let j = 0; j < cont[i].length; j++) {  // Uso de índice numérico.
+        cont[i][j].innerText = contador[i];   // Acceso directo al elemento.
     }
-    for(let i = 0 ;i < 6; i++) {
-        for(let ct of cont[i]) {
-            ct.innerText = contador[i];
-        }
-    }
+}
     return contador ;
 }
 
