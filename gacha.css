@@ -117,6 +117,9 @@ html {
     padding:0.6rem 0.8rem;
     font-size: 2rem;
     color: #111;
+    width: 30%;
+    max-width: 30%;
+    text-align: center;
     border-radius: 0.4rem;
     border:0.1rem solid;
     font-weight: 700;
@@ -397,6 +400,38 @@ html {
 }
 
 
+.canje-error {
+    display:none;
+    position: fixed;
+    top:50%;
+    left:50%;
+    background-color: #111;
+    color:#f00;
+    font-size: 1.4rem;
+    padding: 2rem;
+    font-family: "arvo";
+    text-align: center;
+    z-index: 601;
+    border-radius:1rem;
+    box-shadow: 0.4rem 0.4rem 1rem #f00;
+    transform: translate(-50%,-50%);
+    animation: show-modal 0.8s backwards ease;
+}
+
+.shake {
+      background-color: #d00;
+      animation: shake 0.5s ease;
+   }
+
+
+@keyframes shake {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-0.4rem); }
+      75% { transform: translateX(0.4rem); }
+      100% { transform: translateX(0); }
+   }
+
+
 @keyframes zoomo {
     0% {
         scale: 1;
@@ -430,32 +465,4 @@ html {
     }
 }
 
-.canje-error {
-    display:none;
-    position: fixed;
-    top:50%;
-    left:50%;
-    background-color: #111;
-    color:#f00;
-    font-size: 1.4rem;
-    padding: 2rem;
-    font-family: "arvo";
-    text-align: center;
-    z-index: 601;
-    border-radius:1rem;
-    box-shadow: 0.4rem 0.4rem 1rem #f00;
-    transform: translate(-50%,-50%);
-    animation: show-modal 0.8s backwards ease;
-}
-
-.shake {
-      background-color: #d00;
-      animation: shake 0.5s ease;
-   }
-   @keyframes shake {
-      0% { transform: translateX(0); }
-      25% { transform: translateX(-0.4rem); }
-      75% { transform: translateX(0.4rem); }
-      100% { transform: translateX(0); }
-   }
 
