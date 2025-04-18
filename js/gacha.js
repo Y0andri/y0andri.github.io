@@ -7,12 +7,37 @@ const soundCard1 = document.querySelector('.sound-card1');
 const soundCard234 = document.querySelector('.sound-card234');
 const soundCard5 = document.querySelector('.sound-card5');
 const soundCard6 = document.querySelector('.sound-card6');
-const cont1 = document.querySelector('a.level1');
-const cont2 = document.querySelector('a.level2');
-const cont3 = document.querySelector('a.level3');
-const cont4 = document.querySelector('a.level4');
-const cont5 = document.querySelector('a.level5');
-const cont6 = document.querySelector('a.level6');
+const cont = [
+document.querySelectorAll('.level1'),
+document.querySelectorAll('.level2'),
+document.querySelectorAll('.level3'),
+document.querySelectorAll('.level4'),
+document.querySelectorAll('.level5'),
+document.querySelectorAll('.level6')
+];
+
+const canjLevel2 = document.querySelector('.canjear-level2');
+const canjLevel3 = document.querySelector('.canjear-level3');
+const canjLevel4 = document.querySelector('.canjear-level4');
+const canjLevel5 = document.querySelector('.canjear-level5');
+
+const canjear = (card1,cant1,card2)=>{
+    let cartasString = localStorage.getItem("allTreasures");
+    let cartas = JSON.parse(cartasString) || [];
+    let cantidad = 0;
+    let i = 0 ;
+    while(i < cartas.length && cantidad < cant1 ){
+        if(cartas[i] === card1 ){
+            cartas.splice(i,1);
+            cantidad++ ;
+        }
+        else {
+            i++;
+        }
+    }
+    cartas.push(card2);
+    localStorage.setItem("allTreasures",JSON.stringify(cartas) );
+};
 
 const obtenerRecompensa = ()=>{
     let numRandom = Math.floor(Math.random()*1000+1);
@@ -40,38 +65,23 @@ const obtenerRecompensa = ()=>{
 function showContadores(){
     let treasuresString = localStorage.getItem('allTreasures');
     let treasuresArray = JSON.parse(treasuresString) || [];
-    var contador1 = 0;
-    var contador2 = 0;
-    var contador3 = 0;
-    var contador4 = 0;
-    var contador5 = 0;
-    var contador6 = 0;
+    
+    const contador = [
+        0,0,0,0,0,0
+        ];
+    for(let i = 0; i < 6; i++){
     for(let element of treasuresArray) {
-        if(element == 1){
-            contador1++;
-        }
-        if(element == 2){
-            contador2++;
-        }
-        if(element == 3){
-            contador3++;
-        }
-        if(element == 4){
-            contador4++;
-        }
-        if(element == 5){
-            contador5++;
-        }
-        if(element == 6){
-            contador6++;
+        if(element == (i + 1)){
+            contador[i]++ ;
         }
     }
-    cont1.innerText = contador1;
-    cont2.innerText = contador2;
-    cont3.innerText = contador3;
-    cont4.innerText = contador4;
-    cont5.innerText = contador5;
-    cont6.innerText = contador6;
+    }
+    for(let i = 0 ;i < 6; i++) {
+        for(let ct of cont[i]) {
+            ct.innerText = contador[i];
+        }
+    }
+    return contador ;
 }
 
 function playSound(a) {
@@ -95,6 +105,7 @@ function difHoras (){
 function showTreasure(){
     let treasuresString = localStorage.getItem('allTreasures');
     let treasuresArray = JSON.parse(treasuresString) || [];
+    gachaTreasures.innerHTML = " ";
     for (let treasure of treasuresArray) {
     gachaTreasures.insertAdjacentHTML('afterbegin', `<img id="img-level-${treasure}" src="recursos/gacha/card${treasure}.jpg"></img>`);
 }
@@ -121,6 +132,42 @@ showTreasure();
 showContadores();
 
 
+canjLevel2.addEventListener('click',()=>{
+    let cantidad = 5;
+    let ctn = showContadores();
+    if(ctn[0] >= cantidad){
+        canjear("1",cantidad,"2");
+        showTreasure();
+        showContadores();
+    }
+});
+canjLevel3.addEventListener('click',()=>{
+    let cantidad = 10;
+    let ctn = showContadores();
+    if(ctn[1] >= cantidad){
+        canjear("2",cantidad,"3");
+        showTreasure();
+        showContadores();
+    }
+});
+canjLevel4.addEventListener('click',()=>{
+    let cantidad = 15;
+    let ctn = showContadores();
+    if(ctn[2] >= cantidad){
+        canjear("3",cantidad,"4");
+        showTreasure();
+        showContadores();
+    }
+});
+canjLevel5.addEventListener('click',()=>{
+    let cantidad = 20;
+    let ctn = showContadores();
+    if(ctn[3] >= cantidad){
+        canjear("4",cantidad,"5");
+        showTreasure();
+        showContadores();
+    }
+});
 
 btnGacha.addEventListener("click", ()=>{
     let date = new Date();
@@ -151,7 +198,6 @@ btnGacha.addEventListener("click", ()=>{
         localStorage.setItem("tiradaDate", Date.now());
         localStorage.setItem('cantMonedas', monedasActual - 1);
         showMonedas();
-        gachaTreasures.innerHTML = " ";
         showTreasure();
         showContadores();
         yoandriLoad.classList.remove('show-yoandri');
