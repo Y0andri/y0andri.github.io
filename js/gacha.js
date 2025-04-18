@@ -140,6 +140,13 @@ canjLevel2.addEventListener('click',()=>{
         showTreasure();
         showContadores();
     }
+    else {
+        cont[0][0].classList.add("shake");
+        setTimeout(()=>{
+        cont[0][0].classList.remove("shake");
+
+        }, 500);
+    }
 });
 canjLevel3.addEventListener('click',()=>{
     let cantidad = 10;
@@ -148,6 +155,13 @@ canjLevel3.addEventListener('click',()=>{
         canjear("2",cantidad,"3");
         showTreasure();
         showContadores();
+    }
+    else {
+        cont[1][0].classList.add("shake");
+        setTimeout(()=>{
+        cont[1][0].classList.remove("shake");
+
+        }, 500);
     }
 });
 canjLevel4.addEventListener('click',()=>{
@@ -158,6 +172,13 @@ canjLevel4.addEventListener('click',()=>{
         showTreasure();
         showContadores();
     }
+    else {
+        cont[2][0].classList.add("shake");
+        setTimeout(()=>{
+        cont[2][0].classList.remove("shake");
+
+        }, 500);
+    }
 });
 canjLevel5.addEventListener('click',()=>{
     let cantidad = 20;
@@ -166,6 +187,13 @@ canjLevel5.addEventListener('click',()=>{
         canjear("4",cantidad,"5");
         showTreasure();
         showContadores();
+    }
+    else {
+        cont[3][0].classList.add("shake");
+        setTimeout(()=>{
+        cont[3][0].classList.remove("shake");
+
+        }, 500);
     }
 });
 
