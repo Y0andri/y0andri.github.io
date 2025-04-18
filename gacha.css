@@ -20,14 +20,14 @@ html {
 }
 
 .shop__h2 {
-    margin:0rem auto;
+    margin:0 auto;
     font-size: 2.3rem;
     color:#112;
     font-family: "arvo";
 
 }
 
-.shop__icono {
+i.shop__icono {
     color:#fff;
     font-size: 3rem;
     background-color: #111;
@@ -356,7 +356,7 @@ img.canje-container__img-less {
 
 .gacha-h2, .gacha-h3 {
     margin:3rem 0; 
-    color:#111);
+    color:#111;
     font-size: 3rem;
     padding:0;
     font-weight: 700;
@@ -454,10 +454,12 @@ img.canje-container__img-less {
 }
 
 .popup-canjear img {
+    position: relative;
     width:28rem;
     margin:0;
     box-shadow: 0 0 2rem #000;
-    animation: cardget 1s;
+    animation: cardget 0.5s both;
+    
 }
 
 .popup-active {
@@ -467,7 +469,6 @@ img.canje-container__img-less {
 
 @keyframes cardget {
     0%{
-        position: relative;
         top:3rem;
         opacity: 0.5;
     }
