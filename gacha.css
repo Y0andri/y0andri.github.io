@@ -21,13 +21,18 @@ html {
 
 .shop__h2 {
     margin:0rem auto;
-    font-size: 2rem;
+    font-size: 2.3rem;
     color:#112;
+    font-family: "arvo";
+
 }
 
 .shop__icono {
-    color:#112;
+    color:#fff;
     font-size: 3rem;
+    background-color: #111;
+    padding:1.3rem 0;
+    border-radius: 1rem 1rem 0.4rem 0.4rem ;
 }
 
 .shop__container {
@@ -357,6 +362,10 @@ img.canje-container__img-less {
     font-weight: 700;
 }
 
+.gacha-h2 {
+    font-family: "arvo";
+
+}
 
 .gacha-h3 {
     font-size: 2rem;
