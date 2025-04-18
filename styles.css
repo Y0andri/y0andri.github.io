@@ -138,7 +138,6 @@ main > p {
 /*Header */
 
 i.bi {
-    font-size: inherit;
     display: grid;
     place-content: center;
 }
@@ -155,6 +154,7 @@ header {
     z-index: 300;
     width:100%;
     height:6rem;
+    border-bottom:0.1rem solid var(--color-t-1);
 }
 
 .nav_openner {
@@ -184,7 +184,7 @@ header input {
     background-color: var(--color-p-2);
     height: 100vh;
     overflow: auto;
-    z-index: 300;
+    z-index: 100000;
     transition: 0.4s ease ;
 }
 
@@ -463,7 +463,7 @@ main {
     top:6rem;
     left:0;
     width:100%;
-    z-index: 90;
+    z-index: 200;
 }
 
 .h1_fixer h1 , .h1_false span {
@@ -477,12 +477,13 @@ main {
     text-align: center;
     width:fit-content;
     margin: auto;
-    color: var(--color-t-1);
+    color: var(--color-p-1);
     padding: .3em .9em;
-    background-color: var(--color-p-1);
+    background-color: var(--color-t-1);
     text-transform: uppercase;
     border-radius: 0 0 15px 15px;
-    box-shadow: 0 0px 10px rgba(90,90,90,0.197);
+    border:0.1rem solid var(--color-t-1) ;
+    border-top:none;
 }
 
 .h1_fixer h1::before,.h1_fixer h1::after,
@@ -495,16 +496,20 @@ main {
 }
 
 .h1_fixer h1::before, .h1_false span:before{
-    top:1.8px;
-    left: -18px;
+    border-right:0.1rem solid var(--color-t-1);
+    border-top:0.1rem solid var(--color-t-1);
+    top:1.3px;
+    left: -19px;
     border-top-right-radius: 50px;
-    box-shadow: 4px -4px 0 4px var(--color-p-1);
+    box-shadow: 4px -4px 0 4px var(--color-t-1);
 }
 .h1_fixer h1::after, .h1_false span:after{
-    top:1.8px;
-    right: -18px;
+    border-left:0.1rem solid var(--color-t-1);
+    border-top:0.1rem solid var(--color-t-1);
+    top:1.3px;
+    right: -19px;
     border-top-left-radius: 50px;
-    box-shadow: -4px -4px 0 4px var(--color-p-1);
+    box-shadow: -4px -4px 0 4px var(--color-t-1);
 }
 
 /*Footer */ 
@@ -2585,7 +2590,7 @@ p#errorMessage {
         overflow:hidden;
         display:block;
         top:20%;
-        z-index:600;
+        z-index:700;
         left:0.5rem;
         border-radius:0.3rem;
         border:1px solid #111;
