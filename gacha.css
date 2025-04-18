@@ -36,7 +36,7 @@ html {
     display: -webkit-flex;
     display: flex;
     flex-wrap: wrap;
-    align-items: start;
+    justify-content: center;
     padding:0.4rem;
 }
 
@@ -50,6 +50,7 @@ html {
     flex-direction: column;
     padding:0.8rem;
     color:#fff;
+    max-width: 400px;
     border-radius:0.5rem;
     box-shadow: 0 0 0.4rem rgba(18,18,18,0.478);
 }
@@ -70,6 +71,10 @@ html {
     width: 100%;
     filter: saturate(1.4);
     filter: contrast(1.4);
+}
+
+img.canje-container__img-less {
+    width: 90%;
 }
 
 .shop__card {
@@ -109,8 +114,11 @@ html {
 }
 
 .canje-buttons button:active {
+    transition: 0s;
     scale: 1.05;
     opacity:0.8;
+    letter-spacing: 0.1rem;
+    background-color:rgb(255,179,42) ;
 }
 
 .canje-buttons div {
@@ -421,7 +429,43 @@ html {
 .shake {
       background-color: #d00;
       animation: shake 0.5s ease;
-   }
+}
+
+.popup-canjear {
+    display:none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 601;
+}
+
+.popup-canjear img {
+    width:28rem;
+    margin:0;
+    box-shadow: 0 0 2rem #000;
+    animation: cardget 1s;
+}
+
+.popup-active {
+    display: -webkit-flex;
+    display: flex;
+} 
+
+@keyframes cardget {
+    0%{
+        position: relative;
+        top:3rem;
+        opacity: 0.5;
+    }
+    100%{
+        top:0;
+        opacity: 1;
+    }
+}
 
 
 @keyframes shake {
