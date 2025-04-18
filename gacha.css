@@ -195,7 +195,7 @@ img.canje-container__img-less {
     overflow: hidden;
     border-radius:3rem;
     margin:0rem 0;
-    border:0.15rem solid var(--color-t-1);
+    border:0.15rem solid #111);
 }
 
 .gacha__img img {
@@ -356,7 +356,7 @@ img.canje-container__img-less {
 
 .gacha-h2, .gacha-h3 {
     margin:3rem 0; 
-    color:var(--color-t-1);
+    color:#111);
     font-size: 3rem;
     padding:0;
     font-weight: 700;
@@ -364,6 +364,7 @@ img.canje-container__img-less {
 
 .gacha-h2 {
     font-family: "arvo";
+    color:var(--color-t-1);
 
 }
 
