@@ -60,7 +60,7 @@ i.shop__icono {
     max-width: 400px;
     border-radius:0.5rem;
     border:0.13rem solid #111;
-    background-color: rgb(27,27,29);
+    background-color: #112;
     transition: 0.4s;
 }
 
@@ -246,10 +246,9 @@ img.canje-container__img-less {
     display: -webkit-flex;
     display: flex;
     padding:0.7rem 1rem;
-    border-radius: 1rem;
-    font-size:2rem;
-    background-color: #111;
-    box-shadow: var(--shadow-depth);
+    border-radius: 0.4rem;
+    font-size:2.2rem;
+    background-color: #113;
 }
 
 
@@ -337,7 +336,7 @@ img.canje-container__img-less {
     justify-content: center;
     background-color: var(--color-p-1);
     border-radius: 0;
-    border-top:0.1rem solid;
+    border-top:0.05rem solid;
     flex:1;
     width: 100%;
     z-index: 200;
@@ -345,6 +344,8 @@ img.canje-container__img-less {
 
 .valor-coleccion-container {
     padding: 0 1rem;
+    flex:1;
+    font-family: "Sans-Serif";
 }
 
 .valor-coleccion-container span {
@@ -353,14 +354,17 @@ img.canje-container__img-less {
     color:var(--color-t-2);
     font-weight: 500 ;
     text-align: center;
+    padding:0.2rem;
 }
 
 .valor-coleccion {
     text-align: center;
     font-size:2.5rem;
-    font-weight: 800;
+    font-weight: 900;
+    color:var(--color-p-1);
     padding:0.2rem;
     letter-spacing: 0.16rem;
+    background: linear-gradient(to top, var(--color-t-1), var(--color-t-2));
     
 }
 
@@ -422,28 +426,27 @@ img.canje-container__img-less {
 }
 
 .gacha__contadores {
-    flex:1;
-    height: 5rem;
-    border:0.1rem solid #111;
-    border-radius: 1rem;
-    color:#111;
+    flex:2;
     display: -webkit-flex;
     display: flex;
     align-items: center ;
-    overflow: hidden;
+    flex-wrap: wrap;
     margin-left:0.5rem;
 }
 
 .gacha__contadores > a {
-    font-family: "Micro 5", Sans-Serif;
+    font-family: "Sans-Serif";
     font-weight:800;
     flex:1;
+    border:0.1rem solid;
+    color:rgba(0,0,0,0.875);
     text-align: center;
-    font-size: 4rem;
+    font-size:2.4rem;
+    margin:0.2rem;
+    padding: 0.4rem 0.7rem;
+    border-radius: 0.4rem;
     height: 100%;
     text-decoration: none;
-    line-height: 5rem;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.3'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 
