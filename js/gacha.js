@@ -3,6 +3,7 @@ const errText = document.querySelector('.gacha__limite');
 const gachaTreasures = document.querySelector('.gacha__treasures');
 const yoandriLoad = document.querySelector('.yoandri-ludo');
 const monedaCantidad = document.querySelector('.moneda-cantidad');
+const soundCanjear = document.querySelector('.sound-canjear');
 const soundCard1 = document.querySelector('.sound-card1');
 const soundCard234 = document.querySelector('.sound-card234');
 const soundCard5 = document.querySelector('.sound-card5');
@@ -141,6 +142,7 @@ canjLevel2.addEventListener('click',()=>{
     let cantidad = 4;
     let ctn = showContadores();
     if(ctn[0] >= cantidad){
+        playSound(soundCanjear);
         canjear("1",cantidad,"2");
         showTreasure();
         showContadores();
@@ -164,6 +166,7 @@ canjLevel3.addEventListener('click',()=>{
     let cantidad = 5;
     let ctn = showContadores();
     if(ctn[1] >= cantidad){
+        playSound(soundCanjear);
         canjear("2",cantidad,"3");
         showTreasure();
         showContadores();
@@ -186,6 +189,7 @@ canjLevel4.addEventListener('click',()=>{
     let cantidad = 6;
     let ctn = showContadores();
     if(ctn[2] >= cantidad){
+        playSound(soundCanjear);
         canjear("3",cantidad,"4");
         showTreasure();
         showContadores();
@@ -208,6 +212,7 @@ canjLevel5.addEventListener('click',()=>{
     let cantidad = 7;
     let ctn = showContadores();
     if(ctn[3] >= cantidad){
+        playSound(soundCanjear);
         canjear("4",cantidad,"5");
         showTreasure();
         showContadores();
