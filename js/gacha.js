@@ -363,7 +363,7 @@ for (let i = 1; i <= 6; i++) {
   valorTotalColeccion += cantidadCartasJugador[i] * valorFinal[i];
 }
 
-let valorDefinitivo = +((valorTotalColeccion/100).toFixed(0));
+let valorDefinitivo = +((valorTotalColeccion/10).toFixed(0));
 
 valorColeccionP.innerText = valorDefinitivo;
 
