@@ -251,8 +251,6 @@ img.canje-container__img-less {
     background-color: #113;
 }
 
-
-
 .moneda-cantidad {
     margin-left:0.7rem;
     font-weight: 500;
@@ -260,21 +258,27 @@ img.canje-container__img-less {
 
 .level1, .level1-p {
     background-color:rgb(172,172,172) ;
+    color:rgb(65,65,65) ;
 }
 .level2, .level2-p  {
     background-color:rgb(0,216,32) ;
+    color:rgb(0,91,14) ;
 }
 .level3, .level3-p  {
     background-color:rgb(73,152,255) ;
+    color:rgb(1,64,147) ;
 }
 .level4, .level4-p  {
     background-color: rgb(203,75,255);
+    color: rgb(88,0,123);
 }
 .level5, .level5-p  {
     background-color: rgb(255,97,97);
+    color: rgb(149,0,0);
 }
 .level6, .level6-p  {
-    background-color: rgb(255,226,101);
+    background-color: rgb(251,202,86);
+    color: rgb(110,81,12);
 }
 
 .gacha__button {
@@ -349,14 +353,14 @@ img.canje-container__img-less {
 .valor-coleccion-container {
     padding: 0 1rem;
     flex:1;
-    font-family: "Sans-Serif";
+    font-family: "Outfit";
 }
 
 .valor-coleccion-container span {
     display: block;
     font-size:1.1rem;
     color:var(--color-t-2);
-    font-weight: 500 ;
+    font-weight: 400 ;
     text-align: center;
     padding:0.2rem;
 }
@@ -364,7 +368,7 @@ img.canje-container__img-less {
 .valor-coleccion {
     text-align: center;
     font-size:2.5rem;
-    font-weight: 900;
+    font-weight: 700;
     color:var(--color-p-1);
     padding:0.2rem;
     letter-spacing: 0.16rem;
@@ -439,11 +443,10 @@ img.canje-container__img-less {
 }
 
 .gacha__contadores > a {
-    font-family: "Sans-Serif";
-    font-weight:800;
+    font-family: "Outfit";
+    font-weight:600;
     flex:1;
     border:0.1rem solid;
-    color:rgba(0,0,0,0.875);
     text-align: center;
     font-size:2.4rem;
     margin:0.2rem;
