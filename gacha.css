@@ -327,7 +327,7 @@ img.canje-container__img-less {
 
 .bar-bottom {
     position: fixed;
-    bottom:0rem;
+    bottom:0;
     left:0;
     padding: 1.2rem 1rem;
     display: -webkit-flex;
@@ -340,6 +340,10 @@ img.canje-container__img-less {
     flex:1;
     width: 100%;
     z-index: 200;
+}
+
+#footer {
+    padding-bottom:12rem;
 }
 
 .valor-coleccion-container {
