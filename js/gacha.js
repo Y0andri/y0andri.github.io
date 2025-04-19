@@ -87,6 +87,27 @@ function showContadores(){
         cont[i][j].innerText = contador[i];   // Acceso directo al elemento.
     }
 }
+
+    if(contador[0] >= 4){
+        canjLevel2.classList.add('canjeable');
+    } else {
+        canjLevel2.classList.remove('canjeable');
+    }
+    if(contador[1] >= 5){
+        canjLevel3.classList.add('canjeable');
+    } else {
+        canjLevel3.classList.remove('canjeable');
+    }
+    if(contador[2] >= 6){
+        canjLevel4.classList.add('canjeable');
+    } else {
+        canjLevel4.classList.remove('canjeable');
+    }
+    if(contador[3] >= 7){
+        canjLevel5.classList.add('canjeable');
+    } else {
+        canjLevel5.classList.remove('canjeable');
+    }
     return contador ;
 }
 
