@@ -310,7 +310,7 @@ const bonus = 1.05;
 // Paso 1: calcular valor por probabilidad (inverso)
 const valorPorProbabilidad = {};
 for (let i = 1; i <= 6; i++) {
-  valorPorProbabilidad[i] = +(1 / probabilidades[i]).toFixed(3);
+  valorPorProbabilidad[i] = 1 / probabilidades[i];
 }
 
 // Paso 2: calcular valor por canje empezando desde nivel 1
@@ -320,7 +320,7 @@ valorPorCanje[1] = valorPorProbabilidad[1];
 for (let i = 2; i <= 5; i++) {
   const anterior = valorPorCanje[i - 1];
   const cantidad = canjes[i - 1];
-  valorPorCanje[i] = +(anterior * cantidad * bonus).toFixed(3);
+  valorPorCanje[i] = anterior * cantidad * bonus;
 }
 
 // Nivel 6 no se puede canjear
@@ -333,7 +333,7 @@ for (let i = 1; i <= 6; i++) {
   if (i >= 2 && i <= 5) {
     // Solo niveles 2–5 usan canjes definidos
     valorPorProbabilidadAjustado[i] =
-      +(valorPorProbabilidad[i] * canjes[i - 1]).toFixed(3);
+      valorPorProbabilidad[i] * canjes[i - 1];
   } else {
     // Nivel 1 y 6 se mantienen en su valor puro por probabilidad
     valorPorProbabilidadAjustado[i] = valorPorProbabilidad[i];
