@@ -56,12 +56,12 @@ i.shop__icono {
     align-items: center;
     flex-direction: column;
     padding:0.8rem;
-    color:#111;
+    color:#eef;
     max-width: 400px;
     border-radius:0.5rem;
     border:0.13rem solid #111;
-    background-color: rgba(250,250,250,0.098);
-    box-shadow: var(--shadow-raised);
+    background-color: rgb(27,27,29);
+    transition: 0.4s;
 }
 
 .canje-container > * {
@@ -131,6 +131,7 @@ img.canje-container__img-less {
 }
 
 .canje-buttons div {
+    display: none;
     box-shadow: var(--shadow-raised);
     border:0.13rem solid #111;
     padding:0.6rem 0.8rem;
@@ -190,8 +191,8 @@ img.canje-container__img-less {
 }
 
 .gacha__roulet {
-    border:0.2rem solid #000;
     padding:2rem;
+    border:0.2rem solid #000;
     background-color: rgb(255,179,42);
     border-radius: 1.2rem;
     box-shadow: var(--shadow-depth);
@@ -325,6 +326,44 @@ img.canje-container__img-less {
     display: block;
 }
 
+.bar-bottom {
+    position: fixed;
+    bottom:0rem;
+    left:0;
+    padding: 1.2rem 1rem;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-p-1);
+    border-radius: 0;
+    border-top:0.1rem solid;
+    flex:1;
+    width: 100%;
+    z-index: 200;
+}
+
+.valor-coleccion-container {
+    padding: 0 1rem;
+}
+
+.valor-coleccion-container span {
+    display: block;
+    font-size:1.1rem;
+    color:var(--color-t-2);
+    font-weight: 500 ;
+    text-align: center;
+}
+
+.valor-coleccion {
+    text-align: center;
+    font-size:2.5rem;
+    font-weight: 800;
+    padding:0.2rem;
+    letter-spacing: 0.16rem;
+    
+}
+
 .gacha__treasures {
     display: -webkit-flex;
     display: flex;
@@ -373,6 +412,7 @@ img.canje-container__img-less {
 .gacha-h2 {
     font-family: "arvo";
     color:var(--color-t-1);
+    margin:3rem 0 0rem 0;
 
 }
 
@@ -382,16 +422,16 @@ img.canje-container__img-less {
 }
 
 .gacha__contadores {
-    background-color: rgb(234,236,241);
-    width: 100%;
+    flex:1;
     height: 5rem;
-    border:0.2rem solid #111;
+    border:0.1rem solid #111;
     border-radius: 1rem;
     color:#111;
     display: -webkit-flex;
     display: flex;
     align-items: center ;
     overflow: hidden;
+    margin-left:0.5rem;
 }
 
 .gacha__contadores > a {
@@ -399,7 +439,7 @@ img.canje-container__img-less {
     font-weight:800;
     flex:1;
     text-align: center;
-    font-size: 4.5rem;
+    font-size: 4rem;
     height: 100%;
     text-decoration: none;
     line-height: 5rem;
