@@ -117,10 +117,14 @@ img.canje-container__img-less {
     color:#fff;
     border-radius: 0.5rem;
     font-weight: 700;
-    background-color: var(--color-v-2);
+    background-color: rgb(203,0,6);
     box-shadow: var(--shadow-raised);
     border:0.13rem solid #111;
     transition: 0.5s;
+}
+
+.canje-buttons button.canjeable {
+    background-color: rgb(4,171,7);
 }
 
 .canje-buttons button:active {
