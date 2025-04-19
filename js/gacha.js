@@ -121,7 +121,7 @@ function showMonedas(){
 if(!localStorage.getItem('cantMonedas')) {
     localStorage.setItem('cantMonedas', 3);
 }
-var monedasActual = Number(localStorage.getItem('cantMonedas')) + difHoras();
+var monedasActual = Number(localStorage.getItem('cantMonedas')) + Math.floor(difHoras() / 3);
 monedaCantidad.innerText = monedasActual;
 }
 
@@ -267,4 +267,76 @@ btnGacha.addEventListener("click", ()=>{
         }, 4000)
     }
 })
+
+// Valor Total de la Coleccion
+
+
+const valorColeccion = ()=>{
+
+let ctn = showContadores();
+
+const bonus = 1.05 ;
+
+const probabilidades = {
+    1:0.40,
+    2:0.30,
+    3:0.20,
+    4:0.07,
+    5:0.025,
+    6:0.005
+};
+const cantidadCartasJugador = {
+    1:ctn[0],
+    2:ctn[1],
+    3:ctn[2],
+    4:ctn[3],
+    5:ctn[4],
+    6:ctn[5]
+}
+
+const canjes = {
+    1:4,    //4 level1 > level2
+    2:5,    //5 level2 > level3
+    3:6,    //6 level3 > level4
+    4:7    //7 level4 > level5
+}
+
+const valorPorProbabilidad = {}
+for(let i = 1; i <= 6; i++) {
+    valorPorProbabilidad[i] = +(1 / probabilidades[i]).toFixed(3);
+}
+
+const valorPorCanje = {};
+valorPorCanje[1] = valorPorProbabilidad[1];
+for(let i = 2; i <= 5; i++){
+    const anterior = valorPorCanje[i - 1];
+    const cantidad = canjes[i - 1];
+    valorPorCanje[i] = +(anterior * cantidad * bonus).toFixed(3);
+}
+
+valorPorCanje[6] = 0;
+
+const valorPorProbabilidadAjustado = {};
+for(let i = 1; i <= 6; i++){
+    if(i > 1){
+        valorPorProbabilidadAjustado[i] = +(valorPorProbabilidad[i] * canjes[i - 1]).toFixed(3);
+    } else {
+        valorPorProbabilidadAjustado[i] = valorPorProbabilidad[i];
+    }
+}
+const valorFinal = {};
+for(let i = 1; i <= 6; i++){
+    valorFinal[i] = Math.max(valorPorProbabilidadAjustado[i],valorPorCanje[i]);
+}
+
+let valorTotalColeccion = 0;
+for(let i = 1; i <= 6; i++) {
+    valorTotalColeccion += cantidadCartasJugador[i] * valorFinal[i];
+}
+
+return valorTotalColeccion.toFixed(2);
+
+}
+
+console.log(valorColeccion());
 
