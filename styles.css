@@ -11,6 +11,8 @@
 }
 
 :root {
+    --color-y-1:rgb(255,38,38);
+    --color-y-2:rgb(18,196,0);
     --color-p-1:#020203;
     --color-p-2:#0a0a0f;
     --color-p-3:#15151f;
@@ -36,6 +38,8 @@
 }
 
 .Light {
+    --color-y-1:rgb(219,0,0);
+    --color-y-2:rgb(16,179,0);
     --color-p-1:#eceef7;
     --color-p-2:#f3f6fa;
     --color-p-3:#e5e5eb;
@@ -48,6 +52,8 @@
     --color-bg-t:rgba(241,242,243,0.9);
 }
 .Dbz {
+--color-y-1:rgb(219,0,0);
+--color-y-2:rgb(22,0,189);
 --color-p-3: #f3c337;  /* Amarillo dorado claro (como el pelo de Goku SSJ) */
 --color-p-2: #FFC000;  /* Amarillo dorado más intenso */
 --color-p-1: #FFA500;  /* Naranja (como el gi tradicional) */
@@ -874,23 +880,23 @@ h2 , .hx {
     border-radius: 3px 3px 10px 10px;
     padding: 5px ;
     box-shadow: 0 0 30px 2px rgba(78,78,78,0.432);
-    border-top: 3px solid #ff2525;
+    border-top: 3px solid var(--color-y-1);
     transition: 0.1s;
 }
 
 .flex_photo:first-child {
-     border-top: 3px solid #00dd00;
+     border-top: 3px solid var(--color-y-2);
 }
 
 .flex_photo:first-child p {
-    color: #0b0;
+    color: var(--color-y-2);
 }
 
 .flex_photo p {
     padding: 9px;
     font-size: 1.6rem ;
     font-weight: 500;
-    color:#ff3535;
+    color:var(--color-y-1);
 }
 
 .flex_photo span {
