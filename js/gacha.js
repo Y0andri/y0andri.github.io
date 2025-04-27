@@ -28,6 +28,13 @@ const canjLevel3 = document.querySelector('.canjear-level3');
 const canjLevel4 = document.querySelector('.canjear-level4');
 const canjLevel5 = document.querySelector('.canjear-level5');
 
+
+const updateGacha = ()=>{
+    showTreasure();
+    showContadores();
+    valorColeccion();
+};
+
 const canjear = (card1,cant1,card2)=>{
     let cartasString = localStorage.getItem("allTreasures");
     let cartas = JSON.parse(cartasString) || [];
@@ -93,20 +100,10 @@ function showContadores(){
     } else {
         canjLevel2.classList.remove('canjeable');
     }
-    if(contador[1] >= 5){
+    if(contador[0] >= 5){
         canjLevel3.classList.add('canjeable');
     } else {
         canjLevel3.classList.remove('canjeable');
-    }
-    if(contador[2] >= 6){
-        canjLevel4.classList.add('canjeable');
-    } else {
-        canjLevel4.classList.remove('canjeable');
-    }
-    if(contador[3] >= 7){
-        canjLevel5.classList.add('canjeable');
-    } else {
-        canjLevel5.classList.remove('canjeable');
     }
     return contador ;
 }
@@ -138,6 +135,16 @@ function showTreasure(){
 }
 }
 
+
+function showTreasureInventory(){
+    let treasuresString = localStorage.getItem('allTreasures');
+    let treasuresArray = JSON.parse(treasuresString) || [];
+    gachaInventory.innerHTML = " ";
+    for (let treasure of treasuresArray) {
+    gachaInventory.insertAdjacentHTML('afterbegin', `<img id="img-level-${treasure}" src="recursos/gacha/card${treasure}.jpg"></img>`);
+}
+}
+
 if (!localStorage.getItem("allTreasures") || localStorage.getItem("allTreasures") == undefined || localStorage.getItem("allTreasures") == null){
         let allTreasures = [];
         localStorage.setItem("allTreasures", JSON.stringify(allTreasures));
@@ -165,11 +172,9 @@ canjLevel2.addEventListener('click',()=>{
     if(ctn[0] >= cantidad){
         playSound(soundCanjear);
         canjear("1",cantidad,"2");
-        showTreasure();
-        showContadores();
         popupCanjear.innerHTML = '<img src="recursos/gacha/card2.jpg" alt="">' ;
         popupCanjear.classList.add("popup-active");
-        valorColeccion();
+        updateGacha();
         setTimeout(()=>{
             popupCanjear.classList.remove("popup-active");
         },1500);
@@ -189,11 +194,9 @@ canjLevel3.addEventListener('click',()=>{
     if(ctn[1] >= cantidad){
         playSound(soundCanjear);
         canjear("2",cantidad,"3");
-        showTreasure();
-        showContadores();
+        updateGacha();
         popupCanjear.innerHTML = '<img src="recursos/gacha/card3.jpg" alt="">' ;
         popupCanjear.classList.add("popup-active");
-        valorColeccion();
         setTimeout(()=>{
             popupCanjear.classList.remove("popup-active");
         },1500)
@@ -212,11 +215,9 @@ canjLevel4.addEventListener('click',()=>{
     if(ctn[2] >= cantidad){
         playSound(soundCanjear);
         canjear("3",cantidad,"4");
-        showTreasure();
-        showContadores();
         popupCanjear.innerHTML = '<img src="recursos/gacha/card4.jpg" alt="">' ;
         popupCanjear.classList.add("popup-active");
-        valorColeccion();
+        updateGacha();
         setTimeout(()=>{
             popupCanjear.classList.remove("popup-active");
         },1500)
@@ -235,11 +236,9 @@ canjLevel5.addEventListener('click',()=>{
     if(ctn[3] >= cantidad){
         playSound(soundCanjear);
         canjear("4",cantidad,"5");
-        showTreasure();
-        showContadores();
         popupCanjear.classList.add("popup-active");
         popupCanjear.innerHTML = '<img src="recursos/gacha/card5.jpg" alt="">' ;
-        valorColeccion();
+        updateGacha();
         setTimeout(()=>{
             popupCanjear.classList.remove("popup-active");
         },1500)
@@ -282,8 +281,7 @@ btnGacha.addEventListener("click", ()=>{
         localStorage.setItem("tiradaDate", Date.now());
         localStorage.setItem('cantMonedas', monedasActual - 1);
         showMonedas();
-        showTreasure();
-        showContadores();
+        updateGacha();
         yoandriLoad.classList.remove('show-yoandri');
         if(recompensa == 1) {
         soundCard1.currentTime = 0;
@@ -299,7 +297,6 @@ btnGacha.addEventListener("click", ()=>{
         if(recompensa == 6) {
             playSound(soundCard6);
         }
-        valorColeccion();
         }, 4000)
     }
 })
@@ -310,92 +307,53 @@ btnGacha.addEventListener("click", ()=>{
 // valorColeccion
 
 
-function valorColeccion(){
-    
-let contad = showContadores();
-// Probabilidades de aparición por nivel
-const probabilidades = {
-  1: 0.40,
-  2: 0.30,
-  3: 0.20,
-  4: 0.07,
-  5: 0.025,
-  6: 0.005
-};
+function valorColeccion(bonusPercent = 0.05){
+  const contad = showContadores();            // [n1, n2, ..., n6]
+  const probabilidades = { 1:0.40, 2:0.30, 3:0.20, 4:0.07, 5:0.025, 6:0.005 };
+  const canjes         = { 1:4,    2:5,    3:6,    4:7   };
+  const bonus = 1 + bonusPercent;             // 1.05 para 5%, 1.10 para 10%
 
-// Cantidad de cartas necesarias para canjear a un nivel superior
-const canjes = {
-  1: 4,
-  2: 5,
-  3: 6,
-  4: 7
-};
-
-const bonus = 1.05;
-
-// Paso 1: calcular valor por probabilidad (inverso)
-const valorPorProbabilidad = {};
-for (let i = 1; i <= 6; i++) {
-  valorPorProbabilidad[i] = 1 / probabilidades[i];
-}
-
-// Paso 2: calcular valor por canje empezando desde nivel 1
-const valorPorCanje = {};
-valorPorCanje[1] = valorPorProbabilidad[1];
-
-for (let i = 2; i <= 5; i++) {
-  const anterior = valorPorCanje[i - 1];
-  const cantidad = canjes[i - 1];
-  valorPorCanje[i] = anterior * cantidad * bonus;
-}
-
-// Nivel 6 no se puede canjear
-valorPorCanje[6] = 0;
-
-
-// Paso 3 CORREGIDO: ajustar valor por probabilidad según cantidad de cartas necesarias
-const valorPorProbabilidadAjustado = {};
-for (let i = 1; i <= 6; i++) {
-  if (i >= 2 && i <= 5) {
-    // Solo niveles 2–5 usan canjes definidos
-    valorPorProbabilidadAjustado[i] =
-      valorPorProbabilidad[i] * canjes[i - 1];
-  } else {
-    // Nivel 1 y 6 se mantienen en su valor puro por probabilidad
-    valorPorProbabilidadAjustado[i] = valorPorProbabilidad[i];
+  // 1) valor puro (inverso de la probabilidad)
+  const valorPuro = {};
+  for(let i = 1; i <= 6; i++){
+    valorPuro[i] = 1 / probabilidades[i];
   }
+
+  // 2) valor “base” por probabilidad ajustada (cantidad de cartas necesarias)
+  const valorProbAjustado = {};
+  for(let i = 1; i <= 6; i++){
+    if(i >= 2 && i <= 5){
+      valorProbAjustado[i] = valorPuro[i] * canjes[i - 1];
+    } else {
+      valorProbAjustado[i] = valorPuro[i];
+    }
+  }
+
+  // 3) valor final por nivel: elegimos el mayor entre
+  //    • el valorProbAjustado (sumar y “cobrar” cada carta por separado)  
+  //    • el valor de canjear al nivel anterior + bonus
+  const valorFinal = {};
+  valorFinal[1] = valorProbAjustado[1];
+  for(let i = 2; i <= 5; i++){
+    const canjeVal = valorFinal[i - 1] * canjes[i - 1] * bonus;
+    valorFinal[i] = Math.max(valorProbAjustado[i], canjeVal);
+  }
+  valorFinal[6] = valorProbAjustado[6];
+
+  // 4) suma total de la colección
+  let total = 0;
+  for(let i = 1; i <= 6; i++){
+    total += contad[i - 1] * valorFinal[i];
+  }
+
+  // 5) escalado/formateo (igual que antes)
+  const valorDefinitivo = Math.ceil(total / 10);
+  valorColeccionP.innerText = valorDefinitivo;
+  return valorDefinitivo;
 }
 
 
-// Paso 4: elegir el valor final (el mayor entre ambos métodos)
-const valorFinal = {};
-for (let i = 1; i <= 6; i++) {
-  valorFinal[i] = Math.max(valorPorProbabilidadAjustado[i], valorPorCanje[i]);
-}
 
-// Ahora, incluir la cantidad de cartas del jugador
-const cantidadCartasJugador = {
-  1: contad[0],  // Ejemplo: 12 cartas de nivel 1
-  2: contad[1],   // 3 cartas de nivel 2
-  3: contad[2],   // 1 carta de nivel 3
-  4: contad[3],   // 0 cartas de nivel 4
-  5: contad[4],   // 0 cartas de nivel 5
-  6: contad[5]    // 1 carta de nivel 6
-};
-
-// Paso 5: Calcular el valor total de la colección
-let valorTotalColeccion = 0;
-for (let i = 1; i <= 6; i++) {
-  valorTotalColeccion += cantidadCartasJugador[i] * valorFinal[i];
-}
-
-let valorDefinitivo = +((valorTotalColeccion/10).toFixed(1));
-
-valorColeccionP.innerText = valorDefinitivo;
-
-return valorTotalColeccion.toFixed(2);
-
-}
 
 valorColeccion();
 
