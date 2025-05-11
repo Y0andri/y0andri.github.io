@@ -24,6 +24,7 @@
     --color-b-t:#eef;
     --color-s:rgba(255,255,255,0.124);
     --color-bg-t:#0a0a11;
+    --contador-mensajes: "";
 }
 
 .Light {
@@ -333,6 +334,28 @@ header input {
 
 .nav a[href="gacha.html"] i:after {
     background-color: rgb(255,248,21);
+}
+
+.nav a[href="chat.html"] i:after {
+    display: none;
+    content:var(--contador-mensajes);
+    height: 1rem;
+    min-width: 1rem;
+    text-align: center;
+    position: absolute;
+    top:-.2rem;
+    padding: 2px;
+    font-weight: bold;
+    border-radius: 50%;
+    border: 2px solid #111;
+    right: -0.7rem;
+    font-style: normal;
+    font-size: 0.5rem;
+    color: #000;
+}
+
+.nav a[href="chat.html"] i:after {
+    background-color: rgb(0,252,0);
 }
 
 .nav .nav_btn_active {
@@ -2418,8 +2441,14 @@ p#errorMessage {
     font-family: "Open Sans";
     margin-bottom: 1.4rem;
     border-left:0.5rem solid var(--color-t-1);
+    transition: 0.8s;
     animation: aparecer-msg 0.5s both ease;
     z-index: 2;
+}
+
+/* Estilos para los mensajes nuevos */
+#tankegram .mensaje-nuevo {
+  border-left:0.5rem solid rgb(0,252,0) !important;
 }
 
 #tankegram .mensaje::before {
