@@ -15,6 +15,7 @@ var mensajesList = document.querySelector(".mensaje-list");
 var ultimosMensajes = [];
 var ultimaVersion = null;
 var ultimaActualizacion = null;
+var mensajesAnteriores = parseInt(localStorage.getItem("cantidadMensajes") || "0");
 
 // Función principal
 function init() {
@@ -53,11 +54,19 @@ function verificarYActualizarMensajes() {
         var nuevaVersion = response.headers.get('etag');
         
         if (JSON.stringify(data.record) !== JSON.stringify(ultimosMensajes)) {
+          // Si hay mensajes nuevos y ya teníamos mensajes cargados, quitamos los estilos de nuevo
+          if (ultimosMensajes.length > 0 && data.record && data.record.length > ultimosMensajes.length) {
+            quitarEstiloNuevosMensajes();
+          }
+          
           ultimosMensajes = data.record || [];
           ultimaVersion = nuevaVersion;
           ultimaActualizacion = new Date();
           mostrarMensajes(ultimosMensajes);
           notificarNuevosMensajes();
+          
+          // Guardar cantidad actual de mensajes en localStorage
+          localStorage.setItem("cantidadMensajes", ultimosMensajes.length.toString());
         }
       });
     })
@@ -69,17 +78,50 @@ function verificarYActualizarMensajes() {
 
 // Mostrar mensajes
 function mostrarMensajes(mensajes) {
-  if (document.querySelectorAll('.mensaje').length !== mensajes.length) {
+  var mensajesActuales = document.querySelectorAll('.mensaje').length;
+  
+  // Si no hay mensajes en el DOM o hay menos que los que tenemos en datos, los mostramos
+  if (mensajesActuales === 0) {
+    // Primera carga: mostrar todos los mensajes
     var html = '';
     for (var i = 0; i < mensajes.length; i++) {
-      html += '<div class="mensaje">' +
+      var esNuevo = i >= mensajesAnteriores;
+      var claseNuevo = esNuevo ? ' mensaje-nuevo' : '';
+      
+      html += '<div class="mensaje' + claseNuevo + '" data-id="' + i + '">' +
                 '<h3>' + escapeHTML(mensajes[i].nombre) + '</h3>' +
                 '<p>' + escapeHTML(mensajes[i].mensaje) + '</p>' +
                 '<small>' + new Date(mensajes[i].fecha).toLocaleString() + '</small>' +
               '</div>';
     }
     mensajesList.innerHTML = html;
+  } 
+  else if (mensajesActuales < mensajes.length) {
+    // Solo añadir mensajes nuevos
+    for (var i = mensajesActuales; i < mensajes.length; i++) {
+      var nuevoMensaje = document.createElement('div');
+      nuevoMensaje.className = 'mensaje mensaje-nuevo';
+      nuevoMensaje.setAttribute('data-id', i);
+      
+      var nombre = document.createElement('h3');
+      nombre.textContent = mensajes[i].nombre;
+      
+      var texto = document.createElement('p');
+      texto.textContent = mensajes[i].mensaje;
+      
+      var fecha = document.createElement('small');
+      fecha.textContent = new Date(mensajes[i].fecha).toLocaleString();
+      
+      nuevoMensaje.appendChild(nombre);
+      nuevoMensaje.appendChild(texto);
+      nuevoMensaje.appendChild(fecha);
+      
+      mensajesList.appendChild(nuevoMensaje);
+    }
   }
+  
+  // Actualizar la variable de mensajes anteriores después de mostrarlos
+  mensajesAnteriores = mensajes.length;
 }
 
 // Notificaciones
@@ -120,6 +162,9 @@ function enviarMensaje(e) {
     fecha: new Date().toISOString()
   });
 
+  // Quitar la clase 'mensaje-nuevo' de todos los mensajes cuando se envía uno nuevo
+  quitarEstiloNuevosMensajes();
+
   fetch('https://api.jsonbin.io/v3/b/' + BIN_ID, {
     method: "PUT",
     headers: {
@@ -138,11 +183,22 @@ function enviarMensaje(e) {
       ultimaVersion = etag;
       mostrarMensajes(ultimosMensajes);
       form.reset();
+      
+      // Guardar nueva cantidad de mensajes
+      localStorage.setItem("cantidadMensajes", ultimosMensajes.length.toString());
     })
     .catch(function(error) {
       console.error("Error enviando mensaje:", error);
       alert("Error al enviar. Intenta nuevamente.");
     });
+}
+
+// Función para quitar el estilo de mensajes nuevos
+function quitarEstiloNuevosMensajes() {
+  var mensajesNuevos = document.querySelectorAll('.mensaje-nuevo');
+  for (var i = 0; i < mensajesNuevos.length; i++) {
+    mensajesNuevos[i].classList.remove('mensaje-nuevo');
+  }
 }
 
 // Iniciar
