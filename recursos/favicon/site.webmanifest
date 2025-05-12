@@ -1,6 +1,6 @@
 {
-  "name": "Yoandri",
-  "short_name": "Los Discípulos de Yoandri",
+  "name": "Los Discípulos de Yoandri",
+  "short_name": "Los Discípulos ",
   "icons": [
     {
       "src": "/recursos/favicon/web-app-manifest-192x192.png",
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#fefefe",
-  "background_color": "#000000",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
   "display": "standalone"
 }
