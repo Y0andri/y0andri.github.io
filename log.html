@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/png" href="/recursos/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/recursos/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/recursos/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/recursos/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Los Discípulos" />
+    <link rel="manifest" href="/recursos/favicon/site.webmanifest" />
+    <!-- Primary Meta Tags -->
+    <title>Log In - Los Discípulos de Yoandri El Negro</title>
+    <meta name="title" content="Sign In - Los Discípulos de Yoandri El Negro" />
+    <meta name="description" content="Registrate en la web de Yoandri el Negro" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://metatags.io/" />
+    <meta property="og:title" content="Los Discípulos de Yoandri el Negro" />
+    <meta property="og:description" content="Aquí encontrarás información sobre nuestra comunidad, además de las actualizaciones más recientes sobre la vida de Yoandri." />
+    <meta property="og:image" content="recursos/meta-tags.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://metatags.io/" />
+    <meta property="twitter:title" content="Los Discípulos de Yoandri el Negro" />
+    <meta property="twitter:description" content="Aquí encontrarás información sobre nuestra comunidad, además de las actualizaciones más recientes sobre la vida de Yoandri." />
+    <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</head>
+<body class="signlog">
+    <div class="signlog-border">
+    <form class="signlog-container" onsubmit="logIn(event)">
+        <h1>Iniciar Sesión</h1>
+        <p>Inicia sesión para acceder completamente a la web de Yoandri El Negro</p>
+        <label for="email-login">Correo Electrónico</label>
+        <input id="email-login" required type="email">
+        <label for="password-login">Contraseña</label>
+        <input id="password-login" required minLength="6">
+        <div id="mensaje"></div>
+        <button  type="submit">Iniciar Sesión</button>
+        <a href="./sign.html">Registrarme</a>
+    </form>
+    </div>
+    <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
 
@@ -14,9 +14,9 @@
 :root {
     --color-y-1:rgb(255,38,38);
     --color-y-2:rgb(18,196,0);
-    --color-p-1:#0d0d11;
-    --color-p-2:#121219;
-    --color-p-3:#1e1e2f;
+    --color-p-1:#060611;
+    --color-p-2:#101019;
+    --color-p-3:#1a1a2e;
     --color-v-1:#d80d0d;
     --color-v-2:#bd0000;
     --color-t-1:#eaeef4;
@@ -116,6 +116,107 @@ main > p {
     line-height: 1.4;
 }
 
+/*Sign and Log */
+
+.signlog {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:rgb(5,1,21);
+    height: 100%;
+    color:#eef;
+}
+
+.signlog-border {
+    width:85vw;
+    max-width:700px ;
+    height: 70%;
+    min-height: fit-content;
+    max-height: 1000px;
+    padding: 0.15rem;
+    border-radius: 1rem;
+    background: linear-gradient(-210deg, transparent 30%,rgb(212,36,255),rgb(48,36,255),rgb(255,53,36));
+}
+
+.signlog-container {
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(5,1,21);
+    border-radius: 1rem; 
+    padding: 3rem 2.4rem;
+    
+}
+
+.signlog-container h1 {
+    text-align: center;
+    font-size: 3rem;
+    padding: 1rem 0;
+}
+
+.signlog-container p {
+    text-align: center;
+    color:#ccc;
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+}
+
+.signlog-container label {
+    margin-bottom: 1.1rem;
+    font-size: 1.4rem;
+}
+
+.signlog-container input {
+    margin-bottom: 1.5rem;
+    outline: none;
+    outline-offset: none;
+    border-radius:0.6rem;
+    font-size: 1.5rem;
+    padding: 0.8rem;
+    border:none;
+    background-color: transparent;
+    color:#ddd;
+    outline: 0.1rem solid rgb(217,209,250);
+}
+
+.signlog-container input:hover {
+    outline: 0.13rem solid rgb(111,36,255);
+}
+
+.signlog-container div {
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 1rem 0;
+}
+
+
+.signlog-container button {
+    font-size: 1.6rem ;
+    text-align: center;
+    padding: 0.9rem;
+    color:#fff;
+    font-weight: 700;
+    border:none;
+    border-radius: 0.5rem;
+    margin: 1rem 0 3rem 0;
+    background:linear-gradient(120deg, rgb(212,36,255),rgb(36,54,255)) ;
+    transition: 0.5s;
+}
+
+.signlog-container button:hover {
+    transform: scale(0.93);;
+}
+
+.signlog-container a {
+    font-size: 1.4rem;
+    text-align: center;
+    color:rgb(217,209,250);
+    
+}
+
 /*Header */
 
 i.bi {
@@ -135,7 +236,7 @@ header {
     z-index: 300;
     width:100%;
     height:6rem;
-    border-bottom:0.1rem solid var(--color-t-1);
+    border-bottom:0.1rem solid var(--color-s);
 }
 
 .nav_openner {
@@ -472,48 +573,19 @@ main {
 
 .h1_fixer h1 , .h1_false span {
     position: relative;
-    top:-2px;
     display: block;
-    font-family: "Bebas Neue" , Sans-Serif;
-    letter-spacing: .1rem;
-    font-size: 2.5rem;
-    font-weight: bold;
+    letter-spacing:0;
+    font-family: "Barlow Condensed" , Sans-Serif;
+    font-size: 2.8rem;
     text-align: center;
-    width:fit-content;
+    width:100%;
     margin: auto;
-    color: var(--color-p-1);
-    padding: .3em .9em;
-    background-color: var(--color-t-1);
+    color: var(--color-t-1);
+    padding: 0.7rem 1.3rem 0.6rem 1.3rem;
+    background-color: var(--color-p-1);
     text-transform: uppercase;
-    border-radius: 0 0 15px 15px;
-    border:0.1rem solid var(--color-t-1) ;
-    border-top:none;
-}
-
-.h1_fixer h1::before,.h1_fixer h1::after,
-.h1_false span::before,.h1_false span::after{
-    position: absolute;
-    content:'';
-    width: 18px;
-    height: 18px;
-    background-color: transparent;
-}
-
-.h1_fixer h1::before, .h1_false span:before{
-    border-right:0.1rem solid var(--color-t-1);
-    border-top:0.1rem solid var(--color-t-1);
-    top:1.3px;
-    left: -19px;
-    border-top-right-radius: 50px;
-    box-shadow: 4px -4px 0 4px var(--color-t-1);
-}
-.h1_fixer h1::after, .h1_false span:after{
-    border-left:0.1rem solid var(--color-t-1);
-    border-top:0.1rem solid var(--color-t-1);
-    top:1.3px;
-    right: -19px;
-    border-top-left-radius: 50px;
-    box-shadow: -4px -4px 0 4px var(--color-t-1);
+    border-radius: 0;
+    border-bottom:0.1rem solid var(--color-s) ;
 }
 
 /*Footer */ 
@@ -581,7 +653,6 @@ h2 , .hx {
     margin: 2rem 0 ;
     overflow: hidden;
     gap:4px;
-    filter: drop-shadow(0 0 10px var(--color-s));
 }
 
 .main_index .dialogue_yoandri > img {
@@ -591,7 +662,7 @@ h2 , .hx {
     object-fit: contain;
     margin-bottom:auto;
     background-color: var(--color-p-3);
-    border:1px solid var(--color-t-1);
+    border:1px solid var(--color-s);
     border-radius:100%;
     aspect-ratio: 1/1 ;
 }
@@ -603,10 +674,10 @@ h2 , .hx {
 
 .main_index .dialogue_yoandri section {
     position: relative;
-    padding:7px;
+    padding:1rem;
     border-radius: 10px;
     background-color: var(--color-p-3);
-    border: 1px solid var(--color-t-1);
+    border: 1px solid var(--color-s);
 }
 
 .main_index section p, .main_index section h1 {
@@ -616,9 +687,15 @@ h2 , .hx {
     word-wrap: justify;
 }
 
+.main_index section .saludo {
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    color:var(--color-t-1);
+}
+
 
 .main_index b {
-    font-weight: 800;
     font-size: inherit;
     color:inherit;
 }
@@ -638,7 +715,7 @@ h2 , .hx {
     overflow: hidden;
     object-fit: cover;
     object-position: top;
-    border:1px solid var(--color-t-1);
+    border:1px solid var(--color-s);
     box-shadow: 10px 10px 20px #1112;
 }
 
@@ -675,28 +752,28 @@ h2 , .hx {
     text-decoration: none;
 }
 
-.secciones_grid a[href="https://y0andri.github.io/yoandri.html"] div {
+.secciones_grid a[href="https://yoandri.vercel.app/yoandri.html"] div {
     color: #ff8215;
 }
-.secciones_grid a[href="https://y0andri.github.io/games.html"] div {
+.secciones_grid a[href="https://yoandri.vercel.app/games.html"] div {
     color: #1eb7ff;
 }
-.secciones_grid a[href="https://y0andri.github.io/miembros.html"] div {
+.secciones_grid a[href="https://yoandri.vercel.app/miembros.html"] div {
     color: #ff0f0f;
 }
-.secciones_grid a[href="https://y0andri.github.io/musica.html"] div {
+.secciones_grid a[href="https://yoandri.vercel.app/musica.html"] div {
     color: #ff5af9;
 }
-.secciones_grid a[href="https://y0andri.github.io/docs.html"] div {
+.secciones_grid a[href="https://yoandri.vercel.app/docs.html"] div {
     color: #f5ecff;
 }
-.secciones_grid a[href="https://y0andri.github.io/sandbox.html"] div {
+.secciones_grid a[href="https://yoandri.vercel.app/sandbox.html"] div {
     color: #ffae03;
 }
-.secciones_grid a[href="https://y0andri.github.io/blog-page.html"] div {
+.secciones_grid a[href="https://yoandri.vercel.app/blog-page.html"] div {
     color: #0ca712;
 }
-.secciones_grid a[href="https://y0andri.github.io/gacha.html"] div {
+.secciones_grid a[href="https://yoandri.vercel.app/gacha.html"] div {
     color: rgb(229,184,0);
 }
 
@@ -887,7 +964,7 @@ h2 , .hx {
     overflow: hidden;
     border-radius: 3px 3px 10px 10px;
     padding: 5px ;
-    box-shadow: 0 0 30px 2px rgba(78,78,78,0.432);
+    box-shadow: 0 0 4px rgba(78,78,78,0.432);
     border-top: 3px solid var(--color-y-1);
     transition: 0.1s;
 }
@@ -1010,8 +1087,7 @@ h2 , .hx {
 
 .card_front_miembros {
     font-size: 2.8rem;
-    letter-spacing: 1px;
-    font-family: "Bebas Neue";
+    font-family: "Barlow Condensed";
     font-weight: bolder;
     overflow: hidden;
     display: -webkit-grid;
@@ -1024,6 +1100,7 @@ h2 , .hx {
     font-size: inherit;
     padding: 5px;
     text-align: center;
+    text-transform: uppercase;
     text-shadow: 0 -1px 9px rgba(0,0,0,0.755);
 }
 
@@ -1930,31 +2007,6 @@ input[type=number]{
     display:none;
 }
 
-.contact_marico {
-    display: -webkit-flex;
-    text-decoration: none;
-    font-family: "Bebas Neue";
-    display: flex;
-    padding:2rem;
-    background: linear-gradient(rgba(0,0,0,0.593), rgba(0,0,0,0.593)) , url('https://i0.wp.com/www.cronicalibre.com/wp-content/uploads/2024/02/Captura-de-pantalla-591.png?fit=714%2C449&ssl=1');
-    background-size: cover;
-    color:rgb(252,67,192);
-    text-align: center;
-    font-size: 2.3rem;
-    border-radius: 1rem;
-    margin: auto;
-    border: 0.15rem solid ;
-    justify-content: center;
-    width: 100%;
-    backdrop-filter: blur(10px);
-    text-shadow: 0 0 30px #111;
-    max-width: 600px;
-}
-
-.contact_marico > * {
-    margin:0.8rem;
-}
-
 .container_meme_gen {
     width: 85%;
     max-width: 800px;
@@ -2008,6 +2060,48 @@ input[type=number]{
     right:0;
     padding:3%;
     width: 55%;
+}
+
+
+/* Settings*/
+
+.container-sesion {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-sesion img {
+    border-radius: 100%;
+    height: 12rem;
+    width:12rem;
+    margin: 1rem auto;
+    border:0.1rem solid var(--color-t-1);
+}
+
+.container-sesion h2 {
+    font-size: 2.7rem;
+    font-weight: 300;
+    margin-bottom: 2rem ;
+}
+
+.container-sesion button {
+    font-size: 1.8rem;
+    padding:0.8rem 1.8rem;
+    width: fit-content;
+    color:#fff;
+    font-weight: 700;
+    border-radius: 10rem;
+    border:0.2rem solid var(--color-v-2);
+    background-color: var(--color-v-1);
+    transition: 0.4s;
+}
+
+.container-sesion button:hover {
+    filter:contrast(0.6);
+    transform: scale(0.9);
 }
 
 /* Docs */
@@ -2910,9 +3004,7 @@ p#errorMessage {
     
     .juegosespera h2 {
         padding: 0.7rem;
-        font-family: "Bebas Neue";
-        letter-spacing: 0.2rem;
-        font-weight: 600;
+        font-family: "Barlow Condensed";
         font-size: 2.9rem;
     }
     
@@ -2925,9 +3017,7 @@ p#errorMessage {
     }
     
     .div_awards2024 h2 {
-        font-family: "Bebas Neue";
-        letter-spacing: 0.2rem;
-        font-weight: 600;
+        font-family: "Barlow Condensed";
     }
     
     .div_awards2024 p {
@@ -2956,11 +3046,10 @@ p#errorMessage {
         color:#fb5a00;
         text-align: center;
         width:100%;
-        font-family:"Bebas Neue";
-        letter-spacing: 0.2rem;
+        font-family:"Barlow Condensed";
+        letter-spacing: 0;
         font-size: 2.4rem;
         padding:0.7rem;
-        font-weight: 800;
         border-radius: 15%;
         border-top: 0.2rem solid;
     }

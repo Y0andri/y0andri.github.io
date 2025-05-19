@@ -1,7 +1,46 @@
-  const body = document.querySelector("body");
-  
-  
-  
+  const SUPABASE_URL = 'https://pnsbpdksuateqsvwdyld.supabase.co';
+        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBuc2JwZGtzdWF0ZXFzdndkeWxkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI2NjA0ODcsImV4cCI6MjA1ODIzNjQ4N30.jJwBcM31Zw42PH5HrKxiSpxJsgFwZEeaTnYYUvKa2Ag';
+        window.supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+        while(supabase == undefined){
+            setTimeout(()=>{
+                window.supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+                
+                console.log("intento");
+            },3000);
+        }
+
+
+async function getMyUser(){
+    const { data: { user }, error } = await supabase.auth.getUser();
+    const usuario = user;
+    console.log(usuario);
+    return user;
+}
+
+async function checkLog(){
+    const usuario = await getMyUser();
+    if(usuario){
+        return;
+    } else {
+    if(["/","/index.html","/log.html","/sign.html"].includes(location.pathname)) {
+        console.log("sitio publico");
+    } else {
+        if(!user) window.location.href = "log.html";
+    }
+    }
+}
+
+checkLog();
+
+
+
+document.addEventListener("DOMContentLoaded",function(){
+    
+    
+
+
+
+const body = document.querySelector("body");
   // Inicializador de Tema
   let tema = localStorage.getItem("tema");
 if(localStorage.getItem("tema")) {
@@ -31,16 +70,18 @@ if(localStorage.getItem("tema")) {
     
     lightAlt.addEventListener('click', function(){
         ponerTema("Light");
-    } )
+    } );
     darkAlt.addEventListener('click', function(){
         ponerTema("Dark");
-    } )
+    } );
     dbzAlt.addEventListener('click', function(){
         ponerTema("Dbz");
-    } )
+    } );
     
     
-
+    
+    
+});
 
 
 

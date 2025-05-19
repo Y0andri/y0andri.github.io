@@ -31,16 +31,10 @@
     <meta property="twitter:title" content="Los Discípulos de Yoandri el Negro" />
     <meta property="twitter:description" content="Aquí encontrarás información sobre nuestra comunidad, además de las actualizaciones más recientes sobre la vida de Yoandri." />
     <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
-    
+        <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
 </head>
 <body class="">
-    <div class="modal-username-bg desactivado">
-    <article class="modal-username">
-        <p class="modal-username__text">Introduce tu nombre:</p>
-        <input required class="modal-username__input" type="text" maxlength="11">
-        <button class="modal-username__button">Enviar</button>
-    </article>
-    </div>
     <header id="header"></header>     
     <script src="js/componentes.js"></script>
         <main class="main_index">
@@ -49,7 +43,7 @@
             <div class="dialogue_yoandri">
                 <img src="recursos/modal/yoandri_modal.png" alt="Yoandri el Negro Saludando">
                 <section>
-                    <p><b id="user_name"></b></p>
+                    <p class="saludo">Hola! <span id="user-name"></span></p>
                     <br>
                     <h1>Bienvenido a la página web de Los Discípulos de Yoandri</h1>
                     <br>
@@ -73,7 +67,7 @@
             <h2 class="border-top">Secciones</h2>
             <ul class="secciones_grid">
                 <li>
-                    <a class="" href="https://y0andri.github.io/yoandri.html">
+                    <a class="" href="https://yoandri.vercel.app/yoandri.html">
                         <div>
                             <i class="bi bi-calendar2-range"></i>
                             <p>YOANDRI</p>
@@ -82,7 +76,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="" href="https://y0andri.github.io/games.html">
+                    <a class="" href="https://yoandri.vercel.app/games.html">
                         <div>
                             <i class="bi bi-controller"></i>
                             <p>GAMES</p>
@@ -91,7 +85,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="" href="https://y0andri.github.io/miembros.html">
+                    <a class="" href="https://yoandri.vercel.app/miembros.html">
                         <div>
                             <i class="bi bi-people"></i>
                             <p>MIEMBROS</p>
@@ -100,7 +94,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="" href="https://y0andri.github.io/blog-page.html">
+                    <a class="" href="https://yoandri.vercel.app/blog-page.html">
                         <div>
                             <i class="bi bi-newspaper"></i>
                             <p>BLOG</p>
@@ -109,7 +103,7 @@
                     </a>
                 </li>
                 <!-- <li>
-                    <a class="" href="https://y0andri.github.io/gacha.html">
+                    <a class="" href="https://yoandri.vercel.app/gacha.html">
                         <div>
                             <i class="bi bi-dice-5"></i>
                             <p>GACHA</p>
@@ -118,7 +112,7 @@
                     </a>
                 </li> -->
                 <li>
-                    <a class="" href="https://y0andri.github.io/musica.html">
+                    <a class="" href="https://yoandri.vercel.app/musica.html">
                         <div>
                             <i class="bi bi-music-note-beamed"></i>
                             <p>MÚSICA</p>
@@ -127,7 +121,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="" href="https://y0andri.github.io/docs.html">
+                    <a class="" href="https://yoandri.vercel.app/docs.html">
                         <div>
                             <i class="bi bi-filetype-docx"></i>
                             <p>DOCS</p>
@@ -137,7 +131,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="" href="https://y0andri.github.io/sandbox.html">
+                    <a class="" href="https://yoandri.vercel.app/sandbox.html">
                         <div>
                             <i class="bi bi-textarea"></i>
                             <p>SANDBOX</p>
@@ -163,7 +157,7 @@
                 </div>
                 <div>
                     <span>8/11/2024</span>
-                    <p>Creación de la página web de <a href="https://y0andri.github.io">Los Discípulos de Yoandri El Negro</a></p>
+                    <p>Creación de la página web de <a href="https://yoandri.vercel.app">Los Discípulos de Yoandri El Negro</a></p>
                 </div>
                 <div>
                     <span>1/5/2024</span>
@@ -201,8 +195,6 @@
             </div>
         </main>
     <footer id="footer"></footer>
-    <script src="script.js"></script>
-    <script src="js/saludo.js"></script>
 
 </body>
 </html>
