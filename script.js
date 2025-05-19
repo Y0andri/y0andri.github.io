@@ -37,7 +37,16 @@ checkLog();
 document.addEventListener("DOMContentLoaded",function(){
     
     
+const btnLogout = document.querySelector(".logout-btn");
 
+btnLogout.addEventListener("click", async ()=>{
+    const { error } = await supabase.auth.signOut();
+    if(error){
+        console.log("Error al cerrae sesion");
+        return;
+    }
+    console.log("sesion cerrada");
+});
 
 
 const body = document.querySelector("body");
