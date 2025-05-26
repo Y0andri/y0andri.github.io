@@ -267,7 +267,7 @@ header input {
     height: 100vh;
     overflow: auto;
     z-index: 100000;
-    transition: 0.4s ease ;
+    transition: 0.2s ease ;
 }
 
 .nav--active {
@@ -309,13 +309,12 @@ header input {
 
 .btn-theme {
     padding:1rem;
-    border:0.1rem solid;
+    background-color: transparent;
+    border:none;
     border-radius: 10rem;
     font-size: 2rem;
     width: 6rem;
-    background-color: var(--color-p-3);
     color:var(--color-t-1);
-    box-shadow: 0 0 1rem 0.1rem var(--color-s);
 }
 
 .modal-theme-bg {
@@ -330,7 +329,7 @@ header input {
     width: 100vw;
     height:100vh;
     z-index: 600;
-    animation: aparecer 0.5s both;
+    animation: aparecer 0.2s both ease;
 }
 
 .modal-theme {
@@ -546,6 +545,18 @@ header input {
 
 .theme-popup-openner i {
     font-size: inherit;
+}
+
+.register {
+    display: block;
+    background: radial-gradient( var(--color-v-1), var(--color-v-2));
+    font-size: 1.2rem;
+    border-radius: 10rem;
+    color: #eef;
+    font-weight: 600;
+    padding: 0.3rem 0.8rem;
+    text-align: center;
+    text-decoration: none;
 }
 
 
@@ -2727,9 +2738,11 @@ p#errorMessage {
 
 @keyframes aparecer {
     from {
+        transform: scale(1.2);
         opacity:0;
     }
     to {
+        transform: scale(1);
         opacity:1;
     }
 }
