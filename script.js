@@ -13,9 +13,11 @@ const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 supabase.auth.onAuthStateChange((event, session) => {
   if (session) { // Usuario logeado
     console.log("Sesión activa:", session.user.email);
-    document.getElementById("logout-btn").style.display = "block";
+    document.querySelector(".saludo").innerText = "Sesion actica";
   } else { // No logeado
     console.log("No hay sesión");
+    document.querySelector(".register").style.display = "block";
+    document.querySelector(".saludo").innerText = "Sesion cerrada";
   }
 });
 
