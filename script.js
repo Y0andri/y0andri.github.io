@@ -1,19 +1,13 @@
   const SUPABASE_URL = 'https://pnsbpdksuateqsvwdyld.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBuc2JwZGtzdWF0ZXFzdndkeWxkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI2NjA0ODcsImV4cCI6MjA1ODIzNjQ4N30.jJwBcM31Zw42PH5HrKxiSpxJsgFwZEeaTnYYUvKa2Ag';
         window.supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-        while(supabase == undefined){
-            setTimeout(()=>{
-                window.supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-                
-                console.log("intento");
-            },3000);
-        }
         
         // Verifica al cargar la página
 supabase.auth.onAuthStateChange((event, session) => {
   if (session) { // Usuario logeado
     console.log("Sesión activa:", session.user.email);
     document.querySelector(".saludo").innerText = "Sesion actica";
+    document.querySelector(".register").style.display = "none";
   } else { // No logeado
     console.log("No hay sesión");
     document.querySelector(".register").style.display = "block";
