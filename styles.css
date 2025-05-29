@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
 
 @font-face {
@@ -12,7 +12,7 @@
 }
 
 :root {
-    --color-y-1:rgb(255,38,38);
+    --color-y-1:rgb(240,39,39);
     --color-y-2:rgb(18,196,0);
     --color-p-1:#060611;
     --color-p-2:#101019;
@@ -20,7 +20,7 @@
     --color-v-1:#d80d0d;
     --color-v-2:#bd0000;
     --color-t-1:#eaeef4;
-    --color-t-2:#c2c2c2;
+    --color-t-2:#cdd3e1;
     --color-b-t:#eef;
     --color-s:rgba(255,255,255,0.124);
     --color-bg-t:#0a0a11;
@@ -102,7 +102,12 @@ hr {
     margin:8px 0;
 }
 
-
+.strong_highlight {
+    background-color: var(--color-t-1);
+    padding:0.2rem 0;
+    font-weight: 600;
+    color:var(--color-p-1);
+}
 
 ul {
     list-style: none;
@@ -113,7 +118,7 @@ main > p {
     font-size: 1.5rem;
     font-weight: 400;
     padding: 0 1rem;
-    line-height: 1.4;
+    line-height: 1.6;
 }
 
 /*Sign and Log */
@@ -664,6 +669,7 @@ h2 , .hx {
     margin: 2rem 0 ;
     overflow: hidden;
     gap:4px;
+    animation: enter 1s backwards;
 }
 
 .main_index .dialogue_yoandri > img {
@@ -764,28 +770,28 @@ h2 , .hx {
 }
 
 .secciones_grid a[href="https://yoandri.vercel.app/yoandri.html"] div {
-    color: #ff8215;
+    background-color: #ff8215;
 }
 .secciones_grid a[href="https://yoandri.vercel.app/games.html"] div {
-    color: #1eb7ff;
+    background-color: #1eb7ff;
 }
 .secciones_grid a[href="https://yoandri.vercel.app/miembros.html"] div {
-    color: #ff0f0f;
+    background-color: #ff4343;
 }
 .secciones_grid a[href="https://yoandri.vercel.app/musica.html"] div {
-    color: #ff5af9;
+    background-color: #ff5af9;
 }
 .secciones_grid a[href="https://yoandri.vercel.app/docs.html"] div {
-    color: #f5ecff;
+    background-color: #f5ecff;
 }
 .secciones_grid a[href="https://yoandri.vercel.app/sandbox.html"] div {
-    color: #ffae03;
+    background-color: #ffae03;
 }
 .secciones_grid a[href="https://yoandri.vercel.app/blog-page.html"] div {
-    color: #0ca712;
+    background-color: #0ca712;
 }
 .secciones_grid a[href="https://yoandri.vercel.app/gacha.html"] div {
-    color: rgb(229,184,0);
+    background-color: rgb(229,184,0);
 }
 
 .secciones_grid a div {
@@ -796,10 +802,9 @@ h2 , .hx {
     flex-direction: column;
     width:9rem;
     height:9rem;
-    background-color: #000;
+    color:#1a1a1a;
     padding:1.2rem;
-    border-radius: 1rem;
-    border:0.1rem solid;
+    border-radius: 100%;
 }
 
 .secciones_grid i {
@@ -990,7 +995,7 @@ h2 , .hx {
 
 .flex_photo p {
     padding: 9px;
-    font-size: 1.6rem ;
+    font-size: 1.5rem ;
     font-weight: 500;
     color:var(--color-y-1);
 }
@@ -1350,7 +1355,7 @@ h2 , .hx {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "arvo";
+    font-family: "Noto Serif";
     bottom:0;
     left:0;
     text-align: center;
@@ -1373,7 +1378,7 @@ h2 , .hx {
     position: absolute;
     top: -1.6rem;
     left:0;
-    font-family: "arvo";
+    font-family: "Noto Serif";
     font-size: 1rem;
     white-space: nowrap;
     padding:0.2rem 0.5rem;
@@ -2040,7 +2045,7 @@ input[type=number]{
     justify-content: center;
     height: 49%;
     text-align: center;
-    font-family: "arvo";
+    font-family: "Noto Serif";
     font-weight: bold;
     color:#111;
 }
@@ -2052,7 +2057,7 @@ input[type=number]{
     max-width: 800px;
     padding:0.8rem; 
     color:#111; 
-    font-family: "arvo" ; 
+    font-family: "Noto Serif" ; 
     text-align: center;
     font-size:1.5rem; 
     font-weight:bold;
@@ -2413,7 +2418,7 @@ p#errorMessage {
     border:0.1rem solid var(--color-t-1);
     padding:1rem;
     padding-left:2rem;
-    font-family: "arvo";
+    font-family: "Noto Serif";
 }
 
 .blog_tuto li {
@@ -2835,6 +2840,19 @@ p#errorMessage {
     100% {
         opacity: 1;
         width: 55vw;
+    }
+}
+
+@keyframes enter {
+    0%{
+        opacity: 0;
+        position:relative;
+        top:2rem;
+    }
+    100%{
+        opacity: 1;
+        position:relative;
+        top:0rem;
     }
 }
 

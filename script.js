@@ -1,58 +1,8 @@
-  const SUPABASE_URL = 'https://pnsbpdksuateqsvwdyld.supabase.co';
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBuc2JwZGtzdWF0ZXFzdndkeWxkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI2NjA0ODcsImV4cCI6MjA1ODIzNjQ4N30.jJwBcM31Zw42PH5HrKxiSpxJsgFwZEeaTnYYUvKa2Ag';
-        window.supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-        
-        // Verifica al cargar la página
-supabase.auth.onAuthStateChange((event, session) => {
-  if (session) { // Usuario logeado
-    console.log("Sesión activa:", session.user.email);
-    document.querySelector(".saludo").innerText = "Sesion actica";
-    document.querySelector(".register").style.display = "none";
-  } else { // No logeado
-    console.log("No hay sesión");
-    document.querySelector(".register").style.display = "block";
-    document.querySelector(".saludo").innerText = "Sesion cerrada";
-  }
-});
 
-
-// async function getMyUser(){
-//     const { data: { user }, error } = await supabase.auth.getUser();
-//     const usuario = user;
-//     console.log(usuario);
-//     return user;
-// }
-
-// async function checkLog(){
-//     const usuario = await getMyUser();
-//     if(usuario){
-//         return;
-//     } else {
-//     if(["/","/index.html","/log.html","/sign.html"].includes(location.pathname)) {
-//         console.log("sitio publico");
-//     } else {
-//         if(!user) window.location.href = "log.html";
-//     }
-//     }
-// }
-
-// checkLog();
 
 
 
 document.addEventListener("DOMContentLoaded",function(){
-    
-    
-// const btnLogout = document.querySelector(".logout-btn");
-
-// btnLogout.addEventListener("click", async ()=>{
-//     const { error } = await supabase.auth.signOut();
-//     if(error){
-//         console.log("Error al cerrae sesion");
-//         return;
-//     }
-//     console.log("sesion cerrada");
-// });
 
 
 const body = document.querySelector("body");
