@@ -78,7 +78,7 @@ const showArticles = async () => {
         articles.forEach((p,i) => {
             let article = htmlArticle(p.img, p.description, p.author,p.title);
             
-            articleGeneral += article ;
+            articleGeneral = article + articleGeneral ;
             
             
             //alamcenar schema de productos
