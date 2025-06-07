@@ -1,0 +1,194 @@
+.form-blog {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.4rem;
+  display: -webkit-flex;
+  display: flex;
+  margin:1rem 0;
+  border:0.15rem solid var(--color-s);
+  background-color: var(--color-p-3);
+  border-radius: 2rem;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  display: block;
+  color: var(--color-t-1);
+  font-size: 1.9rem;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+
+.input-title {
+    width: 100%;
+  font-family: "Outfit";
+  padding: 0.5rem 0.75rem;
+  color: var(--color-t-1);
+  background-color: var(--color-p-2);
+  border: 0.1rem solid var(--color-s);
+  padding: 0.8rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.input-title:hover {
+  outline: none;
+  border-color: var(--color-v-2);
+  box-shadow: 0 0 0 2px rgba(240, 39, 39, 0.2);
+}
+
+.input-description {
+  width: 100%;
+  font-family: "Outfit";
+  padding: 0.5rem 0.75rem;
+  color: var(--color-t-1);
+  background-color: var(--color-p-2);
+  border: 0.1rem solid var(--color-s);
+  padding: 0.8rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  resize: none;
+  transition: all 0.2s ease;
+}
+
+.input-description:focus {
+  outline: none;
+  border-color: var(--color-v-2);
+  box-shadow: 0 0 0 2px rgba(240, 39, 39, 0.2);
+}
+
+.input-image {
+  width: 100%;
+  color: var(--color-t-2);
+  font-size: 0.875rem;
+}
+
+.input-image::file-selector-button {
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-p-2);
+  color: var(--color-t-1);
+  border: none;
+  width: 50%;
+  height: 10rem;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  border: 0.1rem solid var(--color-s);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.input-image::file-selector-button:hover {
+  background-color: var(--color-p-1);
+}
+
+
+/* Estilos base del select */
+.input-author {
+  width: 100%;
+  padding: 0.9rem 2.5rem 0.9rem 1rem; /* Espacio para la flecha */
+  background-color: var(--color-p-2);
+  color: var(--color-t-1);
+  border: 1px solid var(--color-s);
+  border-radius: 1rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  
+  /* Elimina el estilo por defecto del navegador */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  
+  /* Transición suave para interacciones */
+  transition: all 0.2s ease;
+}
+
+/* Flecha personalizada (usando SVG inline) */
+.input-author {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23eaeef4'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1.25rem;
+}
+
+/* Estilos al enfocar */
+.input-author:focus {
+  outline: none;
+  border-color: var(--color-y-1);
+  box-shadow: 0 0 0 2px rgba(240, 39, 39, 0.2);
+}
+
+/* Estilos para las opciones */
+.input-author option {
+  background-color: var(--color-p-3);
+  color: var(--color-t-1);
+  padding: 0.5rem;
+}
+
+/* Estilo para la opción placeholder (value="") */
+.input-author option[value=""] {
+  color: var(--color-t-2);
+  font-style: italic;
+}
+
+/* Estilo al pasar el ratón sobre las opciones (en navegadores que lo soportan) */
+.input-author option:hover {
+  background-color: var(--color-v-2);
+  color: var(--color-p-1);
+}
+
+.form-alert {
+  color: var(--color-t-1);
+  margin: 1rem auto;
+  font-size: 1.4rem;
+  text-decoration: underline;
+}
+
+.loading-blog {
+  display: none;
+  margin: 0 auto;
+  width: 3rem;
+  height: 3rem;
+  fill: var(--color-v-2);
+}
+
+.submit-blog {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--color-v-2);
+  color: white;
+  border: none;
+  border-radius:10rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.submit-blog:hover {
+  opacity: 0.7;
+  transform: scale(0.95);
+}
+
+.blog-viewer {
+    border:0.2rem solid var(--color-s);
+    border-radius: 2rem;
+    margin:1rem 0;
+    background-color: var(--color-p-3);
+    height: 40rem;
+    overflow: hidden;
+}
+
+.blog-viewer #blog {
+    height: 100%;
+    overflow: auto;
+}
