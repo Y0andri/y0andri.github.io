@@ -85,7 +85,8 @@ async function uploadArticle() {
             description: 
             DOMPurify
             .sanitize(converter.makeHtml(elements.description.value
-            .replaceAll('\n',"\n <br> ")))
+            .replaceAll('\n',"\n<br>\n")))
+            .replaceAll('\n','')
             .replaceAll("<p>",'')
             .replaceAll("</p>",''),
             author:elements.author.value
