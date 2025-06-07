@@ -1,9 +1,8 @@
 const formAlert = document.querySelector(".form-alert");
 const loadingBlog = document.querySelector(".loading-blog");
 const formBlog = document.querySelector(".form-blog");
-const converter = new showdown.Converter({
-    simpleLineBreaks:true,
-});
+const converter = new showdown.Converter();
+
 
 
 //Function Comprimir Imagenes a 70KB
@@ -39,6 +38,7 @@ async function uploadArticle() {
     formAlert.innerHTML = "";
     let errorMessage = "";
         // Obtener valores del formulario
+        
         const elements = {
             image: document.querySelector(".input-image"),
             title: document.querySelector(".input-title"),
@@ -82,7 +82,7 @@ async function uploadArticle() {
         const newArticle = {
             img: dataImgBb.data.url,
             title:elements.title.value,
-            description: DOMPurify.sanitize(converter.makeHtml(elements.description.value)),
+            description: DOMPurify.sanitize(converter.makeHtml(elements.description.value.replaceAll('\n',"<br>"))),
             author:elements.author.value
         };
         
