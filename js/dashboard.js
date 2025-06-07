@@ -8,7 +8,7 @@ const converter = new showdown.Converter();
 //Function Comprimir Imagenes a 70KB
 async function comprimirA70KB(imagen) {
     const opciones = {
-        maxSizeMB: 0.06,
+        maxSizeMB: 0.10,
         useWebWorker: true,
         maxWidthOrHeight: 1920,
         fileType: 'image/png'
