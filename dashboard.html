@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/png" href="/recursos/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/recursos/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/recursos/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/recursos/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Los Discípulos" />
+    <link rel="manifest" href="/recursos/favicon/site.webmanifest" />
+    <!-- Primary Meta Tags -->
+    <title>Dashboard - Los Discípulos de Yoandri El Negro</title>
+    <meta name="title" content="Dashboard - Los Discípulos de Yoandri El Negro" />
+    <meta name="description" content="Aquí encontrarás información sobre nuestra comunidad, además de las actualizaciones más recientes sobre la vida de Yoandri." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://metatags.io/" />
+    <meta property="og:title" content="Dashboard - Los Discípulos de Yoandri el Negro" />
+    <meta property="og:description" content="Aquí encontrarás información sobre nuestra comunidad, además de las actualizaciones más recientes sobre la vida de Yoandri." />
+    <meta property="og:image" content="recursos/meta-tags.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://metatags.io/" />
+    <meta property="twitter:title" content="Dashboard - Los Discípulos de Yoandri el Negro" />
+    <meta property="twitter:description" content="Aquí encontrarás información sobre nuestra comunidad, además de las actualizaciones más recientes sobre la vida de Yoandri." />
+    <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+    <!--======Scripts=======-->
+    <script src="js/blog.js"></script>
+    <script src="script.js"></script>
+    
+</head>
+<body class="">
+    <header id="header"></header>     
+    <script src="js/componentes.js"></script>
+        <main>
+            <div class="h1_fixer">
+			<h1>Dashboard</h1>
+			</div>
+			
+            <form class="form-blog">
+    <h2>Publicar en el Blog</h2>
+  <!-- Imágenes -->
+  <div class="form-group">
+    <label class="form-label">Imágen</label>
+    <input required type="file" accept="image/*" class="input-image">
+  </div>
+  <!-- Titulo -->
+  <div class="form-group">
+    <label class="form-label">Título</label>
+    <input type="text" placeholder="Escribe el título" required minlength="5" class="input-title">
+  </div>
+  <!-- Descripción -->
+  <div class="form-group">
+    <label class="form-label">Descripción</label>
+    <textarea placeholder="Escribe una descripción para el artículo" required minlength="5" class="input-description" rows="8"></textarea>
+  </div>
+  <div class="form-group">
+    <label class="form-label">Autor</label>
+    <select class="input-author" required>
+        <option value="" disable hidden selected>Seleciona quién eres</option>
+        <option value="cristian">Cristian</option>
+        <option value="derek">Derek</option>
+        <option value="maiko">Maiko</option>
+        <option value="yoan">Yoan</option>
+        <option value="yordan">Yordan</option>
+    </select>
+  </div>
+ 
+
+  
+  <!-- Div para mensajes -->
+  <div class="form-alert"></div>
+  
+  <!-- Loading SVG -->
+  <svg class="loading-blog hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z" opacity="0.25"/>
+    <path fill="currentColorhttp://www.w3.org/2000/svg" d="M12,4a8,8,0,0,1,7.89,6.7A1.53,1.53,0,0,0,21.38,12h0a1.5,1.5,0,0,0,1.48-1.75,11,11,0,0,0-21.72,0A1.5,1.5,0,0,0,2.62,12h0a1.53,1.53,0,0,0,1.49-1.3A8,8,0,0,1,12,4Z">
+      <animateTransform attributeName="transform" dur="0.788s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/>
+    </path>
+  </svg>
+  
+  <!-- Botón Submit -->
+  <button type="submit" class="submit-blog">
+    Publicar Artículo
+  </button>
+</form>
+<aside class="blog-viewer">
+    <h2>Artículos</h2>
+<div id="blog">
+    <div class="skeleton-blog">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+</div>
+
+</aside>
+        </main>
+    <footer id="footer"></footer>
+<!--======Scripts=======-->
+    <script src="https://cdn.jsdelivr.net/npm/browser-image-compression@2.0.0/dist/browser-image-compression.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js" integrity="sha512-LhccdVNGe2QMEfI3x4DVV3ckMRe36TfydKss6mJpdHjNFiV07dFpS2xzeZedptKZrwxfICJpez09iNioiSZ3hA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

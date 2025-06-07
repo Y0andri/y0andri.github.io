@@ -1251,7 +1251,7 @@ h2 , .hx {
     z-index: 5;
 }
 
-#blog div {
+#blog .articulo {
     font-size:1.2rem;
     position: relative;
     width:fit-content;
@@ -1261,13 +1261,14 @@ h2 , .hx {
     padding: .9rem 1.3rem 1.8rem 1.3rem;
     background-color: #eef;
     border:1px solid #111;
+    animation: aparecer 0.5s backwards ease;
 }
 
-#blog div iframe {
+#blog .articulo iframe {
     width:100%;
 }
 
-#blog div:before {
+#blog .articulo:before {
     content:" ";
     position: absolute;
     width: 1rem;
@@ -1281,7 +1282,7 @@ h2 , .hx {
     padding:0;
     
 }
-#blog div:after {
+#blog .articulo:after {
     position: absolute;
     width: fit-content;
     font-size:1rem;
@@ -1293,32 +1294,38 @@ h2 , .hx {
     right: 0rem;
     margin:0;
 }
-#blog div[cristian]:after {
+#blog .articulo[cristian]:after {
     content:"Cristian";
     background-color:rgb(192,0,0) ;
 }
-#blog div[yordan]:after {
+#blog .articulo[yordan]:after {
     content:"Yordan";
     background-color: rgb(0,143,145) ;
 }
-#blog div[derek]:after {
+#blog .articulo[derek]:after {
     content:"Derek";
     background-color: rgb(232,125,0);
 }
-#blog div[yoan]:after {
+#blog .articulo[yoan]:after {
     content:"Yoan";
     background-color: rgb(0,109,216);
 }
-#blog div[maiko]:after {
+#blog .articulo[maiko]:after {
     content:"Maiko";
     background-color:rgb(0,181,5) ;
 }
 
-#blog p {
+#blog .articulo__title {
+    font-size: 2.2rem;
+    font-family: "Barlow Condensed";
+    letter-spacing: 0.5px;
+}
+
+#blog .articulo__p {
     padding:.5rem;
 }
 
-#blog div a {
+#blog .articulo a {
     color: rgb(170,0,76);
     font-family: Arial;
     font-weight: bold;
@@ -1328,14 +1335,15 @@ h2 , .hx {
     text-shadow: 0 0 10px;
 }
 
-#blog div img {
+#blog .articulo__img {
     margin:1rem 0 1rem 0;
     min-width: 100%;
     width: 100%;
     min-height: 14rem;
+    border-radius: 1.5rem;
 }
 
-#blog img {
+/* #blog img {
     border-radius: 1.5rem;
 }
 
@@ -1386,34 +1394,46 @@ h2 , .hx {
     font-style: italic;
     color: #eef;
     background-color: rgb(99,0,243);
-}
+} */
 
-#blog aside{
-    height: 100%;
-    width:100%;
+.skeleton-blog {
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color:var(--color-t-1);
+    padding:0.4rem;
+    margin:1.5rem 0;
+    width: 95%;
+}
+.skeleton-blog div{
+    margin-top:1rem;
+    width: 100%;
+    border-radius: 2rem;
+    background-color: rgba(111,118,129,0.249);
+    animation: pulse 1s both alternate infinite ease;
+}
+.skeleton-blog div:nth-child(1){
+    height: 14rem;
+}
+.skeleton-blog div:nth-child(2){
+    height: 2.5rem;
+    width: 70%;
+    margin:1.4rem 0 0.4rem 0;
+}
+.skeleton-blog div:nth-child(3){
+    height: 1.7rem;
+}
+.skeleton-blog div:nth-child(4){
+    height: 1.7rem;
+    width: calc(100% - 2rem);
 }
 
-#blog aside img{
-    display: block;
-    width:4.3rem;
-    background-color: transparent ;
-    border-radius: 50%;
-    color: ;
-    background-color: #eee;
-    padding:5px;
-    margin:1.5rem;
-    animation: loop 1.3s both infinite linear ;
-}
-
-#blog aside span {
-    display: block;
-    font-size: 2rem;
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
 }
 
 /* Games */
@@ -2729,13 +2749,13 @@ p#errorMessage {
         color:rgb(0,46,173);
     }
     25% {
-        color: rgb(173,152,0);
+        color: rgb(152,135,12);
     }
     50% {
         color:rgb(173,0,0);
     }
     75% {
-        color:rgb(0,173,29);
+        color:rgb(11,133,32);
     }
     100% {
         color:rgb(173,0,149);
@@ -2744,7 +2764,7 @@ p#errorMessage {
 
 @keyframes aparecer {
     from {
-        transform: scale(1.2);
+        transform: scale(0.8);
         opacity:0;
     }
     to {
@@ -2895,14 +2915,6 @@ p#errorMessage {
     
     .main_blog {
         background-color: var(--color-p-3);
-    }
-    
-    #blog div img + a {
-        background-color: var(--color-t-1);
-        border-top:0.15rem solid var(--color-p-1);
-        color:#111;
-        text-shadow: 0 0 10px var(--color-t-1);
-        animation: none;
     }
     
     .nav_openner {
