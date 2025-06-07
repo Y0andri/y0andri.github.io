@@ -47,10 +47,6 @@ async function uploadArticle() {
         };
 
         // Validaciones básicas
-        if (!elements.image.files[0]) {
-            errorMessage = "❌ Inserte una imagen";
-            throw new Error('Imagen no seleccionada');
-        }
         if (!elements.description.value.trim()) {
             errorMessage = "Escriba una descripción";
             throw new Error('No hay descripción');
@@ -58,7 +54,11 @@ async function uploadArticle() {
 
         loadingBlog.style.display = "block";
         formBlog.querySelector('button[type="submit"]').style.display = "none";
-
+        
+        let dataImgBb = null;
+        
+        if(elements.image.files && elements.image.files.length !== 0){
+            
         // Proceso de compresión
         const compressedFile = await comprimirA70KB(elements.image.files[0]);
         
@@ -71,16 +71,19 @@ async function uploadArticle() {
             body: formData
         });
         
-        const dataImgBb = await responseImgBb.json();
+        let dataImgBb = await responseImgBb.json();
         if (!dataImgBb.success) {
             console.error('[ImgBB] Error en respuesta:', dataImgBb);
             throw new Error(`API ImgBB: ${dataImgBb.error?.message || 'Error desconocido'}`);
         }
+        }
+        
+        
 
         // Actualizar JSON con nuevo producto
         const articles = await articlesPromise;
         const newArticle = {
-            img: dataImgBb.data.url,
+            ...(dataImgBb?.data?.url && { img: dataImgBb.data.url }),
             title:elements.title.value,
             description: 
             DOMPurify
@@ -91,6 +94,10 @@ async function uploadArticle() {
             .replaceAll("</p>",''),
             author:elements.author.value
         };
+        
+        
+        
+        
         
         const response = await fetch(`https://api.jsonbin.io/v3/b/${keyBin}`, {
             method: 'PUT',
