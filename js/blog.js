@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Plantilla HTML para productos
 const htmlArticle = (img,d,a,t) => {
     return `<div ${a} class="articulo">
-    <img class="articulo__img" src="${img}">
+    ${img ? `<img class="articulo__img" src="${img}">` : ''}
     <h3 class='articulo__title'>${t}</h3>
     <p class="articulo__p">${d}</p>
     </div>`;
