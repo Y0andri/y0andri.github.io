@@ -82,7 +82,12 @@ async function uploadArticle() {
         const newArticle = {
             img: dataImgBb.data.url,
             title:elements.title.value,
-            description: DOMPurify.sanitize(converter.makeHtml(elements.description.value.replaceAll('\n',"\n<br>\n"))),
+            description: 
+            DOMPurify
+            .sanitize(converter.makeHtml(elements.description.value
+            .replaceAll('\n',"\n<br>\n")))
+            .replaceAll("<p>",'')
+            .replaceAll("</p>",''),
             author:elements.author.value
         };
         
