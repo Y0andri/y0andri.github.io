@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
         return '<div data-title="' + t + '" class="articulo">' +
             (img ? '<img class="articulo__img" src="' + img + '">' : '') +
             '<h3 class="articulo__title">' + t + '</h3>' +
-            '<p class="articulo__p">' + d + '</p>' +
+            '<div class="articulo__div">' + d + '</div>' +
             '</div>';
     }
 
