@@ -1315,13 +1315,15 @@ h2 , .hx {
     background-color:rgb(0,181,5) ;
 }
 
-#blog .articulo__title {
+#blog .articulo .articulo__title {
     font-size: 2.2rem;
     font-family: "Barlow Condensed";
     letter-spacing: 0.5px;
+    margin:0;
+    margin-bottom: 1rem;
 }
 
-#blog > .articulo__p {
+#blog > .articulo__div {
     padding:.5rem;
 }
 
@@ -1339,7 +1341,7 @@ h2 , .hx {
     font-weight: 900;
 }
 
-#blog h1,#blog h2,#blog h3,#blog h4,#blog h5,#blog h6 {
+#blog .articulo__div h1,#blog .articulo__div h2,#blog .articulo__div h3,#blog .articulo__div h4,#blog .articulo__div h5,#blog .articulo__div h6 {
     display: inline;
     margin:0;
     text-align: start;
@@ -1349,50 +1351,50 @@ h2 , .hx {
     font-weight: 800;
 }
 
-#blog h1 {
+#blog .articulo__div h1 {
     font-size: 1.7em;
 }
 
-#blog h1 {
+#blog .articulo__div h1 {
     font-size: 1.6em;
 }
 
-#blog h2 {
+#blog .articulo__div h2 {
     font-size: 1.5em;
 }
 
-#blog h3 {
+#blog .articulo__div h3 {
     font-size: 1.4em;
 }
 
-#blog h4 {
+#blog .articulo__div h4 {
     font-size: 1.3em;
 }
 
-#blog h5 {
+#blog .articulo__div h5 {
     font-size: 1.2em;
 }
 
-#blog h6 {
+#blog .articulo__div h6 {
     font-size: 1.1em;
 }
 
-#blog ul {
+#blog .articulo__div ul {
     list-style: none;
 }
-#blog ol {
+#blog .articulo__div ol {
     margin: initial;
     list-style-position: inside;
     list-style-type: none;
     counter-reset: mycounter;
 }
 
-#blog ol li {
+#blog .articulo__div ol li {
     counter-increment: mycounter;
     margin:0.3rem 0;
 }
 
-#blog ol li::before {
+#blog .articulo__div ol li::before {
     content: counter(mycounter);
     background-color: #111;
     padding:0 0.7rem;
@@ -1402,12 +1404,12 @@ h2 , .hx {
     border-radius: 10rem;
 }
 
-#blog ul li::before {
+#blog .articulo__div ul li::before {
     content: "• ";
 }
 
 #blog .articulo__img {
-    margin:1rem 0 1rem 0;
+    margin:1rem 0 0.5rem 0;
     min-width: 100%;
     width: 100%;
     min-height: 14rem;
