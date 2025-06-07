@@ -33,7 +33,7 @@ window.articlesPromise = getArticlesPromise();
 document.addEventListener("DOMContentLoaded", function() {
 
     function htmlArticle(img, d, a, t) {
-        return '<div data-title="' + t + '" class="articulo">' +
+        return '<div '+a+ ' data-title="' + t + '" class="articulo">' +
             (img ? '<img class="articulo__img" src="' + img + '">' : '') +
             '<h3 class="articulo__title">' + t + '</h3>' +
             '<div class="articulo__div">' + d + '</div>' +
