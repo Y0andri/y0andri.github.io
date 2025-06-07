@@ -1,7 +1,9 @@
 const formAlert = document.querySelector(".form-alert");
 const loadingBlog = document.querySelector(".loading-blog");
 const formBlog = document.querySelector(".form-blog");
-const converter = new showdown.Converter();
+const converter = new showdown.Converter({
+    simpleLineBreaks:true,
+});
 
 
 //Function Comprimir Imagenes a 70KB
