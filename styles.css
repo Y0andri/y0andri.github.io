@@ -1321,7 +1321,7 @@ h2 , .hx {
     letter-spacing: 0.5px;
 }
 
-#blog .articulo__p {
+#blog > .articulo__p {
     padding:.5rem;
 }
 
@@ -1333,6 +1333,75 @@ h2 , .hx {
     text-decoration: none;
     border-bottom: 0.1rem dashed;
     text-shadow: 0 0 10px;
+}
+
+#blog strong {
+    font-weight: 900;
+}
+
+#blog h1,#blog h2,#blog h3,#blog h4,#blog h5,#blog h6 {
+    display: inline;
+    margin:0;
+    text-align: start;
+    padding:0;
+    font-weight: 800;
+}
+
+#blog h1 {
+    font-size: 1.7em;
+}
+
+#blog h1 {
+    font-size: 1.6em;
+}
+
+#blog h2 {
+    font-size: 1.5em;
+}
+
+#blog h3 {
+    font-size: 1.4em;
+}
+
+#blog h4 {
+    font-size: 1.3em;
+}
+
+#blog h5 {
+    font-size: 1.2em;
+}
+
+#blog h6 {
+    font-size: 1.1em;
+}
+
+#blog ul {
+    list-style: none;
+}
+#blog ol {
+    margin: initial;
+    list-style-position: inside;
+    list-style-type: none;
+    counter-reset: mycounter;
+}
+
+#blog ol li {
+    counter-increment: mycounter;
+    margin:0.3rem 0;
+}
+
+#blog ol li::before {
+    content: counter(mycounter);
+    background-color: #111;
+    padding:0 0.7rem;
+    margin-right:0.3rem;
+    min-width: 3rem;
+    color:#eff;
+    border-radius: 10rem;
+}
+
+#blog ul li::before {
+    content: "• ";
 }
 
 #blog .articulo__img {
