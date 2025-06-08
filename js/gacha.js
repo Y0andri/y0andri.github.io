@@ -127,7 +127,7 @@ function updateGacha() {
 }
 
 function hacerTirada() {
-  var monedas = Number(localStorage.getItem('')) + difHoras();
+  var monedas = Number(localStorage.getItem('numbMonedas')) + difHoras();
   if (monedas === 0) {
     errText.classList.add('show-text');
     errText.innerHTML = 'La ludopatía no acepta pobres. <br> <b class="b-gacha">Vuelve cuando tengas monedas</b>';
