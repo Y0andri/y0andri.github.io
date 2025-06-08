@@ -16,8 +16,7 @@ html {
     background-color: rgb(255,179,42);
     margin-bottom: 2rem;
     border-radius:1rem;
-    border:0.2rem solid #000;
-    box-shadow: var(--shadow-depth);
+    border:0.2rem solid rgb(255,160,30);
 }
 
 .shop__h2 {
@@ -25,7 +24,7 @@ html {
     font-size: 2.8rem;
     color:#112;
     font-weight: 800;
-    font-family: "Noto Serif";
+    font-family: "Barlow Condensed";
 
 }
 
@@ -196,10 +195,9 @@ img.canje-container__img-less {
 
 .gacha__roulet {
     padding:2rem;
-    border:0.2rem solid #000;
+    border:0.2rem solid rgb(255,160,30);
     background-color: rgb(255,179,42);
     border-radius: 1.2rem;
-    box-shadow: var(--shadow-depth);
 }
 
 .gacha__img {
@@ -246,18 +244,19 @@ img.canje-container__img-less {
 }
 
 .moneda-container {
-    color:rgb(255,207,14);
+    color:rgb(23,23,23);
     display: -webkit-flex;
     display: flex;
     padding:0.7rem 1rem;
     border-radius: 0.4rem;
+    justify-content: center;
+    align-items: center;
     font-size:2.2rem;
-    background-color: #113;
 }
 
 .moneda-cantidad {
     margin-left:0.7rem;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .level1, .level1-p {
@@ -427,7 +426,7 @@ img.canje-container__img-less {
 }
 
 .gacha-h2 {
-    font-family: "Noto Serif";
+    font-family: "Barlow Condensed";
     color:var(--color-t-1);
     margin:3rem 0 0rem 0;
 
@@ -490,7 +489,7 @@ img.canje-container__img-less {
     color:#f00;
     font-size: 1.4rem;
     padding: 2rem;
-    font-family: "Noto Serif";
+    font-family: "Barlow Condensed";
     text-align: center;
     z-index: 601;
     border-radius:1rem;
