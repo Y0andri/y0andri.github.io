@@ -41,7 +41,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Plantilla con concatenación de strings
   function htmlArticle(img, d, a, t) {
-    var html = '<div '+a+' data-title="' + t + '" class="articulo">';
+    var html = '<div '+a+' data-title="' + t + '" class="articulo';
+    if(img){
+        html = html.concat(
+            ' articulo-bg"', ' style="--bg-url:',"url(",img,");");
+    }
+    
+    html += '"><div class="articulo-container">';
+    console.log(html);
     if (img) {
       html += '<img class="articulo__img" src="' + img + '">';
     }
@@ -52,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
       html += '<button class="articulo__delete" data-title="' + t + '">Eliminar</button>';
     }
     
-    return html + '</div>';
+    return html + '</div></div>';
   };
 
   // Eliminar artículo con XHR
