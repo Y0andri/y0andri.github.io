@@ -1430,6 +1430,20 @@ h2 , .hx {
     border-radius: 1.5rem;
 }
 
+#blog .articulo__delete {
+    position: absolute;
+    top:0.7rem;
+    right: 0.7rem;
+    font-family: 1.3rem;
+    font-weight: 800;
+    padding: 0.5rem;
+    border:none;
+    background-color: #d00;
+    color:#eef;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem #111;
+}
+
 /* #blog img {
     border-radius: 1.5rem;
 }
