@@ -67,10 +67,19 @@ function showTreasure() {
     gachaTreasures.innerHTML = " ";
     for (var i = 0; i < cartas.length; i++) {
       var c = cartas[i].card;
-      gachaTreasures.insertAdjacentHTML('afterbegin', '<img id="img-level-' + c + '" src="recursos/gacha/card' + c + '.jpg"></img>');
+      var fecha = new Date(cartas[i].date)
+      .toLocaleString()
+      .split(",")
+      .reverse()
+      .join(" "); // Formato legible para el alt
+      gachaTreasures.insertAdjacentHTML(
+        'afterbegin',
+        '<div class="treasure-card"><img id="img-level-' + c + '" src="recursos/gacha/card' + c + '.jpg" alt=""><p class="level'+c+'">'+fecha+'</p></div>' 
+      );
     }
   });
 }
+
 
 function showContadores(callback) {
   cargarCartas(function (cartas) {
