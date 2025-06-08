@@ -39,17 +39,12 @@ db.treasures.count().then(function (count) {
         if (Array.isArray(datos)) {
           var nuevos = datos.map(function(card) { return { card: card, date: "00" }; });
           db.treasures.bulkAdd(nuevos);
-          localStorage.setItem("cantMonedas", 15);
+          
         }
       } catch (e) {}
     }
   }
 });
-
-if(!localStorage.getItem("migrado")){
-    localStorage.setItem("cantMonedas", 15);
-    localStorage.setItem("migrado", "true");
-}
 
 function guardarCarta(card) {
   var fecha = new Date().toISOString();
@@ -115,8 +110,8 @@ function difHoras() {
 }
 
 function showMonedas() {
-  if (!localStorage.getItem('cantMonedas')) localStorage.setItem('cantMonedas', 3);
-  var monedas = Number(localStorage.getItem('cantMonedas')) + difHoras();
+  if (!localStorage.getItem('numbMonedas')) localStorage.setItem('numbMonedas', 3);
+  var monedas = Number(localStorage.getItem('numbMonedas')) + difHoras();
   monedaCantidad.innerText = monedas;
 }
 
@@ -132,7 +127,7 @@ function updateGacha() {
 }
 
 function hacerTirada() {
-  var monedas = Number(localStorage.getItem('cantMonedas')) + difHoras();
+  var monedas = Number(localStorage.getItem('')) + difHoras();
   if (monedas === 0) {
     errText.classList.add('show-text');
     errText.innerHTML = 'La ludopatía no acepta pobres. <br> <b class="b-gacha">Vuelve cuando tengas monedas</b>';
@@ -144,7 +139,7 @@ function hacerTirada() {
     var recompensa = obtenerRecompensa();
     guardarCarta(recompensa).then(function () {
       localStorage.setItem("tiradaDate", Date.now());
-      localStorage.setItem("cantMonedas", monedas - 1);
+      localStorage.setItem("numbMonedas", monedas - 1);
       showMonedas();
       updateGacha();
       yoandriLoad.classList.remove('show-yoandri');
