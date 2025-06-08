@@ -104,6 +104,9 @@ function actualizarClasesCanjeables(contador) {
 }
 
 function obtenerRecompensa() {
+  if(prompt("Inserta codigo de canje") == "damelalegendariapinga") {
+    return "6";
+  } 
   var n = Math.floor(Math.random() * 1000 + 1);
   if (n <= 400) return "1";
   if (n <= 700) return "2";
@@ -140,11 +143,13 @@ function updateGacha() {
 
 function hacerTirada() {
   var monedas = Number(localStorage.getItem('numMonedas')) + difHoras();
-  if (monedas === 0) {
+  if(prompt("Inserta codigo de moneda") !== "damelamonedapinga"){
+  if (monedas <= 0) {
     errText.classList.add('show-text');
     errText.innerHTML = 'La ludopatía no acepta pobres. <br> <b class="b-gacha">Vuelve cuando tengas monedas</b>';
     setTimeout(function () { errText.classList.remove('show-text'); }, 6000);
     return;
+  }
   }
   yoandriLoad.classList.add('show-yoandri');
   setTimeout(function () {
