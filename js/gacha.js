@@ -110,8 +110,11 @@ function difHoras() {
 }
 
 function showMonedas() {
-  if (!localStorage.getItem('numbMonedas')) localStorage.setItem('numbMonedas', 3);
-  var monedas = Number(localStorage.getItem('numbMonedas')) + difHoras();
+  if (!localStorage.getItem('numMonedas')){
+    localStorage.setItem('numMonedas', 20);
+    localStorage.setItem("tiradaDate", Date.now());
+  }
+  var monedas = Number(localStorage.getItem('numMonedas')) + difHoras();
   monedaCantidad.innerText = monedas;
 }
 
@@ -127,7 +130,7 @@ function updateGacha() {
 }
 
 function hacerTirada() {
-  var monedas = Number(localStorage.getItem('numbMonedas')) + difHoras();
+  var monedas = Number(localStorage.getItem('numMonedas')) + difHoras();
   if (monedas === 0) {
     errText.classList.add('show-text');
     errText.innerHTML = 'La ludopatía no acepta pobres. <br> <b class="b-gacha">Vuelve cuando tengas monedas</b>';
@@ -139,7 +142,7 @@ function hacerTirada() {
     var recompensa = obtenerRecompensa();
     guardarCarta(recompensa).then(function () {
       localStorage.setItem("tiradaDate", Date.now());
-      localStorage.setItem("numbMonedas", monedas - 1);
+      localStorage.setItem("numMonedas", monedas - 1);
       showMonedas();
       updateGacha();
       yoandriLoad.classList.remove('show-yoandri');
