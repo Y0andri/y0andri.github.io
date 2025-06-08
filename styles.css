@@ -1271,10 +1271,29 @@ h2 , .hx {
     border-radius: 1.5rem;
     width: 95%;
     margin: 0.8rem 0;
-    padding: .9rem 1.3rem 1.8rem 1.3rem;
     background-color: #eef;
     border:1px solid #111;
     animation: aparecer 0.5s backwards ease;
+}
+
+#blog .articulo-container{
+    width: 100%;
+    height: 100%;
+    padding: .9rem 1.3rem 1.8rem 1.3rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+#blog .articulo-bg .articulo-container {
+    background-color: rgba(230,233,237,0.652);
+    backdrop-filter: blur(5rem) contrast(0.6) brightness(2) saturate(1);
+}
+
+#blog .articulo-bg {
+    background: var(--bg-url), #eef;
+    background-position: center;
+    background-size: cover;
+    
 }
 
 #blog .articulo iframe {
@@ -1428,6 +1447,7 @@ h2 , .hx {
     width: 100%;
     min-height: 14rem;
     border-radius: 1.5rem;
+    background-color: #eef;
 }
 
 #blog .articulo__delete {
@@ -2865,11 +2885,13 @@ p#errorMessage {
 
 @keyframes aparecer {
     from {
-        transform: scale(0.8);
+        
+        
         opacity:0;
     }
     to {
-        transform: scale(1);
+        
+        
         opacity:1;
     }
 }
@@ -3138,7 +3160,11 @@ p#errorMessage {
         margin:0.3rem;
         border:1px solid;
     }
-
+    
+    
+    #blog .articulo-bg .articulo-container {
+        background-color: rgb(238,238,255);
+    }
 
     
     .dialogue_yoandri img {
