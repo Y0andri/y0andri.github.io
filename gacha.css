@@ -22,9 +22,10 @@ html {
 
 .shop__h2 {
     margin:0 auto;
-    font-size: 2.3rem;
+    font-size: 2.8rem;
     color:#112;
-    font-family: "arvo";
+    font-weight: 800;
+    font-family: "Noto Serif";
 
 }
 
@@ -32,10 +33,13 @@ i.shop__icono {
     display: block;
     color:#fff;
     font-size: 3rem;
-    background-color: #111;
+    background:linear-gradient(40deg,rgb(0,185,35) 0% 33%,rgb(15,15,21) 33% 66%,rgb(215,5,5) 66%);
     padding:0.4rem 0;
+    margin:1rem;
+    margin:;
     text-align: center;
-    border-radius: 0.8rem 0.8rem 0 0 ;
+    border:0.2rem solid #111;
+    border-radius: 1rem ;
 }
 
 .shop__container {
@@ -121,10 +125,6 @@ img.canje-container__img-less {
     box-shadow: var(--shadow-raised);
     border:0.13rem solid #111;
     transition: 0.5s;
-}
-
-.canje-buttons button.canjeable {
-    background-color: rgb(4,171,7);
 }
 
 .canje-buttons button:active {
@@ -376,6 +376,7 @@ img.canje-container__img-less {
     color:var(--color-p-1);
     padding:0.2rem;
     letter-spacing: 0.16rem;
+    border-radius: 0.5rem;
     background: linear-gradient(to top, var(--color-t-1), var(--color-t-2));
     
 }
@@ -426,7 +427,7 @@ img.canje-container__img-less {
 }
 
 .gacha-h2 {
-    font-family: "arvo";
+    font-family: "Noto Serif";
     color:var(--color-t-1);
     margin:3rem 0 0rem 0;
 
@@ -489,7 +490,7 @@ img.canje-container__img-less {
     color:#f00;
     font-size: 1.4rem;
     padding: 2rem;
-    font-family: "arvo";
+    font-family: "Noto Serif";
     text-align: center;
     z-index: 601;
     border-radius:1rem;
