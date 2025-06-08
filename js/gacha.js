@@ -46,6 +46,11 @@ db.treasures.count().then(function (count) {
   }
 });
 
+if(!localStorage.getItem("migrado")){
+    localStorage.setItem("cantMonedas", 15);
+    localStorage.setItem("migrado", "true");
+}
+
 function guardarCarta(card) {
   var fecha = new Date().toISOString();
   return db.treasures.add({ card: card, date: fecha });
