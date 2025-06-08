@@ -390,8 +390,15 @@ img.canje-container__img-less {
     width: 100%;
 }
 
-.gacha__treasures img {
+.treasure-card {
+    position: relative;
+    transition: 0.4s;
+    margin:0;
+    padding: 0;
     margin: 1rem 0.5rem ;
+}
+
+.gacha__treasures img {
     background-color: #eff;
     display: -webkit-flex;
     display: flex;
@@ -408,7 +415,21 @@ img.canje-container__img-less {
     transition: 0.4s;
 }
 
-.gacha__treasures img:first-child {
+.gacha__treasures p {
+    width: fit-content;
+    margin:0.3rem 0.5rem 0 auto;
+    border-radius: 10rem;
+    border-top-right-radius: 2rem;
+    font-weight: 700;
+    color:#000;
+    text-shadow: 0 0 0.2rem rgba(228,228,228,0.294);
+    padding:0.2rem 0.5rem;
+}
+
+
+
+
+.gacha__treasures .treasure-card:first-child {
     filter:blur(0px) contrast(1.2);
     opacity: 1;
     transform:scale(1);
@@ -461,7 +482,7 @@ img.canje-container__img-less {
 }
 
 
-.gacha__treasures img:hover {
+.gacha__treasures .treasure-card:hover {
     transform: 
     perspective(30rem) 
     rotateY(0deg) 
