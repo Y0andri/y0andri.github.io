@@ -109,12 +109,25 @@ document.addEventListener("DOMContentLoaded", function() {
     var articleGeneral = "";
     var itemListElement = [];
     
-    // Formateador de fechas compatible
+    // Formateador de fechas compatible con ISO 8601 y zona horaria
     function formatDate(date) {
-      var d = new Date(date);
-      return d.getFullYear() + '-' + 
-             ('0' + (d.getMonth() + 1)).slice(-2) + '-' + 
-             ('0' + d.getDate()).slice(-2);
+      var d = new Date(date || Date.now());
+      
+      // Obtener componentes de fecha
+      var year = d.getFullYear();
+      var month = ('0' + (d.getMonth() + 1)).slice(-2);
+      var day = ('0' + d.getDate()).slice(-2);
+      
+      // Obtener zona horaria
+      var tzOffset = d.getTimezoneOffset();
+      var tzSign = tzOffset > 0 ? "-" : "+";
+      tzOffset = Math.abs(tzOffset);
+      var tzHours = ('0' + Math.floor(tzOffset / 60)).slice(-2);
+      var tzMinutes = ('0' + (tzOffset % 60)).slice(-2);
+      
+      // Formato: YYYY-MM-DDTHH:MM:SS±HH:MM
+      return year + '-' + month + '-' + day + 'T00:00:00' + 
+             tzSign + tzHours + ':' + tzMinutes;
     }
 
     // Generar artículos
@@ -124,6 +137,10 @@ document.addEventListener("DOMContentLoaded", function() {
       
       // Validar URL de imagen
       var imageUrl = p.img || "https://yoandri.vercel.app/recursos/LDY_portada.jpg";
+      
+      // Obtener fechas con valores predeterminados
+      var datePublished = p.datePublished || Date.now();
+      var dateModified = p.dateModified || datePublished;
       
       // Schema para cada artículo
       itemListElement.push({
@@ -139,8 +156,8 @@ document.addEventListener("DOMContentLoaded", function() {
             "name": p.author || "Anónimo",
             "url": "https://yoandri.vercel.app/blog-page.html"
           },
-          "datePublished": formatDate(p.datePublished || Date.now()),
-          "dateModified": formatDate(p.dateModified || Date.now()),
+          "datePublished": formatDate(datePublished),
+          "dateModified": formatDate(dateModified),
           "image": {
             "@type": "ImageObject",
             "url": imageUrl,
