@@ -105,39 +105,45 @@ document.addEventListener("DOMContentLoaded", function() {
   };
 
   function showArticles() {
-    articlesPromise.then(function(articles) {
-      var articleGeneral = "";
-      var itemListElement = [];
-      
-      // Formateador de fechas compatible
-      function formatDate(date) {
-        var d = new Date(date);
-        return d.getFullYear() + '-' + 
-               ('0' + (d.getMonth() + 1)).slice(-2) + '-' + 
-               ('0' + d.getDate()).slice(-2);
-      }
+  articlesPromise.then(function(articles) {
+    var articleGeneral = "";
+    var itemListElement = [];
+    
+    // Formateador de fechas compatible
+    function formatDate(date) {
+      var d = new Date(date);
+      return d.getFullYear() + '-' + 
+             ('0' + (d.getMonth() + 1)).slice(-2) + '-' + 
+             ('0' + d.getDate()).slice(-2);
+    }
 
-      // Generar artículos
-      for (var i = 0; i < articles.length; i++) {
-        var p = articles[i];
-        articleGeneral = htmlArticle(p.img, p.description, p.author, p.title) + articleGeneral;
-        
-        // Schema
-        itemListElement.push({
-          "@context": "https://schema.org",
+    // Generar artículos
+    for (var i = 0; i < articles.length; i++) {
+      var p = articles[i];
+      articleGeneral = htmlArticle(p.img, p.description, p.author, p.title) + articleGeneral;
+      
+      // Validar URL de imagen
+      var imageUrl = p.img || "https://yoandri.vercel.app/recursos/LDY_portada.jpg";
+      
+      // Schema para cada artículo
+      itemListElement.push({
+        "@type": "ListItem",
+        "position": i + 1,
+        "item": {
           "@type": "BlogPosting",
           "headline": p.title,
           "description": p.description.substring(0, 160),
+          "url": "https://yoandri.vercel.app/blog-page.html?article=" + encodeURIComponent(p.title),
           "author": {
             "@type": "Person",
-            "name": p.author,
+            "name": p.author || "Anónimo",
             "url": "https://yoandri.vercel.app/blog-page.html"
           },
-          "datePublished": formatDate(Date.now() - 86400000),
-          "dateModified": formatDate(Date.now()),
+          "datePublished": formatDate(p.datePublished || Date.now()),
+          "dateModified": formatDate(p.dateModified || Date.now()),
           "image": {
             "@type": "ImageObject",
-            "url": p.img,
+            "url": imageUrl,
             "width": 1200,
             "height": 630
           },
@@ -155,37 +161,38 @@ document.addEventListener("DOMContentLoaded", function() {
             "@type": "WebPage",
             "@id": "https://yoandri.vercel.app/blog-page.html"
           }
-        });
-      }
-
-      // Insertar artículos
-      try {
-        document.getElementById("blog").innerHTML = articleGeneral;
-        
-        // Insertar schema
-        var script = document.createElement('script');
-        script.type = 'application/ld+json';
-        script.textContent = JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "ItemList",
-          "itemListElement": itemListElement
-        });
-        document.head.appendChild(script);
-
-        // Eventos de eliminación
-        if (isAdmin) {
-          var buttons = document.getElementsByClassName('articulo__delete');
-          for (var j = 0; j < buttons.length; j++) {
-            buttons[j].addEventListener('click', function(e) {
-              deleteArticle(e.target.getAttribute('data-title'));
-            });
-          }
         }
-      } catch (e) {
-        console.log("Error al mostrar articulos:", e);
+      });
+    }
+
+    // Insertar artículos
+    try {
+      document.getElementById("blog").innerHTML = articleGeneral;
+      
+      // Insertar schema completo una sola vez
+      var script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": itemListElement
+      });
+      document.head.appendChild(script);
+
+      // Eventos de eliminación
+      if (isAdmin) {
+        var buttons = document.getElementsByClassName('articulo__delete');
+        for (var j = 0; j < buttons.length; j++) {
+          buttons[j].addEventListener('click', function(e) {
+            deleteArticle(e.target.getAttribute('data-title'));
+          });
+        }
       }
-    });
-  };
+    } catch (e) {
+      console.log("Error al mostrar articulos:", e);
+    }
+  });
+}
 
   showArticles();
 });
