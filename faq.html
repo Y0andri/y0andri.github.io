@@ -17,31 +17,62 @@
     <link rel="manifest" href="/recursos/favicon/site.webmanifest" />
         <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
     <script src="script.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question",
+        "name": "¿Quién es Yoandri El Negro?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yoandri El Negro es la figura representativa de Los Discípulos de Yoandri El Negro. Es un humano muy poderoso perteneciente al universo fanon de Dragon Ball."}},
+        {"@type": "Question",
+        "name": "¿Yoandri El Negro puede vencer a Goku?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yoandri no solo puede, sino que ha derrotado a Goku."}},
+        {"@type": "Question",
+        "name": "¿Dónde trabaja Yoandri El Negro?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yoandri El Negro luego de revivir se alista al Ejército de Freezer donde actualmente presenta el grado de Comandante."}},
+        {"@type": "Question",
+        "name": "¿Quiénes son los Tanques de Versalles?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Los Tanques de Versalles son una comunidad que trabaja en varios proyectos donde la mayoría de sus miembros residen en Versalles. A esta comunidad se subordina el grupo de Los Discípulos de Yoandri el Negro en colaboración con el grupo GAMES."}}
+    ]
+    }
+</script>
 </head>
 <body>
-    <header id="header"></header>     
+    <header id="header" role="banner"></header>     
     <script src="js/componentes.js"></script>
-		<main id="main_faq">
-            <div class="h1_false"><span>Preguntas Frecuentes</span>
-            </div>
-            <div class="question">
-                <h1>¿Quién es <strong>Yoandri El Negro</strong>?</h1>
-                <p> Yoandri el Negro es la figura representativa de Los Discípulos de Yoandri El Negro. Es un humano muy poderoso perteneciente al universo fanon de Dragon Ball.</p>
-            </div>
-            <div class="question">
-                <h2>¿Yoandri El Negro puede vencer a Goku?</h2>
-                <p>No solo puede, sino que ha derrotado a Goku.</p>
-            </div>
-            <div class="question">
-                <h2>¿Dónde trabaja Yoandri El Negro?</h2>
-                <p>Yoandri El Negro luego de revivir se alista al Ejército de Freezer donde actualmente presenta el grado de Comandante.</p>
-            </div>
-            <div class="question">
-                <h2>¿Quiénes son los Tanques de Versalles?</h2>
-                <p>Los Tanques de Versalles son una comunidad que trabaja en varios proyectos donde la mayoría de sus miembros residen en Versalles. A esta comunidad se subordina el grupo de Los Discípulos de Yoandri el Negro en colaboración con el grupo <a href="https://y0andri.github.io/games.html">GAMES</a>.</p>
-            </div>
-
-		</main>
-	<footer id="footer"></footer>
+    <main id="main_faq" role="main">
+        <div class="h1_fixer"><h1>Preguntas Frecuentes</h1></div>
+        
+        <section class="question" tabindex="0" role="region" aria-labelledby="q1" id="question1">
+            <h2 id="q1">¿Quién es Yoandri El Negro?</h2>
+            <p aria-describedby="q1">Yoandri El Negro es la figura representativa de Los Discípulos de Yoandri El Negro. Es un humano muy poderoso perteneciente al universo fanon de Dragon Ball.</p>
+        </section>
+        
+        <section class="question" tabindex="0" role="region" aria-labelledby="q2" id="question2">
+            <h2 id="q2">¿Yoandri El Negro puede vencer a Goku?</h2>
+            <p aria-describedby="q2">Yoandri no solo puede, sino que ha derrotado a Goku.</p>
+        </section>
+        
+        <section class="question" tabindex="0" role="region" aria-labelledby="q3" id="question3">
+            <h2 id="q3">¿Dónde trabaja Yoandri El Negro?</h2>
+            <p aria-describedby="q3">Yoandri El Negro luego de revivir se alista al Ejército de Freezer donde actualmente presenta el grado de Comandante.</p>
+        </section>
+        
+        <section class="question" tabindex="0" role="region" aria-labelledby="q4" id="question4">
+            <h2 id="q4">¿Quiénes son los Tanques de Versalles?</h2>
+            <p aria-describedby="q4">Los Tanques de Versalles son una comunidad que trabaja en varios proyectos donde la mayoría de sus miembros residen en Versalles. A esta comunidad se subordina el grupo de Los Discípulos de Yoandri el Negro en colaboración con el grupo <a href="https://y0andri.github.io/games.html">GAMES</a>.</p>
+        </section>
+    </main>
+    
+    <footer id="footer" role="contentinfo"></footer>
 </body>
 </html>
