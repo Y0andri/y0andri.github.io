@@ -2803,7 +2803,7 @@ p#errorMessage {
 /* Console */ 
 
 #main_console {
-    background:linear-gradient(130deg, #200070,#000);
+    background: #10112e;
     color:#05ef00;
     font-family: Monospace;
     padding-left:0;
@@ -2862,12 +2862,31 @@ p#errorMessage {
     color: #eef;
 }
 
-.console-log-input {
+.console-msg{
     margin: 0.5rem 0;
+    animation: aparecer 1s both ease;
+}
+
+.console-msg-user {
+    color: #eef;
+}
+
+.console-msg-error {
+    color: #ff2626;
 }
 
 .console-input input:hover, .console-input input:focus {
     outline: none;
+}
+
+@keyframes aparecer-type {
+    0% {
+        width: 0%;
+        overflow: hidden;
+    }
+    100% {
+        width: 100%;
+    }
 }
 
 
