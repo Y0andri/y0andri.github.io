@@ -5,6 +5,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
 
+
+
+
 @font-face {
   font-family: "saiyasans";
   src: url("recursos/fuentes/Saiyan-Sans.ttf") format("truetype");
@@ -104,7 +107,7 @@ body {
     overflow-x: hidden;
 }
 
-footer, header {
+#footer, #header {
     width:100vw;
 }
 
@@ -241,7 +244,7 @@ i.bi {
     place-content: center;
 }
 
-header {
+#header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -268,7 +271,7 @@ header {
     font-size: 2.6rem;
 }
 
-header input {
+#header input {
     display:none;
 }
 
@@ -2796,6 +2799,77 @@ p#errorMessage {
     color:var(--color-t-1);
     scale: 1.05;
 }
+
+/* Console */ 
+
+#main_console {
+    background:linear-gradient(130deg, #200070,#000);
+    color:#05ef00;
+    font-family: Monospace;
+    padding-left:0;
+    padding-right:0;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.console {
+    font-size: 1.2rem;
+    flex:1;
+    display: flex;
+    flex-direction: column;
+}
+
+.console-header {
+    background-color: #eef;
+    color:#111;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.2rem 1rem;
+}
+
+.console-scroll {
+    flex:1;
+    overflow-y:auto;
+    margin-top:0.5rem;
+    padding: 0 0.4rem;
+}
+
+.console-main {
+    line-height: 1.3;
+    display: block;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.console-input {
+    margin:0.5rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.console-input input {
+    background-color: transparent;
+    color:inherit;
+    border:none;
+    font-weight: 400;
+    font-size: inherit;
+    flex:1;
+}
+
+.console-input span {
+    color: #eef;
+}
+
+.console-log-input {
+    margin: 0.5rem 0;
+}
+
+.console-input input:hover, .console-input input:focus {
+    outline: none;
+}
+
 
 @keyframes loop {
     0% {
