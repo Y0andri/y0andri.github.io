@@ -13,15 +13,15 @@ inputConsole.addEventListener("keypress",function(e){
         if(comands.hasOwnProperty(inputConsole.value.toLocaleLowerCase())){
             mainConsole.insertAdjacentHTML("beforeend",
             
-            "<p class='console-log-input'><span style='color:#eef;'>~ bash$: </span>"+inputConsole.value+"</p>"+
-            "<p>"+comands[inputConsole.value.toLocaleLowerCase()]+"</p>"
+            "<p class='console-msg'><span class='console-msg-user'>~ bash$: </span>"+inputConsole.value+"</p>"+
+            "<p class='console-msg'>"+comands[inputConsole.value.toLocaleLowerCase()]+"</p>"
             );
             
         } else {
             mainConsole.insertAdjacentHTML("beforeend",
             
-            "<p class='console-log-input'><span style='color:#eef;'>~ bash$: </span>"+inputConsole.value+"</p>"+
-            "<p style='color:#f44;'>Socio, tu eres anormal o que</p>"
+            "<p class='console-msg'><span class='console-msg-user'>~ bash$: </span>"+inputConsole.value+"</p>"+
+            "<p class='console-msg console-msg-error'>Socio, tu eres anormal o que</p>"
             );
         }
         inputConsole.value = ""
